@@ -1279,7 +1279,7 @@ async function confirmPaymentAndStartQuiz() {
       currency: "INR",
       name: "Shubh Diwali Mega Contest",
       description: `${appState.ticketQuantity} Skill Contest Ticket(s) - ₹${appState.orderData.amount_inr}`,
-      image: "assets/logo-diya.svg",
+      image: "assets/official-logo.png",
       prefill: {
         name: name,
         contact: phone
