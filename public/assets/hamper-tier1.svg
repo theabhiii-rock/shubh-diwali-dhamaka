@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none" aria-label="VIP Patakha Mega Hamper Tier 1">
+  <defs>
+    <linearGradient id="crateWood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8D6E63"/>
+      <stop offset="50%" stop-color="#5D4037"/>
+      <stop offset="100%" stop-color="#3E2723"/>
+    </linearGradient>
+    <linearGradient id="boxRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E53935"/>
+      <stop offset="100%" stop-color="#B71C1C"/>
+    </linearGradient>
+    <linearGradient id="boxGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#43A047"/>
+      <stop offset="100%" stop-color="#1B5E20"/>
+    </linearGradient>
+    <linearGradient id="boxGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD54F"/>
+      <stop offset="50%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#FF8F00"/>
+    </linearGradient>
+    <linearGradient id="boxBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E88E5"/>
+      <stop offset="100%" stop-color="#0D47A1"/>
+    </linearGradient>
+    <linearGradient id="anarCone" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFCA28"/>
+      <stop offset="50%" stop-color="#FF6F00"/>
+      <stop offset="100%" stop-color="#BF360C"/>
+    </linearGradient>
+    <radialGradient id="sparkGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF9C4" stop-opacity="1"/>
+      <stop offset="50%" stop-color="#FFD54F" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FF6F00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Ambient Golden Base Glow -->
+  <ellipse cx="160" cy="175" rx="140" ry="22" fill="url(#sparkGlow)" opacity="0.7"/>
+
+  <!-- Wooden Reinforced Safety Crate Base -->
+  <rect x="25" y="145" width="270" height="42" rx="4" fill="url(#crateWood)" stroke="#D7CCC8" stroke-width="1.5"/>
+  <line x1="25" y1="165" x2="295" y2="165" stroke="#3E2723" stroke-width="2"/>
+  <line x1="115" y1="145" x2="115" y2="187" stroke="#3E2723" stroke-width="1.5"/>
+  <line x1="205" y1="145" x2="205" y2="187" stroke="#3E2723" stroke-width="1.5"/>
+  <text x="160" y="160" fill="#FFD54F" font-family="'Cinzel', serif" font-size="9" font-weight="bold" text-anchor="middle" letter-spacing="1">VIP SAFETY CRATE • 5000 WALA</text>
+
+  <!-- Large Aerial Cake Box 240-Shot (Center Back) -->
+  <rect x="100" y="55" width="120" height="92" rx="3" fill="url(#boxGreen)" stroke="#FFD54F" stroke-width="1.5"/>
+  <rect x="105" y="60" width="110" height="82" fill="none" stroke="#FFD54F" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="160" y="80" fill="#FFF" font-family="sans-serif" font-size="10" font-weight="900" text-anchor="middle">240 SHOT</text>
+  <text x="160" y="94" fill="#FFD54F" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle">AERIAL SKY DISPLAY</text>
+  <circle cx="160" cy="118" r="16" fill="url(#boxGold)"/>
+  <polygon points="160,106 163,115 172,115 165,121 167,130 160,124 153,130 155,121 148,115 157,115" fill="#B71C1C"/>
+
+  <!-- Left Fireworks Box (5000-Wala Siva Kasi Sound Garland) -->
+  <rect x="38" y="75" width="70" height="72" rx="3" fill="url(#boxRed)" stroke="#FFD54F" stroke-width="1.2"/>
+  <text x="73" y="98" fill="#FFF" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle">5000 WALA</text>
+  <text x="73" y="110" fill="#FFD54F" font-family="sans-serif" font-size="7" text-anchor="middle">SIVAKASI</text>
+  <rect x="50" y="120" width="46" height="18" rx="2" fill="#FFD54F"/>
+  <text x="73" y="132" fill="#B71C1C" font-family="sans-serif" font-size="7" font-weight="bold" text-anchor="middle">SPECIAL</text>
+
+  <!-- Right Fireworks Box (Grand Flower Pots / Anar Box) -->
+  <rect x="212" y="75" width="70" height="72" rx="3" fill="url(#boxBlue)" stroke="#FFD54F" stroke-width="1.2"/>
+  <text x="247" y="98" fill="#FFF" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle">DELUXE ANAR</text>
+  <text x="247" y="110" fill="#FFD54F" font-family="sans-serif" font-size="7" text-anchor="middle">12 COLOR POTS</text>
+  <circle cx="247" cy="126" r="10" fill="url(#boxGold)"/>
+  <text x="247" y="130" fill="#0D47A1" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle">VIP</text>
+
+  <!-- Giant Flower Pots (Anar Cones in Front) -->
+  <polygon points="120,150 135,115 150,150" fill="url(#anarCone)" stroke="#FFD54F" stroke-width="1"/>
+  <polygon points="170,150 185,115 200,150" fill="url(#anarCone)" stroke="#FFD54F" stroke-width="1"/>
+
+  <!-- Ground Wheels (Chakkars) -->
+  <circle cx="95" cy="148" r="14" fill="#E65100" stroke="#FFD54F" stroke-width="1.5"/>
+  <circle cx="95" cy="148" r="7" fill="#FFD54F"/>
+  <circle cx="225" cy="148" r="14" fill="#E65100" stroke="#FFD54F" stroke-width="1.5"/>
+  <circle cx="225" cy="148" r="7" fill="#FFD54F"/>
+
+  <!-- Parachute Rockets Standing at Back -->
+  <g transform="translate(18, 25)">
+    <line x1="2" y1="125" x2="2" y2="40" stroke="#8D6E63" stroke-width="2"/>
+    <polygon points="2,20 -4,45 8,45" fill="#E53935" stroke="#FFD54F" stroke-width="1"/>
+    <rect x="-3" y="45" width="10" height="30" fill="#FFD54F"/>
+  </g>
+  <g transform="translate(295, 25)">
+    <line x1="2" y1="125" x2="2" y2="40" stroke="#8D6E63" stroke-width="2"/>
+    <polygon points="2,20 -4,45 8,45" fill="#1E88E5" stroke="#FFD54F" stroke-width="1"/>
+    <rect x="-3" y="45" width="10" height="30" fill="#FFD54F"/>
+  </g>
+
+  <!-- Sparklers Sparks Spilling Over -->
+  <line x1="160" y1="110" x2="160" y2="95" stroke="#FFE082" stroke-width="1.5"/>
+  <circle cx="160" cy="92" r="3" fill="#FFF"/>
+  <circle cx="152" cy="85" r="2" fill="#FFD54F"/>
+  <circle cx="168" cy="86" r="2" fill="#FFD54F"/>
+
+  <!-- Two Clay Diyas with Radiant Flame at Base Corners -->
+  <g transform="translate(42, 160)">
+    <path d="M 0 16 Q 16 26 32 16 Q 16 8 0 16 Z" fill="#D84315" stroke="#BF360C" stroke-width="1"/>
+    <path d="M 16 9 Q 20 2 16 -6 Q 12 2 16 9 Z" fill="#FFF59D"/>
+    <path d="M 16 9 Q 18 4 16 -2 Q 14 4 16 9 Z" fill="#FF6F00"/>
+  </g>
+  <g transform="translate(246, 160)">
+    <path d="M 0 16 Q 16 26 32 16 Q 16 8 0 16 Z" fill="#D84315" stroke="#BF360C" stroke-width="1"/>
+    <path d="M 16 9 Q 20 2 16 -6 Q 12 2 16 9 Z" fill="#FFF59D"/>
+    <path d="M 16 9 Q 18 4 16 -2 Q 14 4 16 9 Z" fill="#FF6F00"/>
+  </g>
+</svg>

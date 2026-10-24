@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="m3Ribbon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="50%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+    <radialGradient id="m3Bronze" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#fed7aa"/>
+      <stop offset="35%" stop-color="#d97706"/>
+      <stop offset="70%" stop-color="#92400e"/>
+      <stop offset="100%" stop-color="#451a03"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Hanging Ribbon V-fold -->
+  <polygon points="35,5 50,38 24,38" fill="url(#m3Ribbon)"/>
+  <polygon points="65,5 50,38 76,38" fill="url(#m3Ribbon)"/>
+  <polygon points="50,15 50,38 42,38" fill="#fbbf24" opacity="0.8"/>
+  <polygon points="50,15 50,38 58,38" fill="#fbbf24" opacity="0.8"/>
+
+  <!-- Medal Disc Outer Rim -->
+  <circle cx="50" cy="62" r="32" fill="url(#m3Bronze)" stroke="#fde68a" stroke-width="2" filter="drop-shadow(0 6px 8px rgba(0,0,0,0.55))"/>
+  
+  <!-- Inner Rim -->
+  <circle cx="50" cy="62" r="26" fill="#78350f" stroke="#fed7aa" stroke-width="1.5"/>
+  <circle cx="50" cy="62" r="23" fill="url(#m3Bronze)"/>
+
+  <!-- Embossed '3' -->
+  <text x="50" y="72" font-family="'Cinzel', serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle" filter="drop-shadow(1px 2px 2px rgba(0,0,0,0.6))">3</text>
+  
+  <!-- Specular Glint -->
+  <ellipse cx="38" cy="48" rx="8" ry="3" fill="#ffffff" opacity="0.45" transform="rotate(-30 38 48)"/>
+</svg>

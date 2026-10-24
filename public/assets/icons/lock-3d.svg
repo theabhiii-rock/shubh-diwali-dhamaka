@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="shackleSteel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#cbd5e1"/>
+      <stop offset="80%" stop-color="#64748b"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <radialGradient id="lockGold" cx="45%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#fff8d6"/>
+      <stop offset="35%" stop-color="#f8c64e"/>
+      <stop offset="75%" stop-color="#b8860b"/>
+      <stop offset="100%" stop-color="#593c00"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Shadow -->
+  <ellipse cx="60" cy="110" rx="35" ry="7" fill="#000" opacity="0.6" filter="blur(5px)"/>
+
+  <!-- Hardened Curved Shackle -->
+  <path d="M 38 55 L 38 35 C 38 18 82 18 82 35 L 82 55" fill="none" stroke="url(#shackleSteel)" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- Main Solid Lock Body -->
+  <rect x="26" y="50" width="68" height="54" rx="10" fill="url(#lockGold)" stroke="#ffd700" stroke-width="2.5" filter="drop-shadow(0 8px 12px rgba(0,0,0,0.6))"/>
+
+  <!-- Glowing Keyhole -->
+  <circle cx="60" cy="72" r="6" fill="#1f0a02"/>
+  <polygon points="56,74 64,74 62,88 58,88" fill="#1f0a02"/>
+  <circle cx="60" cy="72" r="2.5" fill="#ffd700"/>
+
+  <!-- Specular Reflection Across Body -->
+  <path d="M 32 54 L 88 54 L 75 98 L 32 98 Z" fill="#ffffff" opacity="0.2"/>
+</svg>

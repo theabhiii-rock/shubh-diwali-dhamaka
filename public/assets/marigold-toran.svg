@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 180" fill="none" preserveAspectRatio="none" aria-label="Festive Marigold Toran Garland with Hanging Brass Diyas">
+  <defs>
+    <!-- Marigold Orange Petal Gradient -->
+    <radialGradient id="marigoldOrange" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="35%" stop-color="#FF9800"/>
+      <stop offset="75%" stop-color="#E65100"/>
+      <stop offset="100%" stop-color="#BF360C"/>
+    </radialGradient>
+
+    <!-- Marigold Golden Yellow Gradient -->
+    <radialGradient id="marigoldYellow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFF8D"/>
+      <stop offset="35%" stop-color="#FFD700"/>
+      <stop offset="70%" stop-color="#FFA000"/>
+      <stop offset="100%" stop-color="#FF6F00"/>
+    </radialGradient>
+
+    <!-- Mango Leaf Green Gradient -->
+    <linearGradient id="mangoLeafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#66BB6A"/>
+      <stop offset="50%" stop-color="#2E7D32"/>
+      <stop offset="100%" stop-color="#1B5E20"/>
+    </linearGradient>
+
+    <!-- Hanging Brass Chain & Bell Gradient -->
+    <linearGradient id="brassChain" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="40%" stop-color="#FFD700"/>
+      <stop offset="80%" stop-color="#B78103"/>
+      <stop offset="100%" stop-color="#6D4C00"/>
+    </linearGradient>
+
+    <!-- Hanging Diya Flame Gradient -->
+    <linearGradient id="hangingFlame" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="25%" stop-color="#FFF59D"/>
+      <stop offset="60%" stop-color="#FF9100"/>
+      <stop offset="100%" stop-color="#D50000"/>
+    </linearGradient>
+
+    <!-- Flame Aura Filter -->
+    <filter id="flameGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Reusable Single Marigold Flower -->
+    <g id="flower-orange">
+      <circle cx="0" cy="0" r="16" fill="url(#marigoldOrange)"/>
+      <circle cx="-6" cy="-6" r="8" fill="#FF9800" opacity="0.8"/>
+      <circle cx="6" cy="-6" r="8" fill="#FFA726" opacity="0.8"/>
+      <circle cx="-6" cy="6" r="8" fill="#F57C00" opacity="0.8"/>
+      <circle cx="6" cy="6" r="8" fill="#E65100" opacity="0.8"/>
+      <circle cx="0" cy="0" r="7" fill="#FFE082" opacity="0.9"/>
+    </g>
+
+    <g id="flower-yellow">
+      <circle cx="0" cy="0" r="16" fill="url(#marigoldYellow)"/>
+      <circle cx="-6" cy="-6" r="8" fill="#FFEE58" opacity="0.85"/>
+      <circle cx="6" cy="-6" r="8" fill="#FFEB3B" opacity="0.85"/>
+      <circle cx="-6" cy="6" r="8" fill="#FFD700" opacity="0.85"/>
+      <circle cx="6" cy="6" r="8" fill="#FFA000" opacity="0.85"/>
+      <circle cx="0" cy="0" r="7" fill="#FFFF8D" opacity="0.95"/>
+    </g>
+
+    <!-- Mango Leaf Motif -->
+    <g id="mango-leaf">
+      <path d="M0,0 C-12,18 -8,36 0,48 C8,36 12,18 0,0 Z" fill="url(#mangoLeafGrad)"/>
+      <path d="M0,0 L0,48" stroke="#81C784" stroke-width="0.8" opacity="0.7"/>
+    </g>
+
+    <!-- Hanging Brass Diya Lamp from Golden Chain -->
+    <g id="hanging-lamp">
+      <!-- Chain Links -->
+      <line x1="0" y1="0" x2="0" y2="75" stroke="url(#brassChain)" stroke-width="2.5" stroke-dasharray="3,2"/>
+      <circle cx="0" cy="76" r="4" fill="#FFD700"/>
+      <!-- Brass Bell Canopy -->
+      <path d="M-10,84 C-8,78 8,78 10,84 L12,88 L-12,88 Z" fill="url(#brassChain)"/>
+      <!-- Brass Bowl -->
+      <path d="M-18,92 C-18,108 18,108 18,92 C14,88 -14,88 -18,92 Z" fill="url(#brassChain)" stroke="#FFE082" stroke-width="1"/>
+      <ellipse cx="0" cy="91" rx="16" ry="4" fill="#8B5A00"/>
+      <!-- Glowing Flame with Flicker -->
+      <circle cx="0" cy="85" r="14" fill="#FFB300" opacity="0.35" filter="url(#flameGlow)"/>
+      <path d="M0,74 C3,80 5,85 3,89 C1,92 -1,92 -3,89 C-5,85 -3,80 0,74 Z" fill="url(#hangingFlame)">
+        <animate attributeName="d" values="M0,74 C3,80 5,85 3,89 C1,92 -1,92 -3,89 C-5,85 -3,80 0,74 Z; M0,72 C4,79 4,86 2,89 C0,92 -2,92 -4,88 C-4,84 -2,79 0,72 Z; M0,74 C3,80 5,85 3,89 C1,92 -1,92 -3,89 C-5,85 -3,80 0,74 Z" dur="1.4s" repeatCount="indefinite"/>
+      </path>
+      <!-- Small Hanging Golden Droplet/Bead at base -->
+      <circle cx="0" cy="112" r="3" fill="#FFD700"/>
+      <line x1="0" y1="104" x2="0" y2="112" stroke="#FFD700" stroke-width="1.5"/>
+    </g>
+  </defs>
+
+  <!-- Top Support String Line -->
+  <line x1="0" y1="10" x2="1440" y2="10" stroke="#E65100" stroke-width="3" opacity="0.6"/>
+
+  <!-- ==================== SWAG 1 (0 to 360) ==================== -->
+  <!-- Hanging Lamp 1 -->
+  <g transform="translate(180, 10)">
+    <use href="#hanging-lamp"/>
+  </g>
+  <!-- Festoon Curve 1 -->
+  <path d="M0,10 Q180,85 360,10" fill="none" stroke="#FFA000" stroke-width="2" opacity="0.4"/>
+  <!-- Leaf Accents along curve 1 -->
+  <g transform="translate(60, 32) rotate(25)"><use href="#mango-leaf"/></g>
+  <g transform="translate(120, 52) rotate(15)"><use href="#mango-leaf"/></g>
+  <g transform="translate(240, 52) rotate(-15)"><use href="#mango-leaf"/></g>
+  <g transform="translate(300, 32) rotate(-25)"><use href="#mango-leaf"/></g>
+  <!-- Flowers on Swag 1 -->
+  <g transform="translate(15, 12)"><use href="#flower-orange"/></g>
+  <g transform="translate(45, 24)"><use href="#flower-yellow"/></g>
+  <g transform="translate(80, 42)"><use href="#flower-orange"/></g>
+  <g transform="translate(120, 58)"><use href="#flower-yellow"/></g>
+  <g transform="translate(155, 68)"><use href="#flower-orange"/></g>
+  <g transform="translate(180, 70)"><use href="#flower-yellow"/></g>
+  <g transform="translate(205, 68)"><use href="#flower-orange"/></g>
+  <g transform="translate(240, 58)"><use href="#flower-yellow"/></g>
+  <g transform="translate(280, 42)"><use href="#flower-orange"/></g>
+  <g transform="translate(315, 24)"><use href="#flower-yellow"/></g>
+  <g transform="translate(345, 12)"><use href="#flower-orange"/></g>
+
+  <!-- ==================== SWAG 2 (360 to 720) ==================== -->
+  <!-- Hanging Lamp 2 -->
+  <g transform="translate(540, 10)">
+    <use href="#hanging-lamp"/>
+  </g>
+  <path d="M360,10 Q540,85 720,10" fill="none" stroke="#FFA000" stroke-width="2" opacity="0.4"/>
+  <g transform="translate(420, 32) rotate(25)"><use href="#mango-leaf"/></g>
+  <g transform="translate(480, 52) rotate(15)"><use href="#mango-leaf"/></g>
+  <g transform="translate(600, 52) rotate(-15)"><use href="#mango-leaf"/></g>
+  <g transform="translate(660, 32) rotate(-25)"><use href="#mango-leaf"/></g>
+  <g transform="translate(375, 12)"><use href="#flower-yellow"/></g>
+  <g transform="translate(405, 24)"><use href="#flower-orange"/></g>
+  <g transform="translate(440, 42)"><use href="#flower-yellow"/></g>
+  <g transform="translate(480, 58)"><use href="#flower-orange"/></g>
+  <g transform="translate(515, 68)"><use href="#flower-yellow"/></g>
+  <g transform="translate(540, 70)"><use href="#flower-orange"/></g>
+  <g transform="translate(565, 68)"><use href="#flower-yellow"/></g>
+  <g transform="translate(600, 58)"><use href="#flower-orange"/></g>
+  <g transform="translate(640, 42)"><use href="#flower-yellow"/></g>
+  <g transform="translate(675, 24)"><use href="#flower-orange"/></g>
+  <g transform="translate(705, 12)"><use href="#flower-yellow"/></g>
+
+  <!-- ==================== SWAG 3 (720 to 1080) ==================== -->
+  <!-- Hanging Lamp 3 -->
+  <g transform="translate(900, 10)">
+    <use href="#hanging-lamp"/>
+  </g>
+  <path d="M720,10 Q900,85 1080,10" fill="none" stroke="#FFA000" stroke-width="2" opacity="0.4"/>
+  <g transform="translate(780, 32) rotate(25)"><use href="#mango-leaf"/></g>
+  <g transform="translate(840, 52) rotate(15)"><use href="#mango-leaf"/></g>
+  <g transform="translate(960, 52) rotate(-15)"><use href="#mango-leaf"/></g>
+  <g transform="translate(1020, 32) rotate(-25)"><use href="#mango-leaf"/></g>
+  <g transform="translate(735, 12)"><use href="#flower-orange"/></g>
+  <g transform="translate(765, 24)"><use href="#flower-yellow"/></g>
+  <g transform="translate(800, 42)"><use href="#flower-orange"/></g>
+  <g transform="translate(840, 58)"><use href="#flower-yellow"/></g>
+  <g transform="translate(875, 68)"><use href="#flower-orange"/></g>
+  <g transform="translate(900, 70)"><use href="#flower-yellow"/></g>
+  <g transform="translate(925, 68)"><use href="#flower-orange"/></g>
+  <g transform="translate(960, 58)"><use href="#flower-yellow"/></g>
+  <g transform="translate(1000, 42)"><use href="#flower-orange"/></g>
+  <g transform="translate(1035, 24)"><use href="#flower-yellow"/></g>
+  <g transform="translate(1065, 12)"><use href="#flower-orange"/></g>
+
+  <!-- ==================== SWAG 4 (1080 to 1440) ==================== -->
+  <!-- Hanging Lamp 4 -->
+  <g transform="translate(1260, 10)">
+    <use href="#hanging-lamp"/>
+  </g>
+  <path d="M1080,10 Q1260,85 1440,10" fill="none" stroke="#FFA000" stroke-width="2" opacity="0.4"/>
+  <g transform="translate(1140, 32) rotate(25)"><use href="#mango-leaf"/></g>
+  <g transform="translate(1200, 52) rotate(15)"><use href="#mango-leaf"/></g>
+  <g transform="translate(1320, 52) rotate(-15)"><use href="#mango-leaf"/></g>
+  <g transform="translate(1380, 32) rotate(-25)"><use href="#mango-leaf"/></g>
+  <g transform="translate(1095, 12)"><use href="#flower-yellow"/></g>
+  <g transform="translate(1125, 24)"><use href="#flower-orange"/></g>
+  <g transform="translate(1160, 42)"><use href="#flower-yellow"/></g>
+  <g transform="translate(1200, 58)"><use href="#flower-orange"/></g>
+  <g transform="translate(1235, 68)"><use href="#flower-yellow"/></g>
+  <g transform="translate(1260, 70)"><use href="#flower-orange"/></g>
+  <g transform="translate(1285, 68)"><use href="#flower-yellow"/></g>
+  <g transform="translate(1320, 58)"><use href="#flower-orange"/></g>
+  <g transform="translate(1360, 42)"><use href="#flower-yellow"/></g>
+  <g transform="translate(1395, 24)"><use href="#flower-orange"/></g>
+  <g transform="translate(1425, 12)"><use href="#flower-yellow"/></g>
+
+  <!-- Hanging Lamps at Boundaries -->
+  <g transform="translate(360, 10)"><use href="#hanging-lamp"/></g>
+  <g transform="translate(720, 10)"><use href="#hanging-lamp"/></g>
+  <g transform="translate(1080, 10)"><use href="#hanging-lamp"/></g>
+</svg>

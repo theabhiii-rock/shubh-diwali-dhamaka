@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sndGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8d6"/>
+      <stop offset="50%" stop-color="#f8c64e"/>
+      <stop offset="100%" stop-color="#a16207"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Speaker Cone Body -->
+  <path d="M 18 36 L 34 36 L 56 18 L 56 82 L 34 64 L 18 64 Z" fill="url(#sndGold)" stroke="#ffd700" stroke-width="2" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.5))"/>
+
+  <!-- Sound Waves (Small, Med, Large) -->
+  <path d="M 66 38 A 16 16 0 0 1 66 62" fill="none" stroke="#fde047" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 76 28 A 28 28 0 0 1 76 72" fill="none" stroke="#facc15" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 86 18 A 40 40 0 0 1 86 82" fill="none" stroke="#eab308" stroke-width="4" stroke-linecap="round"/>
+</svg>

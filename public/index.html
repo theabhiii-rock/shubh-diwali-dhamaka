@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="hi" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>शुभ दीपावली महा धमाका 2026 | Shubh Diwali Mega Contest — Cultural Trivia & Festive Prize Challenge</title>
+  
+  <!-- SEO & Regulatory Metadata -->
+  <meta name="description" content="शुभ दीपावली महा धमाका 2026 - भारतीय दीपोत्सव हेतु भव्य सांस्कृतिक ट्रिविया क्विज़ एवं ₹32 लाख का पटाखा उपहार पूल। 100 विजेता • लाइसेंस्ड स्टोर वाउचर या वुडन सेफ्टी क्रेट डिलीवरी।">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2B0615">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:8080/">
+  <meta property="og:title" content="शुभ दीपावली महा धमाका 2026 | Shubh Diwali Mega Contest">
+  <meta property="og:description" content="100 भाग्यशाली कुशल विजेता • ₹32 लाख का भव्य पटाखा उपहार पूल • परिणाम 4 नवंबर 2026">
+  <meta property="og:image" content="/assets/og-image.svg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="शुभ दीपावली महा धमाका 2026 | Shubh Diwali Mega Contest">
+  <meta name="twitter:description" content="100 भाग्यशाली कुशल विजेता • ₹32 लाख का भव्य पटाखा उपहार पूल।">
+  <meta name="twitter:image" content="/assets/og-image.svg">
+
+  <!-- Razorpay Standard Checkout SDK -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/favicon.svg">
+
+  <!-- Google Fonts: Cinzel, Tiro Devanagari Hindi, Noto Sans Devanagari, Outfit, Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Tiro+Devanagari+Hindi:ital@0;1&family=Noto+Sans+Devanagari:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            festiveMaroon: '#2B0615',
+            festiveCrimson: '#480A1F',
+            festiveRuby: '#7F1D1D',
+            festiveGold: '#FFD700',
+            festiveSaffron: '#FF6F00',
+            festiveIvory: '#FFFBEB'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Production Festive Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fullscreen Interactive Canvas for Fireworks & Ambient Ground Diya Glow -->
+  <canvas id="fireworksCanvas" aria-hidden="true"></canvas>
+  <div class="rangoli-overlay" aria-hidden="true"></div>
+  <div class="ground-diya-glow" aria-hidden="true"></div>
+
+  <!-- Live Auspicious Contest Announcement Strip -->
+  <div class="compliance-strip" role="region" aria-label="उत्सव घोषणा">
+    <span class="compliance-badge-pulse"><span class="pulse-emerald-dot"></span>LIVE ENTRIES OPEN</span>
+    <span>
+      शुभ दीपावली महा धमाका 2026 — <strong>राष्ट्रीय सांस्कृतिक क्विज़ व ₹32 लाख का भव्य पटाखा उपहार पूल</strong>। प्रवेश खुला है!
+    </span>
+    <a href="#prizes" class="announcement-link">ईनाम विवरण देखें &rarr;</a>
+  </div>
+
+  <!-- Festive Marigold Toran Garland with Hanging Brass Diyas (Authentic Diwali Motif) -->
+  <div class="genda-toran-container" aria-hidden="true">
+    <img src="/assets/marigold-toran.svg" alt="गेंदा फूल तोरण व लटकते दीये" class="genda-toran-img">
+  </div>
+
+  <!-- Header Navigation Bar -->
+  <header class="header-bar" role="banner">
+    <div class="header-container container">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-link" aria-label="शुभ दीपावली धमाका होम">
+        <img src="/assets/logo-diya.svg" alt="शुभ दीपावली दीया" class="brand-emblem">
+        <div class="brand-title-group">
+          <span class="brand-title-hindi">शुभ दीपावली धमाका</span>
+          <span class="brand-title-sub">Mega Skill Contest 2026</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" role="navigation" aria-label="मुख्य नेविगेशन">
+        <a href="/" class="nav-item active">होम (Home)</a>
+        <a href="/prizes" class="nav-item">इनाम (Prizes)</a>
+        <a href="/how-it-works" class="nav-item">कैसे भाग लें (How It Works)</a>
+        <a href="/faq" class="nav-item">नियम व FAQ (FAQ & Legal)</a>
+      </nav>
+
+      <!-- Action & Accessibility Controls -->
+      <div class="controls-group">
+        <!-- Direct Play Contest Button -->
+        <button onclick="startContestFlow()" class="btn-gold py-2 px-4 text-xs font-bold sm:inline-flex hidden items-center gap-1.5">
+          <img src="/assets/icons/cart-3d.svg" class="btn-icon-3d" alt="">
+          <span>टिकट बुक करें (₹49)</span>
+        </button>
+
+        <!-- Fireworks Animation Toggle -->
+        <button id="toggleMotionBtn" class="control-btn" onclick="toggleFireworksMotion()" title="आतिशबाजी एनीमेशन रोकें / चालू करें" aria-pressed="false">
+          <span id="motionIcon"><img src="/assets/icons/fireworks-3d.svg" class="icon-3d" alt=""></span>
+          <span class="hidden sm:inline" id="motionText">Animation ON</span>
+        </button>
+
+        <!-- Sound Toggle -->
+        <button id="toggleAudioBtn" class="control-btn" onclick="toggleAudioSynthesis()" title="उत्सव ध्वनि प्रभाव चालू या बंद करें" aria-pressed="false">
+          <span id="audioIcon"><img src="/assets/icons/sound-off-3d.svg" class="icon-3d" alt=""></span>
+          <span class="hidden sm:inline" id="audioText">Sound Mute</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- PANEL 1: MAIN HERO SECTION (HERITAGE PALACE, LANTERNS & GOLD 3D TYPOGRAPHY) -->
+  <!-- ========================================================================= -->
+  <main id="mainContent" role="main">
+    <section class="hero-wrapper container">
+      <!-- Heritage Palace Silhouette Backdrop Across Lower Hero -->
+      <div class="hero-palace-backdrop" aria-hidden="true">
+        <img src="/assets/palace-backdrop.svg" alt="राजमहल" class="hero-palace-img">
+      </div>
+
+      <!-- Traditional Floral Rangoli Mandala Glowing Centerpiece -->
+      <div class="hero-mandala-backdrop" aria-hidden="true">
+        <img src="/assets/rangoli-mandala.svg" alt="" class="w-full h-full">
+      </div>
+
+      <!-- Floating Limited Tickets Circular Seal on Right -->
+      <div class="floating-limited-seal" aria-hidden="true">
+        <img src="/assets/icons/ticket-3d.svg" class="w-7 h-7 mx-auto mb-1 floating-3d" alt="">
+        <span class="seal-main-text">सिर्फ 1 लाख टिकट्स</span>
+        <span class="seal-sub-text">सीमित संख्या</span>
+      </div>
+
+      <!-- Clay Diyas Resting on Rangolis on Left & Right Bottom Corners -->
+      <img src="/assets/logo-diya.svg" alt="दीया" class="hero-corner-diya-left" aria-hidden="true">
+      <img src="/assets/logo-diya.svg" alt="दीया" class="hero-corner-diya-right" aria-hidden="true">
+
+      <!-- Glowing Diya Crest Atop Headline -->
+      <img src="/assets/logo-diya.svg" alt="शुभ दीया" class="hero-crest-diya">
+
+      <!-- Hero Title in Shimmering 3D Gold -->
+      <h1 class="hero-heading">
+        शुभ दीपावली धमाका
+      </h1>
+
+      <!-- Auspicious Sub-Ribbon Badge -->
+      <div class="hero-sub-ribbon">
+        <span><img src="/assets/icons/sparkles-3d.svg" class="icon-3d-sm inline-block mr-1" alt=""> महाबंपर लॉटरी 2026 <img src="/assets/icons/sparkles-3d.svg" class="icon-3d-sm inline-block ml-1" alt=""></span>
+      </div>
+
+      <!-- Curved Red Festive Banner Ribbon -->
+      <div>
+        <div class="festive-curved-ribbon">
+          त्योहार की खुशियों, अब और भी खास!
+        </div>
+      </div>
+
+      <p class="hero-description">
+        इस दीपावली पाइए शानदार <strong>प्रीमियम ग्रीन आतिशबाज़ी हैंपर्स और डिजिटल स्टोर वाउचर्स</strong>! 
+        प्रतियोगिता प्रवेश शुल्क <strong>मात्र ₹49 प्रति टिकट</strong>। कुल <strong>100 विजेताओं</strong> के 
+        लिए पूरे <strong>₹32 लाख</strong> का भव्य पटाखा उपहार पूल — लाइसेंस्ड स्टोर वाउचर या वुडन सेफ्टी क्रेट डिलीवरी!
+      </p>
+
+      <!-- 4 Spec Cards (Maroon Glass + Gold Trim) -->
+      <div class="specs-grid" role="region" aria-label="प्रतियोगिता विनिर्देश">
+        <div class="spec-card">
+          <img src="/assets/icons/ticket-3d.svg" class="w-7 h-7 mx-auto mb-1 floating-3d" alt="">
+          <span class="spec-val">₹49</span>
+          <span class="spec-label">टिकट मूल्य (प्रति टिकट)</span>
+        </div>
+        <div class="spec-card">
+          <img src="/assets/icons/target-3d.svg" class="w-7 h-7 mx-auto mb-1 floating-3d" alt="">
+          <span class="spec-val">1,00,000</span>
+          <span class="spec-label">कुल टिकट्स (सीमित संख्या)</span>
+        </div>
+        <div class="spec-card">
+          <img src="/assets/icons/trophy-3d.svg" class="w-7 h-7 mx-auto mb-1 floating-3d" alt="">
+          <span class="spec-val">100</span>
+          <span class="spec-label">विजेता (भाग्यशाली प्रतिभागी)</span>
+        </div>
+        <div class="spec-card">
+          <img src="/assets/icons/gift-3d.svg" class="w-7 h-7 mx-auto mb-1 floating-3d" alt="">
+          <span class="spec-val">₹32,00,000</span>
+          <span class="spec-label">कुल पुरस्कार (मेगा पटाखा पूल)</span>
+        </div>
+      </div>
+
+      <!-- LIVE WINNER ANNOUNCEMENT TICKER (Appears when Admin declares a winner) -->
+      <div id="liveWinnerTickerCard" class="w-full max-w-2xl mx-auto mb-4 hidden transform transition-all duration-500 ease-out">
+        <div class="relative overflow-hidden rounded-3xl border-2 border-amber-400 bg-gradient-to-br from-[#2a060d] via-[#4d0c18] to-[#1d0409] p-5 sm:p-6 shadow-[0_0_50px_rgba(245,158,11,0.5)] text-center">
+          
+          <!-- Top Row: Live badge & 2-Minute Slot Timer -->
+          <div class="flex items-center justify-between gap-2 border-b border-amber-500/30 pb-3 mb-3">
+            <div class="flex items-center gap-2">
+              <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-rose-500"></span>
+              </span>
+              <span class="text-xs font-black tracking-widest text-amber-300 uppercase">🏆 लाइव विजेता घोषणा • LIVE WINNER ANNOUNCEMENT</span>
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-950/80 border border-red-500/50 text-red-200 text-xs font-bold font-mono shadow">
+              <span>⏱️ लाइव समय:</span>
+              <span id="liveWinnerSlotTimer" class="text-amber-300 font-black text-sm">02:00</span>
+            </div>
+          </div>
+
+          <!-- Ticket Number Highlight (Big Glowing Box) -->
+          <div class="my-3 py-3 px-4 rounded-2xl bg-black/60 border border-amber-400/60 shadow-inner">
+            <div class="text-[11px] font-bold text-amber-200/80 tracking-wider uppercase mb-0.5">
+              🎟️ विजेता टिकट कोड (WINNING TICKET NUMBER)
+            </div>
+            <div id="liveWinnerTicketCode" class="text-2xl sm:text-4xl font-black font-mono tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-amber-300 to-yellow-400 filter drop-shadow-[0_2px_12px_rgba(250,204,21,0.6)]">
+              SKILL-DML-927482
+            </div>
+          </div>
+
+          <!-- Winner Details Card -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left my-3 bg-black/40 p-3.5 rounded-2xl border border-amber-500/20">
+            <div>
+              <span class="text-[10px] text-amber-200/70 block">विजेता का नाम:</span>
+              <div class="flex items-center gap-1.5">
+                <span id="liveWinnerName" class="text-base font-bold text-white">विक्रमार्क सिंह</span>
+                <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-950 border border-emerald-500/50 text-emerald-300 font-bold">✅ Verified Player</span>
+              </div>
+            </div>
+            <div>
+              <span class="text-[10px] text-amber-200/70 block">स्थान / शहर:</span>
+              <span id="liveWinnerCity" class="text-sm font-semibold text-amber-200">📍 लखनऊ, उत्तर प्रदेश</span>
+            </div>
+            <div class="sm:col-span-2 pt-2 border-t border-amber-500/20 flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <span class="text-[10px] text-amber-200/70 block">आवंटित पुरस्कार:</span>
+                <span id="liveWinnerPrize" class="text-sm font-black text-yellow-300">🏆 TIER 1 — ₹50,000 VIP पटाखा हैंपर</span>
+              </div>
+              <div class="text-[11px] text-amber-200/90 bg-amber-950/70 px-3 py-1 rounded-xl border border-amber-500/30 font-medium">
+                📞 आयोजक टीम सीधे विजेता से संपर्क कर रही है
+              </div>
+            </div>
+          </div>
+
+          <!-- Subtext -->
+          <p class="text-[10px] sm:text-[11px] text-amber-200/70 italic">
+            * यह आधिकारिक विजेता कोड सिस्टम में दर्ज है। हर विजेता कोड 2 मिनट तक स्क्रीन पर लाइव दिखाया जाता है।
+          </p>
+        </div>
+      </div>
+
+      <!-- Event Timeline Flip Countdown -->
+      <div id="countdownCard" class="event-countdown-card" role="timer" aria-label="प्रस्तावित परिणाम उलटी गिनती">
+        <div class="countdown-title flex items-center justify-center gap-1.5">
+          <img src="/assets/icons/clock-3d.svg" class="icon-3d" alt="">
+          <span>महाबंपर परिणाम घोषणा: 4 नवंबर 2026, रात्रि 8:00 बजे IST</span>
+        </div>
+
+        <div class="countdown-boxes">
+          <div class="time-digit-block">
+            <div class="time-val" id="daysDisplay">16</div>
+            <div class="time-lbl">दिन / DAYS</div>
+          </div>
+          <div class="time-divider" aria-hidden="true">:</div>
+          <div class="time-digit-block">
+            <div class="time-val" id="hoursDisplay">09</div>
+            <div class="time-lbl">घंटे / HRS</div>
+          </div>
+          <div class="time-divider" aria-hidden="true">:</div>
+          <div class="time-digit-block">
+            <div class="time-val" id="minsDisplay">42</div>
+            <div class="time-lbl">मिनट / MINS</div>
+          </div>
+          <div class="time-divider" aria-hidden="true">:</div>
+          <div class="time-digit-block">
+            <div class="time-val" id="secsDisplay">18</div>
+            <div class="time-lbl">सेकंड / SECS</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Call-to-Actions -->
+      <div class="flex items-center justify-center gap-4 flex-wrap">
+        <button type="button" onclick="startContestFlow()" class="btn-gold py-4 px-10 text-base shadow-2xl flex items-center gap-2">
+          <img src="/assets/icons/cart-3d.svg" class="btn-icon-3d" alt="">
+          <span>अभी टिकट खरीदें (₹49)</span>
+          <span class="btn-arrow">&rarr;</span>
+        </button>
+        <a href="#prizes" class="btn-outline-gold py-3.5 px-6 text-sm flex items-center gap-2">
+          <img src="/assets/icons/gift-3d.svg" class="btn-icon-3d" alt="">
+          <span>ईनाम देखें (Prize Hampers)</span>
+        </a>
+        <a href="#how-to-play" class="btn-outline-gold py-3.5 px-6 text-sm flex items-center gap-2">
+          <img src="/assets/icons/sparkles-3d.svg" class="btn-icon-3d" alt="">
+          <span>कैसे भाग लें (How to Play)</span>
+        </a>
+      </div>
+      <div class="text-xs text-amber-200/80 mt-3 font-medium flex items-center justify-center gap-1.5">
+        <img src="/assets/icons/shield-3d.svg" class="icon-3d-xs" alt="">
+        <span>100% सुरक्षित भुगतान • UPI / डेबिट कार्ड / नेट बैंकिंग • तत्काल डिजिटल पास</span>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- PANEL 2: PRIZES SECTION (3 ARCHED ROYAL TIERS & AUTHENTIC HAMPER VISUALS) -->
+    <!-- ========================================================================= -->
+    <section id="prizes" class="container py-16" aria-labelledby="prizesHeading">
+      <div class="section-header">
+        <span class="section-kicker">Exclusive Diwali Gift Hampers</span>
+        <h2 id="prizesHeading" class="section-title flex items-center justify-center gap-2">
+          <img src="/assets/icons/star-3d.svg" class="icon-3d" alt="">
+          <span>आपके लिए खास इनाम</span>
+          <img src="/assets/icons/star-3d.svg" class="icon-3d" alt="">
+        </h2>
+        <p class="section-subtitle">
+          100 भाग्यशाली विजेताओं के लिए कुल ₹32 लाख मूल्य के प्रीमियम ग्रीन क्रैकर्स एवं डिजिटल वाउचर्स — सुरक्षित वुडन क्रेट या लाइसेंस्ड स्टोर वाउचर विकल्प।
+        </p>
+      </div>
+
+      <div class="tiers-container">
+        <!-- Tier 1: 30 Winners - 50k Patakha (Arched Card) -->
+        <article class="tier-card tier-primary">
+          <div class="tier-ribbon-badge">Tier 1 • Mega</div>
+          
+          <!-- Arched Card Top Rank Medallion Header -->
+          <div class="tier-rank-header">
+            <div class="tier-rank-badge badge-gold">
+              <div class="rank-coin-medal">
+                <img src="/assets/icons/medal1-3d.svg" class="rank-medal-icon" alt="1st Prize">
+              </div>
+              <div class="rank-meta">
+                <span class="rank-title-hindi">रैंक 1 से 30</span>
+                <span class="rank-subtitle">प्रथम श्रेणी • 30 विजेता</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tier-card-amount">₹50,000</div>
+          <div class="tier-card-count">प्रत्येक को ₹50,000 का VIP लक्ज़री पटाखा हैंपर</div>
+          
+          <!-- Real Photo Cracker Hamper Frame -->
+          <div class="tier-hamper-frame">
+            <img src="/assets/hamper-tier1.jpg" alt="VIP लक्ज़री पटाखा हैंपर" class="tier-hamper-img" loading="lazy">
+            <div class="hamper-overlay-badge">
+              <img src="/assets/icons/sparkles-3d.svg" class="icon-3d-xs" alt="">
+              <span>असली पटाखा कॉम्बो • 240 Shots + Sky Rockets</span>
+            </div>
+          </div>
+
+          <ul class="tier-contents-list">
+            <li><strong>240-शॉट</strong> Royal Multi-Color Aerial Sky Cake</li>
+            <li><strong>10,000</strong> Sivakasi डीलक्स रेड लड़ी बॉक्स</li>
+            <li><strong>20 पीस</strong> Deluxe Parachute Rockets & Sky Lanterns</li>
+            <li><strong>Grand Peacock 12-Color</strong> Anar & Ground Chakkars</li>
+            <li><strong>75cm Giant Long</strong> Golden & Silver Sparklers</li>
+            <li><strong>नज़दीकी लाइसेंस्ड स्टोर वाउचर</strong> अथवा वुडन सेफ्टी क्रेट</li>
+          </ul>
+
+          <div class="tier-delivery-disclaimer">
+            <span class="flex items-center justify-center gap-1.5">
+              <img src="/assets/icons/voucher-3d.svg" class="icon-3d-sm" alt="">
+              <span>लाइसेंस्ड स्टोर वाउचर या वुडन सेफ्टी क्रेट डिलीवरी</span>
+            </span>
+          </div>
+        </article>
+
+        <!-- Tier 2: 50 Winners - 30k Patakha (Arched Card) -->
+        <article class="tier-card">
+          <div class="tier-ribbon-badge bg-amber-600">Tier 2 • Grand</div>
+          
+          <!-- Arched Card Top Rank Medallion Header -->
+          <div class="tier-rank-header">
+            <div class="tier-rank-badge badge-silver">
+              <div class="rank-coin-medal">
+                <img src="/assets/icons/medal2-3d.svg" class="rank-medal-icon" alt="2nd Prize">
+              </div>
+              <div class="rank-meta">
+                <span class="rank-title-hindi">रैंक 31 से 80</span>
+                <span class="rank-subtitle">द्वितीय श्रेणी • 50 विजेता</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tier-card-amount">₹30,000</div>
+          <div class="tier-card-count">प्रत्येक को ₹30,000 का ग्रैंड सेलिब्रेशन हैंपर</div>
+
+          <!-- Real Photo Cracker Hamper Frame -->
+          <div class="tier-hamper-frame">
+            <img src="/assets/hamper-tier2.jpg" alt="ग्रैंड सेलिब्रेशन हैंपर" class="tier-hamper-img" loading="lazy">
+            <div class="hamper-overlay-badge">
+              <img src="/assets/icons/sparkles-3d.svg" class="icon-3d-xs" alt="">
+              <span>60 Shots Aerial Thunder + 2,000 Ladi</span>
+            </div>
+          </div>
+
+          <ul class="tier-contents-list">
+            <li><strong>60-शॉट</strong> Aerial Sky Thunder Cake</li>
+            <li><strong>2,000</strong> डीलक्स रेड लड़ी बॉक्स</li>
+            <li><strong>10 Premium Boxes</strong> Deluxe Color Flower Pots (अनार)</li>
+            <li><strong>Ground Wheel Chakkars</strong> (20 Special Spinners)</li>
+            <li><strong>Electric Twinkling Sparklers</strong> & Sound Rockets</li>
+            <li><strong>नज़दीकी लाइसेंस्ड स्टोर वाउचर</strong> अथवा वुडन सेफ्टी क्रेट</li>
+          </ul>
+
+          <div class="tier-delivery-disclaimer">
+            <span class="flex items-center justify-center gap-1.5">
+              <img src="/assets/icons/voucher-3d.svg" class="icon-3d-sm" alt="">
+              <span>लाइसेंस्ड स्टोर वाउचर या वुडन सेफ्टी क्रेट डिलीवरी</span>
+            </span>
+          </div>
+        </article>
+
+        <!-- Tier 3: 20 Winners - 10k Patakha (Arched Card) -->
+        <article class="tier-card">
+          <div class="tier-ribbon-badge bg-rose-700">Tier 3 • Special</div>
+          
+          <!-- Arched Card Top Rank Medallion Header -->
+          <div class="tier-rank-header">
+            <div class="tier-rank-badge badge-bronze">
+              <div class="rank-coin-medal">
+                <img src="/assets/icons/medal3-3d.svg" class="rank-medal-icon" alt="3rd Prize">
+              </div>
+              <div class="rank-meta">
+                <span class="rank-title-hindi">रैंक 81 से 100</span>
+                <span class="rank-subtitle">तृतीय श्रेणी • 20 विजेता</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tier-card-amount">₹10,000</div>
+          <div class="tier-card-count">प्रत्येक को ₹10,000 का स्पेशल फेस्टिव हैंपर</div>
+
+          <!-- Real Photo Cracker Hamper Frame -->
+          <div class="tier-hamper-frame">
+            <img src="/assets/hamper-tier3.jpg" alt="स्पेशल फेस्टिव हैंपर" class="tier-hamper-img" loading="lazy">
+            <div class="hamper-overlay-badge">
+              <img src="/assets/icons/sparkles-3d.svg" class="icon-3d-xs" alt="">
+              <span>25 Shots Multi-Color + Anar & Sparklers</span>
+            </div>
+          </div>
+
+          <ul class="tier-contents-list">
+            <li><strong>25-शॉट</strong> Multi-Color Aerial Sky Cake</li>
+            <li><strong>500</strong> Classic Sound Ladi Box</li>
+            <li><strong>Standard Color Anar</strong> & Ground Chakkis Pack</li>
+            <li><strong>Twinkling Star Sparklers</strong> (Gold & Silver 5 Packs)</li>
+            <li><strong>20-Piece Classic Rocket Box</strong> & Magic Pencils</li>
+            <li><strong>नज़दीकी लाइसेंस्ड स्टोर वाउचर</strong> अथवा वुडन सेफ्टी क्रेट</li>
+          </ul>
+
+          <div class="tier-delivery-disclaimer">
+            <span class="flex items-center justify-center gap-1.5">
+              <img src="/assets/icons/voucher-3d.svg" class="icon-3d-sm" alt="">
+              <span>लाइसेंस्ड स्टोर वाउचर या वुडन सेफ्टी क्रेट डिलीवरी</span>
+            </span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Bottom Grand Prize Pool Banner Strip -->
+      <div class="pool-banner-strip">
+        <span class="flex items-center justify-center gap-2">
+          <img src="/assets/icons/gift-3d.svg" class="icon-3d" alt="">
+          <span>कुल पटाखा पूल: ₹32,00,000 | 100 भाग्यशाली विजेता | लाइसेंस्ड स्टोर डिजिटल वाउचर अथवा सुरक्षित वुडन क्रेट डिलीवरी</span>
+        </span>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- PANEL 3: HOW IT WORKS — 4-STEP TIMELINE & 3 BENTO CARDS (#how-to-play)     -->
+    <!-- ========================================================================= -->
+    <section id="how-to-play" class="container py-16" aria-labelledby="howHeading">
+      <div class="section-header">
+        <span class="section-kicker">Simple 4-Step Process</span>
+        <h2 id="howHeading" class="section-title flex items-center justify-center gap-2">
+          <img src="/assets/icons/sparkles-3d.svg" class="icon-3d" alt="">
+          <span>भाग लेना है बहुत आसान</span>
+          <img src="/assets/icons/sparkles-3d.svg" class="icon-3d" alt="">
+        </h2>
+        <p class="section-subtitle">
+          सरल 4 चरणों में इस पावन पर्व पर अपना लकी टिकट प्राप्त करें और ₹32 लाख के 100 पुरस्कारों की दौड़ में शामिल हों।
+        </p>
+      </div>
+
+      <!-- 4-Step Horizontal Timeline -->
+      <div class="timeline-steps-grid">
+        <div class="timeline-step-item">
+          <div class="step-circle-badge">1</div>
+          <h3 class="step-title">टिकट संख्या चुनें</h3>
+          <p class="step-desc">1, 2, 3, 5, 10, 20 अथवा अपनी मनपसंद मात्रा चुनें। प्रत्येक टिकट मात्र ₹49।</p>
+        </div>
+        <div class="timeline-step-item">
+          <div class="step-circle-badge">2</div>
+          <h3 class="step-title">विवरण दर्ज करें</h3>
+          <p class="step-desc">नाम, मोबाइल, शहर एवं डिलीवरी या डिजिटल स्टोर वाउचर की प्राथमिकता चुनें।</p>
+        </div>
+        <div class="timeline-step-item">
+          <div class="step-circle-badge">3</div>
+          <h3 class="step-title">सुरक्षित भुगतान करें</h3>
+          <p class="step-desc">UPI (GPay, PhonePe, Paytm, BHIM) अथवा Razorpay गेटवे से त्वरित भुगतान करें।</p>
+        </div>
+        <div class="timeline-step-item">
+          <div class="step-circle-badge">4</div>
+          <h3 class="step-title">डिजिटल पास प्राप्त करें</h3>
+          <p class="step-desc">5 आसान सांस्कृतिक प्रश्नों के उत्तर देकर तुरंत आधिकारिक डिजिटल लकी पास प्राप्त करें।</p>
+        </div>
+      </div>
+
+      <!-- 3 Bento Cards: Calculator, Pass Preview/Demo, Accepted Payment Methods -->
+      <div class="how-bento-grid">
+        <!-- Card 1: Ticket Calculator -->
+        <div class="bento-card" id="tickets">
+          <h3 class="bento-card-title flex items-center gap-2">
+            <img src="/assets/icons/calculator-3d.svg" class="icon-3d" alt="">
+            <span>टिकट कैलकुलेटर (Ticket Calculator)</span>
+          </h3>
+          <p class="text-xs text-amber-100/80 mb-3">
+            जितने अधिक टिकट, उतनी अधिक जीतने की संभावना! अपनी इच्छित टिकट संख्या चुनें:
+          </p>
+
+          <!-- Stepper Control -->
+          <div class="flex items-center justify-center gap-3 mb-3 bg-black/40 p-2.5 rounded-xl border border-amber-500/30">
+            <button type="button" onclick="adjustBookingQty(-1)" class="w-10 h-10 rounded-xl bg-amber-500/20 hover:bg-amber-500/40 text-amber-200 text-xl font-bold border border-amber-500/40 transition flex items-center justify-center" aria-label="कम करें">−</button>
+            <div class="text-center px-3">
+              <input type="number" id="bookingQtyInput" min="1" max="100" value="5" onchange="onBookingQtyChange(this.value)" class="text-center text-2xl font-black text-amber-300 bg-transparent w-16 border-b-2 border-amber-400 focus:outline-none">
+              <span class="block text-[10px] text-amber-100/70 uppercase tracking-wider mt-0.5">टिकट</span>
+            </div>
+            <button type="button" onclick="adjustBookingQty(1)" class="w-10 h-10 rounded-xl bg-amber-500/20 hover:bg-amber-500/40 text-amber-200 text-xl font-bold border border-amber-500/40 transition flex items-center justify-center" aria-label="बढ़ाएं">+</button>
+          </div>
+
+          <!-- Quick Chips -->
+          <div class="grid grid-cols-3 gap-1.5 mb-4">
+            <button type="button" class="sim-qty-btn text-xs py-2" onclick="setBookingQty(1, this)">1 (₹49)</button>
+            <button type="button" class="sim-qty-btn text-xs py-2" onclick="setBookingQty(2, this)">2 (₹98)</button>
+            <button type="button" class="sim-qty-btn text-xs py-2" onclick="setBookingQty(3, this)">3 (₹147)</button>
+            <button type="button" class="sim-qty-btn text-xs py-2 border-amber-400 bg-amber-500/20 text-white font-bold flex items-center justify-center gap-1" onclick="setBookingQty(5, this)">
+              <span>5 (₹245)</span>
+              <img src="/assets/icons/star-3d.svg" class="icon-3d-xs" alt="">
+            </button>
+            <button type="button" class="sim-qty-btn text-xs py-2" onclick="setBookingQty(10, this)">10 (₹490)</button>
+            <button type="button" class="sim-qty-btn text-xs py-2" onclick="setBookingQty(20, this)">20 (₹980)</button>
+          </div>
+
+          <!-- Live Price Banner -->
+          <div class="bg-black/50 border border-amber-500/40 rounded-xl p-3 mb-4 text-center">
+            <div class="text-[10px] uppercase tracking-wider text-amber-300 font-bold">देय राशि (Total Amount)</div>
+            <div class="text-2xl font-serif font-black text-white">
+              <span id="bookingTotalDisplay">₹245</span>
+              <span class="text-xs font-sans text-amber-300 font-normal">
+                (<span id="bookingTicketsDisplay">5</span> Tickets × ₹49)
+              </span>
+            </div>
+            <div class="text-[10px] text-emerald-400 mt-0.5">
+              ✓ <strong id="bookingChancesDisplay" class="text-white">5</strong> अलग-अलग रैंडम टिकट नंबर प्राप्त होंगे
+            </div>
+          </div>
+
+          <button type="button" id="bookTicketsCtaBtn" onclick="startContestFlowWithQty()" class="btn-gold py-3 px-6 text-sm w-full justify-center shadow-xl flex items-center gap-2">
+            <img src="/assets/icons/cart-3d.svg" class="btn-icon-3d" alt="">
+            <span>अभी टिकट बुक करें व खेलें</span>
+            <span class="btn-arrow">&rarr;</span>
+          </button>
+        </div>
+
+        <!-- Card 2: Demo Simulator / Live Pass Preview -->
+        <div class="bento-card">
+          <h3 class="bento-card-title flex items-center gap-2">
+            <img src="/assets/icons/ticket-3d.svg" class="icon-3d" alt="">
+            <span>डिजिटल पास पूर्वावलोकन (Pass Preview)</span>
+          </h3>
+          <p class="text-xs text-amber-100/80 mb-3">
+            सफल प्रविष्टि के बाद आपको इस प्रकार का आधिकारिक डिजिटल गोल्डन पास जारी किया जाएगा:
+          </p>
+
+          <!-- Specimen Golden Ticket Pass Card -->
+          <div class="golden-ticket-foil" style="padding: 1.25rem 1.4rem;">
+            <div class="ticket-notch-left" aria-hidden="true"></div>
+            <div class="ticket-notch-right" aria-hidden="true"></div>
+            <div class="ticket-watermark-bg">DHAMAKA</div>
+            
+            <div class="ticket-header-line">
+              <div>
+                <span class="text-[10px] uppercase tracking-wider text-amber-300 font-extrabold flex items-center gap-1.5">
+                  <img src="/assets/icons/diya-3d.svg" class="icon-3d-xs" alt=""><span>शुभ दीपावली धमाका 2026</span>
+                </span>
+                <div class="text-xs text-white font-bold mt-0.5">आधिकारिक डिजिटल एंट्री पास</div>
+              </div>
+              <span class="watermark-demo-stamp">LIVE PASS</span>
+            </div>
+
+            <div class="text-center my-2">
+              <div class="text-[10px] text-amber-200/80 uppercase">लकी टिकट नंबर (Ticket Serial)</div>
+              <div class="ticket-serial-badge text-xl text-amber-300 font-mono">SKILL-DWL-351391</div>
+            </div>
+
+            <div class="ticket-perforation-divider"></div>
+
+            <div class="flex items-center justify-between text-[10px] text-amber-100/80">
+              <span>प्रवेश: <strong>5 Tickets (₹245)</strong></span>
+              <span class="text-emerald-400 font-mono">✓ PESO Verified</span>
+            </div>
+          </div>
+
+          <div class="mt-auto">
+            <button type="button" id="generateDemoBtn" onclick="generateSimulatedTickets()" class="btn-outline-gold py-2.5 px-4 text-xs w-full justify-center flex items-center gap-1.5">
+              <img src="/assets/icons/refresh-3d.svg" class="icon-3d-xs" alt="">
+              <span>नया डेमो टिकट जनरेट करें (Simulate Now)</span>
+            </button>
+          </div>
+
+          <!-- Dynamic Container for Generated Simulated Passes -->
+          <div id="simulatedTicketsContainer" style="display: none;"></div>
+        </div>
+
+        <!-- Card 3: Accepted Payment Methods & Trust -->
+        <div class="bento-card">
+          <h3 class="bento-card-title flex items-center gap-2">
+            <img src="/assets/icons/card-3d.svg" class="icon-3d" alt="">
+            <span>स्वीकृत भुगतान विकल्प (Payment Modes)</span>
+          </h3>
+          <p class="text-xs text-amber-100/80 mb-2">
+            शत-प्रतिशत सुरक्षित एवं एन्क्रिप्टेड गेटवे। 0% अतिरिक्त शुल्क के साथ तत्काल एक्टिवेशन:
+          </p>
+
+          <!-- UPI Badges -->
+          <div class="upi-apps-row">
+            <span class="upi-pill-badge"><span class="w-2 h-2 rounded-full bg-emerald-400 inline-block mr-1"></span> Google Pay</span>
+            <span class="upi-pill-badge"><span class="w-2 h-2 rounded-full bg-purple-400 inline-block mr-1"></span> PhonePe</span>
+            <span class="upi-pill-badge"><span class="w-2 h-2 rounded-full bg-sky-400 inline-block mr-1"></span> Paytm</span>
+            <span class="upi-pill-badge"><span class="w-2 h-2 rounded-full bg-amber-400 inline-block mr-1"></span> BHIM UPI</span>
+            <span class="upi-pill-badge"><span class="w-2 h-2 rounded-full bg-slate-400 inline-block mr-1"></span> CRED</span>
+          </div>
+
+          <!-- Cards & Banking -->
+          <div class="bg-black/40 border border-amber-500/20 rounded-xl p-3 my-3 text-center">
+            <div class="text-xs font-bold text-amber-200 mb-1">डेबिट / क्रेडिट कार्ड एवं नेटबैंकिंग</div>
+            <div class="flex items-center justify-center gap-3 text-xs font-semibold text-amber-100">
+              <span class="flex items-center gap-1"><img src="/assets/icons/card-3d.svg" class="icon-3d-xs" alt="">Visa</span>
+              <span>•</span>
+              <span class="flex items-center gap-1"><img src="/assets/icons/card-3d.svg" class="icon-3d-xs" alt="">MasterCard</span>
+              <span>•</span>
+              <span class="flex items-center gap-1"><img src="/assets/icons/card-3d.svg" class="icon-3d-xs" alt="">RuPay</span>
+            </div>
+          </div>
+
+          <!-- Security Badges -->
+          <div class="space-y-1.5 text-[11px] text-amber-100/80 mt-auto">
+            <div class="flex items-center gap-1.5 text-emerald-400">
+              <img src="/assets/icons/lock-3d.svg" class="icon-3d-xs" alt="">
+              <strong>256-Bit SSL एन्क्रिप्टेड लेन-देन</strong>
+            </div>
+            <div class="flex items-center gap-1.5 text-amber-300">
+              <img src="/assets/icons/lightning-3d.svg" class="icon-3d-xs" alt="">
+              <span>तत्काल SMS एवं WhatsApp डिजिटल टिकट डिलीवरी</span>
+            </div>
+            <div class="flex items-center gap-1.5 text-amber-200">
+              <img src="/assets/icons/shield-3d.svg" class="icon-3d-xs" alt="">
+              <span>Razorpay अधिकृत मर्चेंट पार्टनरशिप</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- LIVE LEADERBOARD SECTION                                                  -->
+    <!-- ========================================================================= -->
+    <section id="leaderboard" class="container py-16" aria-labelledby="leaderboardHeading">
+      <div class="section-header">
+        <span class="section-kicker">Live Skill Challenge Rankings</span>
+        <h2 id="leaderboardHeading" class="section-title flex items-center justify-center gap-2">
+          <img src="/assets/icons/trophy-3d.svg" class="icon-3d" alt="">
+          <span>लाइव लीडरबोर्ड & रैंकिंग (Live Leaderboard)</span>
+        </h2>
+        <p class="section-subtitle">
+          सर्वोच्च स्कोर और सबसे तेज़ गति वाले शीर्ष 100 प्रतियोगी ईनाम के पात्र हैं। 30 विजेता ₹50,000, 50 विजेता ₹30,000 और 20 विजेता ₹10,000 के भव्य उपहार वाउचर/हैम्पर्स प्राप्त करेंगे।
+        </p>
+      </div>
+
+      <div class="leaderboard-wrapper">
+        <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
+          <div class="flex items-center gap-2">
+            <span class="pulse-emerald-dot"></span>
+            <span class="font-bold text-amber-200 text-sm">Top 100 Live Standings (लाइव रैंकिंग)</span>
+            <span class="watermark-demo-stamp">LIVE VERIFIED</span>
+          </div>
+          <button type="button" onclick="loadLeaderboard()" class="btn-outline-gold py-1.5 px-4 text-xs flex items-center gap-1.5">
+            <img src="/assets/icons/refresh-3d.svg" class="icon-3d-xs" alt="">
+            <span>रिफ्रेश करें (Refresh)</span>
+          </button>
+        </div>
+
+        <div id="leaderboardTableContainer">
+          <div class="text-center py-8 text-amber-100/70 text-sm">
+            लीडरबोर्ड लोड हो रहा है...
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- PANEL 4: FAQ & 4 COLOR-CODED COMPLIANCE CARDS (#faq, #compliance)        -->
+    <!-- ========================================================================= -->
+    <section id="faq" class="container py-16" aria-labelledby="faqHeading">
+      <div class="section-header">
+        <span class="section-kicker">Helpdesk & Statutory Standards</span>
+        <h2 id="faqHeading" class="section-title flex items-center justify-center gap-2">
+          <img src="/assets/icons/faq-3d.svg" class="icon-3d" alt="">
+          <span>अक्सर पूछे जाने वाले सवाल एवं विधिक जानकारी</span>
+        </h2>
+        <p class="section-subtitle">
+          प्रतियोगिता, नियम, सुरक्षा, डिलीवरी और कानूनी अनुपालन से जुड़े सभी मुख्य प्रश्न।
+        </p>
+      </div>
+
+      <!-- 2-Column Bento Grid: Left FAQs, Right 4 Compliance Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <!-- Left Column: FAQ Accordions -->
+        <div class="space-y-3.5">
+          <details class="bg-card border border-amber-500/30 rounded-xl p-4 transition" open>
+            <summary class="font-bold text-amber-200 cursor-pointer flex justify-between items-center text-sm font-hindi">
+              <span>1. क्या यह प्रतियोगिता कानूनी और सुरक्षित है?</span>
+              <span class="text-amber-400 font-serif text-base">+</span>
+            </summary>
+            <p class="text-xs text-amber-100/80 mt-3 pt-3 border-t border-amber-500/20 leading-relaxed font-hindi">
+              हाँ। शुभ दीपावली धमाका भारतीय संविधान के अनुच्छेद 19(1)(g) एवं माननीय सर्वोच्च न्यायालय के ऐतिहासिक निर्णय (State of Bombay v. R.M.D. Chamarbaugwala) के तहत एक कौशल-आधारित सांस्कृतिक प्रतियोगिता (Game of Skill) है। इसमें विजेताओं का चयन ज्ञान, सटीकता और समय गति के आधार पर निष्पक्ष रूप से होता है।
+            </p>
+          </details>
+
+          <details class="bg-card border border-amber-500/30 rounded-xl p-4 transition">
+            <summary class="font-bold text-amber-200 cursor-pointer flex justify-between items-center text-sm font-hindi">
+              <span>2. विजेताओं को पटाखे किस माध्यम से प्राप्त होंगे? (वाउचर vs होम डिलीवरी)</span>
+              <span class="text-amber-400 font-serif text-base">+</span>
+            </summary>
+            <p class="text-xs text-amber-100/80 mt-3 pt-3 border-t border-amber-500/20 leading-relaxed font-hindi">
+              विस्फोटक नियम 2008 एवं पेट्रोलियम और विस्फोटक सुरक्षा संगठन (PESO) के अनुसार, कूरियर से पटाखे भेजना प्रतिबंधित है। अतः विजेताओं को उनके शहर के अधिकृत लाइसेंस्ड पटाखा स्टोर का डिजिटल गिफ्ट वाउचर (Self-Pickup) दिया जाता है, या स्थानीय अधिकृत डिस्ट्रीब्यूटर्स द्वारा सीलबंद वुडन सेफ्टी क्रेट में होम डिलीवरी की जाती है।
+            </p>
+          </details>
+
+          <details class="bg-card border border-amber-500/30 rounded-xl p-4 transition">
+            <summary class="font-bold text-amber-200 cursor-pointer flex justify-between items-center text-sm font-hindi">
+              <span>3. परिणाम की घोषणा कब और कहाँ होगी?</span>
+              <span class="text-amber-400 font-serif text-base">+</span>
+            </summary>
+            <p class="text-xs text-amber-100/80 mt-3 pt-3 border-t border-amber-500/20 leading-relaxed font-hindi">
+              महाबंपर प्रतियोगिता का परिणाम 4 नवंबर 2026, रात्रि 8:00 बजे IST को आधिकारिक लाइव लीडरबोर्ड पर घोषित किया जाएगा। सभी 100 विजेताओं को उनके पंजीकृत मोबाइल नंबर पर SMS और WhatsApp द्वारा तुरंत वाउचर कोड एवं डिलीवरी ट्रैकिंग भेजी जाएगी।
+            </p>
+          </details>
+
+          <details class="bg-card border border-amber-500/30 rounded-xl p-4 transition">
+            <summary class="font-bold text-amber-200 cursor-pointer flex justify-between items-center text-sm font-hindi">
+              <span>4. क्या एक से अधिक टिकट खरीद सकते हैं?</span>
+              <span class="text-amber-400 font-serif text-base">+</span>
+            </summary>
+            <p class="text-xs text-amber-100/80 mt-3 pt-3 border-t border-amber-500/20 leading-relaxed font-hindi">
+              जी हाँ! आप 1, 2, 3, 5, 10, 20 या जितने चाहें उतने टिकट बुक कर सकते हैं। प्रत्येक टिकट के लिए अलग-अलग रैंडम टिकट नंबर जारी किए जाते हैं, जिससे ₹32 लाख के 100 उपहारों में आपकी जीतने की संभावना कई गुना बढ़ जाती है।
+            </p>
+          </details>
+
+          <details class="bg-card border border-amber-500/30 rounded-xl p-4 transition">
+            <summary class="font-bold text-amber-200 cursor-pointer flex justify-between items-center text-sm font-hindi">
+              <span>5. भुगतान के बाद टिकट कैसे प्राप्त होगा?</span>
+              <span class="text-amber-400 font-serif text-base">+</span>
+            </summary>
+            <p class="text-xs text-amber-100/80 mt-3 pt-3 border-t border-amber-500/20 leading-relaxed font-hindi">
+              भुगतान पूरा होते ही ऑन-स्क्रीन 5 आसान सांस्कृतिक प्रश्नों की क्विज़ प्रारंभ होती है। क्विज़ सबमिट करते ही आपका आधिकारिक डिजिटल गोल्ड पास (बारकोड, यूनिक सीरियल नंबर व मुहर सहित) स्क्रीन पर दिखेगा जिसे आप डाउनलोड या प्रिंट कर सकते हैं।
+            </p>
+          </details>
+
+          <details class="bg-card border border-amber-500/30 rounded-xl p-4 transition">
+            <summary class="font-bold text-amber-200 cursor-pointer flex justify-between items-center text-sm font-hindi">
+              <span>6. अगर भुगतान कट जाए पर टिकट न मिले तो क्या करें?</span>
+              <span class="text-amber-400 font-serif text-base">+</span>
+            </summary>
+            <p class="text-xs text-amber-100/80 mt-3 pt-3 border-t border-amber-500/20 leading-relaxed font-hindi">
+              चिंता न करें। हमारे सिस्टम में Razorpay ऑटो-रिकंसीलिएशन सक्रिय है। किसी भी तकनीकी त्रुटि की स्थिति में आपका भुगतान रेफरेंस ट्रेस करके 15 मिनट के भीतर टिकट जारी कर दिया जाता है अथवा 24 घंटे में स्वतः रिफंड प्रोसेस हो जाता है।
+            </p>
+          </details>
+
+          <div class="pt-2">
+            <button onclick="openModal('termsModal')" class="btn-outline-gold py-2.5 px-6 text-xs flex items-center gap-2">
+              <img src="/assets/icons/scroll-3d.svg" class="icon-3d-xs" alt="">
+              <span>सभी 12 नियम व शर्तें देखें (View All)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: 4 Distinct Color-Coded Compliance Cards -->
+        <div id="compliance" class="compliance-4grid">
+          <!-- Card 1: Gold / Amber (Legal Compliance) -->
+          <div class="compliance-card comp-gold">
+            <div class="comp-title flex items-center gap-2">
+              <img src="/assets/icons/scale-3d.svg" class="icon-3d" alt="">
+              <span>कानूनी जानकारी (Legal)</span>
+            </div>
+            <p class="comp-desc">
+              भारतीय संविधान के अनुच्छेद 19(1)(g) एवं सर्वोच्च न्यायालय के निर्णय (Chamarbaugwala केस) के अंतर्गत पूर्णतः वैध कौशल प्रतियोगिता।
+            </p>
+            <button onclick="openModal('termsModal')" class="comp-link-btn text-amber-300">
+              <span>विस्तृत विधिक नीति देखें</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+
+          <!-- Card 2: Purple / Violet (Privacy Notice) -->
+          <div class="compliance-card comp-purple">
+            <div class="comp-title flex items-center gap-2">
+              <img src="/assets/icons/lock-3d.svg" class="icon-3d" alt="">
+              <span>गोपनीयता नीति (Privacy)</span>
+            </div>
+            <p class="comp-desc">
+              DPDP अधिनियम 2023 के तहत 100% 256-बिट एन्क्रिप्टेड डेटा। शून्य थर्ड-पार्टी शेयरिंग और 30-दिवसीय डेटा न्यूनता (Purge) नीति।
+            </p>
+            <button onclick="openModal('privacyModal')" class="comp-link-btn text-purple-300">
+              <span>गोपनीयता नीति पढ़ें</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+
+          <!-- Card 3: Emerald Green (Terms of Service) -->
+          <div class="compliance-card comp-emerald">
+            <div class="comp-title flex items-center gap-2">
+              <img src="/assets/icons/scroll-3d.svg" class="icon-3d" alt="">
+              <span>सेवा की शर्तें (Terms)</span>
+            </div>
+            <p class="comp-desc">
+              18+ आयु सीमा अनिवार्य। पारदर्शी ऑडिट लॉग और राज्य विधिक छूट (असम, ओडिशा, तेलंगाना आदि में प्रतिबंधित)।
+            </p>
+            <button onclick="openModal('termsModal')" class="comp-link-btn text-emerald-300">
+              <span>सेवा की शर्तें पढ़ें</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+
+          <!-- Card 4: Sapphire Blue (Contact & Regulatory) -->
+          <div class="compliance-card comp-blue" id="contact">
+            <div class="comp-title flex items-center gap-2">
+              <img src="/assets/icons/mailbox-3d.svg" class="icon-3d" alt="">
+              <span>संपर्क एवं नियामक (Contact)</span>
+            </div>
+            <p class="comp-desc">
+              ईमेल: <strong>support@shubhdiwalidhamaka.in</strong><br>
+              हेल्पडेस्क: प्रातः 10:00 से सायं 8:00 IST। तत्काल सहायता उपलब्ध।
+            </p>
+            <button onclick="openModal('contactModal')" class="comp-link-btn text-blue-300">
+              <span>हेल्पडेस्क से संपर्क करें</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-amber-500/30 bg-black/85 py-12 relative z-10" role="contentinfo">
+    <div class="container text-center">
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <img src="/assets/logo-diya.svg" alt="दीया" class="w-9 h-9">
+        <span class="font-serif font-bold text-xl text-amber-200">शुभ दीपावली धमाका</span>
+      </div>
+
+      <p class="text-xs text-amber-100/80 max-w-xl mx-auto mb-6 leading-relaxed">
+        शुभ दीपावली महा धमाका 2026 भारतीय संविधान के अनुच्छेद 19(1)(g) के तहत एक कौशल आधारित सांस्कृतिक प्रतियोगिता (Game of Skill) है। 
+        सभी 100 विजेताओं को अधिकृत PESO-लाइसेंस्ड डिस्ट्रीब्यूटर्स द्वारा डिजिटल उपहार वाउचर (Self-Pickup) अथवा प्रमाणित वुडन क्रेट डिलीवरी प्रदान की जाती है।
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-6 text-xs text-amber-200 mb-6 font-semibold">
+        <button onclick="openModal('privacyModal')" class="hover:text-amber-300 underline">गोपनीयता नीति (Privacy Notice)</button>
+        <button onclick="openModal('termsModal')" class="hover:text-amber-300 underline">नियम व शर्तें (Terms of Use)</button>
+        <button onclick="openModal('contactModal')" class="hover:text-amber-300 underline">कानूनी व संपर्क जानकारी (Contact)</button>
+        <a href="/LEGAL_CHECKLIST.md" target="_blank" class="hover:text-amber-300 underline">विधिक अनुपालन (Legal Compliance)</a>
+      </div>
+
+      <div class="text-xs text-slate-500 mb-4">
+        &copy; 2026 Shubh Diwali Dhamaka. All rights reserved. • Built for Indian Festive Cultural Celebration.
+      </div>
+
+      <!-- Secret / Discreet Operations Trigger (BLAST) as requested -->
+      <div class="footer-blast-container">
+        <button id="blastAdminTrigger" onclick="handleBlastTap(event)" class="blast-btn" title="Operations & Admin Console (Tap 5x to Unlock)" aria-label="व्यवस्थापक डैशबोर्ड">
+          <span class="blast-spark-icon"><img src="/assets/icons/blast-3d.svg" class="icon-3d-sm" alt=""></span>
+          <span class="blast-text">BLAST</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- STICKY MOBILE BOTTOM ACTION DOCK (OPTIMIZED FOR SMARTPHONES & TABLETS) -->
+  <!-- ========================================================================= -->
+  <nav id="mobileBottomDock" class="mobile-bottom-dock" aria-label="त्वरित मोबाइल नेविगेशन">
+    <a href="/" class="mobile-dock-btn active" aria-label="होम पेज">
+      <span class="dock-icon"><img src="/assets/icons/diya-3d.svg" class="dock-icon-3d" alt=""></span>
+      <span>होम</span>
+    </a>
+    <a href="/prizes" class="mobile-dock-btn" aria-label="इनाम देखें">
+      <span class="dock-icon"><img src="/assets/icons/gift-3d.svg" class="dock-icon-3d" alt=""></span>
+      <span>इनाम</span>
+    </a>
+    <a href="/how-it-works" class="mobile-dock-btn" aria-label="कैसे भाग लें">
+      <span class="dock-icon"><img src="/assets/icons/sparkles-3d.svg" class="dock-icon-3d" alt=""></span>
+      <span>प्रक्रिया</span>
+    </a>
+    <a href="/faq" class="mobile-dock-btn" aria-label="नियम व FAQ">
+      <span class="dock-icon"><img src="/assets/icons/faq-3d.svg" class="dock-icon-3d" alt=""></span>
+      <span>FAQ</span>
+    </a>
+    <button type="button" onclick="startContestFlow()" class="mobile-dock-btn dock-cta-primary" aria-label="टिकट खरीदें">
+      <span class="dock-icon"><img src="/assets/icons/cart-3d.svg" class="dock-icon-3d" alt=""></span>
+      <span>टिकट (₹49)</span>
+    </button>
+  </nav>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: FESTIVE CONTEST FLOW (PAYMENT -> QUIZ -> VOUCHER/DELIVERY -> PASS) -->
+  <!-- ========================================================================= -->
+  <div id="contestModal" class="modal-layer" role="dialog" aria-modal="true" aria-labelledby="contestModalTitle">
+    <div class="modal-dialog max-w-2xl">
+      <button class="modal-dismiss" onclick="closeModal('contestModal')" aria-label="बंद करें">&times;</button>
+
+      <!-- Step Navigation Indicator -->
+      <div class="contest-step-nav">
+        <div id="stepInd1" class="step-indicator active">
+          <span class="option-badge-circle">1</span>
+          <span>विवरण व टिकट चुनें</span>
+        </div>
+        <div class="text-amber-500/50">➔</div>
+        <div id="stepInd2" class="step-indicator">
+          <span class="option-badge-circle">2</span>
+          <span>Razorpay 100% Live भुगतान</span>
+        </div>
+        <div class="text-amber-500/50">➔</div>
+        <div id="stepInd3" class="step-indicator">
+          <span class="option-badge-circle">3</span>
+          <span>तुरंत टिकट जारी (Instant Pass)</span>
+        </div>
+      </div>
+
+      <!-- STAGE 1: CHECKOUT & PARTICIPANT DETAILS -->
+      <div id="contestStagePayment">
+        <div class="text-center mb-3">
+          <div class="mb-1"><img src="/assets/icons/diya-3d.svg" class="icon-3d-xl mx-auto floating-3d" alt=""></div>
+          <h3 id="contestModalTitle" class="text-xl font-bold text-amber-200">शुभ दीपावली टिकट बुकिंग (Ticket Booking)</h3>
+          <p class="text-xs text-amber-100/70 mt-0.5">
+            टिकट संख्या चुनें, अपना नाम व मोबाइल नंबर दर्ज करें और सुरक्षित Razorpay से भुगतान कर तुरंत अपने टिकट प्राप्त करें!
+          </p>
+        </div>
+
+        <!-- Ticket Quantity Selector inside Modal -->
+        <div class="mb-3 bg-black/40 p-3 rounded-2xl border border-amber-500/30">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-xs font-bold text-amber-200">टिकट संख्या चुनें (Ticket Quantity):</span>
+            <span class="text-xs text-amber-300 font-bold">₹49 / टिकट</span>
+          </div>
+          <div class="flex items-center justify-center gap-3 mb-2">
+            <button type="button" onclick="adjustModalQty(-1)" class="w-9 h-9 rounded-lg bg-amber-500/20 hover:bg-amber-500/40 text-amber-200 text-lg font-bold border border-amber-500/40 flex items-center justify-center transition" aria-label="कम करें">−</button>
+            <input type="number" id="modalQtyInput" min="1" max="100" value="1" onchange="onModalQtyChange(this.value)" class="text-center text-xl font-black text-amber-300 bg-black/60 rounded-lg px-2 py-1 w-16 border border-amber-500/50 focus:outline-none">
+            <button type="button" onclick="adjustModalQty(1)" class="w-9 h-9 rounded-lg bg-amber-500/20 hover:bg-amber-500/40 text-amber-200 text-lg font-bold border border-amber-500/40 flex items-center justify-center transition" aria-label="बढ़ाएं">+</button>
+          </div>
+          <!-- Quick Quantity Chips -->
+          <div class="flex items-center justify-center gap-1.5 flex-wrap">
+            <button type="button" class="text-[11px] px-2.5 py-1 rounded-lg border border-amber-500/30 bg-black/50 text-amber-200 hover:border-amber-400 font-bold" onclick="setModalQty(1)">1 Ticket (₹49)</button>
+            <button type="button" class="text-[11px] px-2.5 py-1 rounded-lg border border-amber-500/30 bg-black/50 text-amber-200 hover:border-amber-400 font-bold" onclick="setModalQty(2)">2 Tickets (₹98)</button>
+            <button type="button" class="text-[11px] px-2.5 py-1 rounded-lg border border-amber-500/30 bg-black/50 text-amber-200 hover:border-amber-400 font-bold" onclick="setModalQty(3)">3 Tickets (₹147)</button>
+            <button type="button" class="text-[11px] px-2.5 py-1 rounded-lg border border-amber-400 bg-amber-500/20 text-white font-bold flex items-center gap-1" onclick="setModalQty(5)">
+              <span>5 Tickets (₹245)</span>
+              <img src="/assets/icons/star-3d.svg" class="icon-3d-xs" alt="">
+            </button>
+            <button type="button" class="text-[11px] px-2.5 py-1 rounded-lg border border-amber-500/30 bg-black/50 text-amber-200 hover:border-amber-400 font-bold flex items-center gap-1" onclick="setModalQty(10)">
+              <span>10 Tickets (₹490)</span>
+              <img src="/assets/icons/star-3d.svg" class="icon-3d-xs" alt="">
+            </button>
+            <button type="button" class="text-[11px] px-2.5 py-1 rounded-lg border border-amber-500/30 bg-black/50 text-amber-200 hover:border-amber-400 font-bold flex items-center gap-1" onclick="setModalQty(20)">
+              <span>20 Tickets (₹980)</span>
+              <img src="/assets/icons/star-3d.svg" class="icon-3d-xs" alt="">
+            </button>
+          </div>
+        </div>
+
+        <!-- Total Price Banner -->
+        <div class="bg-black/50 border border-amber-500/30 rounded-2xl p-3 mb-3 text-center">
+          <div class="text-[10px] uppercase tracking-wider text-amber-300 font-bold mb-0.5">देय कुल राशि (TOTAL PAYABLE)</div>
+          <div class="text-3xl font-serif font-black text-white">
+            <span id="modalTotalDisplay">₹49</span>
+            <span class="text-xs font-sans text-amber-300 font-normal">
+              (<span id="modalQtyDisplay">1</span> Ticket<span id="modalQtyPlural"></span> × ₹49)
+            </span>
+          </div>
+          <div class="text-[11px] text-emerald-400 mt-0.5">
+            ✓ भुगतान सफल होते ही आपको कुल <strong id="modalChancesDisplay" class="text-white">1</strong> अलग-अलग टिकट तुरंत स्क्रीन पर मिल जाएंगे
+          </div>
+        </div>
+
+        <!-- Participant Details Form -->
+        <div class="bg-black/40 border border-amber-500/30 rounded-2xl p-3.5 mb-3 text-left space-y-2.5">
+          <div class="text-xs font-bold text-amber-200 flex items-center gap-1.5 border-b border-amber-500/20 pb-1.5">
+            <img src="/assets/icons/ticket-3d.svg" class="icon-3d-xs" alt="">
+            <span>प्रतिभागी संपर्क विवरण (Contact Details For Winner Prize Verification)</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <div>
+              <label class="text-[11px] text-amber-200/90 block mb-1 font-semibold" for="checkoutParticipantName">पूरा नाम (Full Name) *</label>
+              <input type="text" id="checkoutParticipantName" class="text-input text-xs py-2" placeholder="उदा. राहुल शर्मा" required autocomplete="name">
+            </div>
+            <div>
+              <label class="text-[11px] text-amber-200/90 block mb-1 font-semibold" for="checkoutPhone">मोबाइल नंबर (WhatsApp Number) *</label>
+              <input type="tel" id="checkoutPhone" class="text-input text-xs py-2" placeholder="10 अंकों का मोबाइल नंबर" required maxlength="10" autocomplete="tel">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <div>
+              <label class="text-[11px] text-amber-200/90 block mb-1 font-semibold" for="checkoutCity">शहर / ज़िला (City) *</label>
+              <input type="text" id="checkoutCity" class="text-input text-xs py-2" placeholder="उदा. लखनऊ / वाराणसी" required>
+            </div>
+            <div>
+              <label class="text-[11px] text-amber-200/90 block mb-1 font-semibold">इनाम वितरण माध्यम (Prize Option)</label>
+              <div class="text-xs text-emerald-300 bg-black/50 border border-emerald-500/40 rounded-xl px-2.5 py-2 font-bold flex items-center gap-1">
+                <img src="/assets/icons/voucher-3d.svg" class="icon-3d-xs" alt="">
+                <span>लाइसेंस्ड स्टोर वाउचर / होम डिलीवरी</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 1-Click Festive Cultural Trivia Challenge (Legal Game of Skill Compliance) -->
+          <div class="bg-amber-950/40 border border-amber-500/30 rounded-xl p-2.5 mt-2">
+            <div class="text-[10px] text-amber-300 font-extrabold uppercase tracking-wide flex items-center gap-1 mb-1">
+              <img src="/assets/icons/sparkles-3d.svg" class="icon-3d-xs" alt="">
+              <span>दिवाली ज्ञान कौशल प्रश्न (Game of Skill Challenge)</span>
+            </div>
+            <div class="text-xs text-amber-100 font-medium">
+              भगवान श्रीराम के 14 वर्ष वनवास पश्चात अयोध्या लौटने पर कौन सा महापर्व मनाया जाता है?
+            </div>
+            <div class="mt-1 text-xs text-emerald-300 font-bold flex items-center gap-1">
+              <span>✓ सही उत्तर: <strong>शुभ दीपावली (दीपोत्सव)</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Official Razorpay Trust Card (ONLY Razorpay - No personal UPI) -->
+        <div class="p-3 rounded-2xl bg-black/50 border border-emerald-500/40 mb-3 text-center">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-xs font-bold text-amber-200 flex items-center gap-1.5">
+              <img src="/assets/icons/shield-3d.svg" class="icon-3d-xs" alt="">
+              <span>Razorpay 100% Live Official Gateway</span>
+            </span>
+            <span class="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded-full font-bold">RBI Approved & Encrypted</span>
+          </div>
+          <p class="text-[11px] text-amber-100/80 mb-2 text-left">
+            नीचे दिए गए बटन को दबाते ही आधिकारिक Razorpay गेटवे खुलेगा — <strong>PhonePe, Google Pay, Paytm, Any UPI QR, क्रेडिट/डेबिट कार्ड या नेटबैंकिंग</strong> से भुगतान करते ही आपके टिकट तुरंत स्क्रीन पर दिख जाएंगे!
+          </p>
+          <div class="flex justify-center items-center gap-3 py-1.5 bg-black/40 rounded-xl border border-amber-500/20">
+            <img src="/assets/icons/lightning-3d.svg" class="icon-3d-sm" alt="" title="UPI QR / GPay / PhonePe">
+            <span class="text-xs text-amber-200 font-bold font-mono">PhonePe • Google Pay • Paytm • Any UPI QR • Cards</span>
+            <img src="/assets/icons/lock-3d.svg" class="icon-3d-sm" alt="" title="256-bit SSL">
+          </div>
+        </div>
+
+        <button type="button" id="confirmPayBtn" onclick="confirmPaymentAndStartQuiz()" class="btn-gold w-full justify-center py-3.5 text-base flex items-center gap-2 shadow-2xl">
+          <img src="/assets/icons/card-3d.svg" class="btn-icon-3d" alt="">
+          <span id="confirmPayBtnText">Razorpay से ₹49 भुगतान करें व तुरंत टिकट प्राप्त करें</span>
+          <span class="btn-arrow">&rarr;</span>
+        </button>
+      </div>
+
+      <!-- STAGE 2: TIMED CULTURAL TRIVIA QUIZ -->
+      <div id="contestStageQuiz" style="display: none;">
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center gap-2">
+            <img src="/assets/icons/diya-3d.svg" class="icon-3d" alt="">
+            <span class="font-bold text-amber-200 text-sm" id="quizQCounter">प्रश्न 1 / 5</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-amber-100/70">शेष समय:</span>
+            <span id="quizTimerText" class="font-mono text-base font-bold text-amber-300">60.0s</span>
+          </div>
+        </div>
+
+        <!-- Countdown Progress Bar -->
+        <div class="quiz-timer-container">
+          <div id="quizTimerFill" class="quiz-timer-fill" style="width: 100%;"></div>
+        </div>
+
+        <!-- Question Card -->
+        <div class="bg-card p-5 rounded-2xl border border-amber-500/30 my-4 text-left">
+          <h4 id="quizQuestionText" class="text-base font-bold text-white leading-relaxed mb-4">
+            प्रतियोगिता प्रश्न लोड हो रहा है...
+          </h4>
+          <div id="quizOptionsContainer" class="quiz-options-grid">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+
+        <!-- Question Actions -->
+        <div class="flex items-center justify-between gap-3">
+          <button type="button" id="quizPrevBtn" onclick="prevQuizQuestion()" class="btn-outline-gold py-2 px-4 text-xs" disabled>
+            ← पिछला प्रश्न
+          </button>
+          <button type="button" id="quizNextBtn" onclick="nextQuizQuestion()" class="btn-gold py-2.5 px-6 text-sm">
+            <span>अगला प्रश्न →</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- STAGE 3: WINNER FULFILLMENT & DELIVERY PREFERENCE FORM -->
+      <div id="contestStageDelivery" style="display: none;">
+        <div class="text-center mb-4">
+          <div class="mb-2"><img src="/assets/icons/gift-3d.svg" class="icon-3d-xl mx-auto floating-3d" alt=""></div>
+          <h3 class="text-xl font-bold text-amber-200">विजेता पुरस्कार एवं डिलीवरी विवरण</h3>
+          <p class="text-xs text-amber-100/70 mt-1">
+            बधाई! आपका क्विज पूर्ण हो गया है। कृपया चुनें कि आप अपना ₹50,000 / ₹30,000 / ₹10,000 का ईनाम कैसे प्राप्त करना चाहते हैं:
+          </p>
+        </div>
+
+        <!-- FULFILLMENT CHOICE SELECTOR CARDS -->
+        <div class="fulfillment-selector-grid">
+          <!-- Choice 1: Licensed Store Digital Gift Voucher (Recommended) -->
+          <div id="choiceCardVoucher" class="fulfillment-choice-card active" onclick="setFulfillmentChoice('STORE_VOUCHER')">
+            <div class="recommended-pill flex items-center justify-center gap-1">
+              <img src="/assets/icons/star-3d.svg" class="icon-3d-xs" alt="">
+              <span>सर्वाधिक सुरक्षित (Safest)</span>
+            </div>
+            <div class="flex items-center gap-2 mb-1.5">
+              <img src="/assets/icons/voucher-3d.svg" class="icon-3d-lg" alt="">
+              <strong class="text-amber-200 text-sm">लाइसेंस्ड स्टोर डिजिटल वाउचर</strong>
+            </div>
+            <div class="text-[11px] text-amber-100/80 leading-relaxed">
+              <strong>कूरियर की परेशानी और जोखिम से बचें!</strong> आपके शहर की नजदीकी अधिकृत लाइसेंस्ड पटाखा दुकान का डिजिटल वाउचर आपके WhatsApp/SMS पर भेजा जाएगा। आप खुद जाकर अपनी पसंद के ताज़ा पटाखे कलेक्ट कर सकेंगे।
+            </div>
+            <div class="mt-2 text-[10px] text-emerald-400 font-semibold">✓ 100% Legal & Safe Self-Pickup</div>
+          </div>
+
+          <!-- Choice 2: Doorstep Wooden Crate Delivery -->
+          <div id="choiceCardDelivery" class="fulfillment-choice-card" onclick="setFulfillmentChoice('DOORSTEP_DELIVERY')">
+            <div class="flex items-center gap-2 mb-1.5">
+              <img src="/assets/icons/crate-3d.svg" class="icon-3d-lg" alt="">
+              <strong class="text-amber-200 text-sm">सुरक्षित होम डिलीवरी</strong>
+            </div>
+            <div class="text-[11px] text-amber-100/80 leading-relaxed">
+              प्रमाणित स्थानीय लाइसेंस्ड डिस्ट्रीब्यूटर द्वारा सीलबंद वुडन सेफ्टी क्रेट में सीधे आपके पते पर होम डिलीवरी की जाएगी।
+            </div>
+            <div class="mt-2 text-[10px] text-amber-300 font-semibold">✓ Reinforced Wooden Safety Crate</div>
+          </div>
+        </div>
+
+        <!-- Delivery / Contact Form -->
+        <form onsubmit="submitContestEntry(event)" class="space-y-3 text-left">
+          <input type="hidden" id="entryFulfillmentChoice" value="STORE_VOUCHER">
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="field-label" for="entryParticipantName">पूरा नाम (Full Name) *</label>
+              <input type="text" id="entryParticipantName" class="text-input" placeholder="उदा. राहुल शर्मा" required autocomplete="name">
+            </div>
+            <div>
+              <label class="field-label" for="entryPhone">मोबाइल नंबर (WhatsApp/SMS) *</label>
+              <input type="tel" id="entryPhone" class="text-input" placeholder="10 अंकों का मोबाइल नंबर" required pattern="[0-9]{10}" autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div>
+              <label class="field-label" for="entryCity">शहर / ज़िला (City) *</label>
+              <input type="text" id="entryCity" class="text-input" placeholder="उदा. लखनऊ" required>
+            </div>
+            <div>
+              <label class="field-label" for="entryState">राज्य (State) *</label>
+              <select id="entryState" class="text-input">
+                <option value="Uttar Pradesh">उत्तर प्रदेश (Uttar Pradesh)</option>
+                <option value="Delhi NCR">दिल्ली (Delhi NCR)</option>
+                <option value="Maharashtra">महाराष्ट्र (Maharashtra)</option>
+                <option value="Bihar">बिहार (Bihar)</option>
+                <option value="Madhya Pradesh">मध्य प्रदेश (Madhya Pradesh)</option>
+                <option value="Rajasthan">राजस्थान (Rajasthan)</option>
+                <option value="Gujarat">गुजरात (Gujarat)</option>
+                <option value="Haryana">हरियाणा (Haryana)</option>
+                <option value="Punjab">पंजाब (Punjab)</option>
+                <option value="Uttarakhand">उत्तराखंड (Uttarakhand)</option>
+                <option value="West Bengal">पश्चिम बंगाल (West Bengal)</option>
+                <option value="Other">अन्य (Other State)</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-label" for="entryPincode">पिन कोड (PIN Code) *</label>
+              <input type="text" id="entryPincode" class="text-input" placeholder="6 अंकों का पिन कोड" required pattern="[0-9]{6}">
+            </div>
+          </div>
+
+          <!-- Dynamic Field for Store Voucher Choice -->
+          <div id="voucherStoreNoteField">
+            <label class="field-label" for="entryStoreNote">पसंदीदा नजदीकी बाज़ार / क्षेत्र (Preferred Local Market / Area) - वैकल्पिक</label>
+            <input type="text" id="entryStoreNote" class="text-input" placeholder="उदा. हजरतगंज मार्केट / घंटाघर / मेन मार्केट (ताकि नजदीकी आउटलेट का वाउचर मिले)">
+          </div>
+
+          <!-- Dynamic Field for Doorstep Home Delivery -->
+          <div id="deliveryAddressField" style="display: none;">
+            <label class="field-label" for="entryAddress">डिलीवरी हेतु पूरा पता (Full Street Address) *</label>
+            <textarea id="entryAddress" class="text-input h-20" placeholder="मकान सं., बिल्डिंग, गली, लैंडमार्क"></textarea>
+          </div>
+
+          <div id="entrySubmitError" class="field-error-text text-center"></div>
+
+          <button type="submit" id="entrySubmitBtn" class="btn-gold w-full justify-center py-3.5 text-base mt-2 flex items-center gap-2">
+            <img src="/assets/icons/sparkles-3d.svg" class="btn-icon-3d" alt="">
+            <span>एंट्री सबमिट करें और गोल्डन पास प्राप्त करें (Get Entry Pass)</span>
+            <img src="/assets/icons/ticket-3d.svg" class="btn-icon-3d" alt="">
+          </button>
+        </form>
+      </div>
+
+      <!-- STAGE 4: OFFICIAL GOLD-FOIL ENTRY PASS RESULT -->
+      <div id="contestStagePass" style="display: none;">
+        <div class="text-center mb-4">
+          <div class="mb-2"><img src="/assets/icons/trophy-3d.svg" class="icon-3d-xl mx-auto floating-3d" alt=""></div>
+          <h3 class="text-xl font-bold text-amber-200">शुभ दीपावली ऑफिशियल एंट्री पास</h3>
+          <p class="text-xs text-amber-100/80 mt-1">
+            आपकी प्रविष्टि सफलतापूर्वक दर्ज हो चुकी है। यह आपका आधिकारिक डिजिटल पास है:
+          </p>
+        </div>
+
+        <div id="generatedPassCardContainer">
+          <!-- Populated dynamically with gold foil card -->
+        </div>
+
+        <div class="flex items-center justify-center gap-3 mt-4 flex-wrap">
+          <button type="button" onclick="window.print()" class="btn-outline-gold py-2.5 px-6 text-sm flex items-center gap-1.5">
+            <img src="/assets/icons/printer-3d.svg" class="icon-3d-xs" alt="">
+            <span>प्रिंट या सेव करें (Print Pass)</span>
+          </button>
+          <a href="#leaderboard" onclick="closeModal('contestModal')" class="btn-gold py-2.5 px-6 text-sm flex items-center gap-1.5">
+            <img src="/assets/icons/trophy-3d.svg" class="btn-icon-3d" alt="">
+            <span>लाइव लीडरबोर्ड देखें (View Ranks)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: PRIVACY NOTICE (DPDP 2023 COMPLIANT) -->
+  <!-- ========================================================================= -->
+  <div id="privacyModal" class="modal-layer" role="dialog" aria-modal="true" aria-labelledby="privacyTitle">
+    <div class="modal-dialog">
+      <button class="modal-dismiss" onclick="closeModal('privacyModal')" aria-label="बंद करें">&times;</button>
+      <h3 id="privacyTitle" class="text-xl font-bold text-amber-200 mb-3 flex items-center gap-2">
+        <img src="/assets/icons/lock-3d.svg" class="icon-3d" alt="">
+        <span>गोपनीयता नीति (Privacy Notice)</span>
+      </h3>
+      <div class="text-xs text-amber-100/80 space-y-3 leading-relaxed">
+        <p><strong>1. Data Minimization (डेटा न्यूनता):</strong> Preview & Demo mode के दौरान यह प्लेटफॉर्म उपयोगकर्ताओं से कोई भी फोन नंबर, आवासीय पता या पेमेंट/बैंकिंग डिटेल्स एकत्र नहीं करता है।</p>
+        <p><strong>2. Cookies & Local Storage:</strong> हम केवल इंटरफ़ेस सेटिंग्स (जैसे Animation status और Sound preferences) को आपके ब्राउज़र में लोकली सेव करते हैं।</p>
+        <p><strong>3. Data Purge Authority:</strong> व्यवस्थापक डैशबोर्ड में संपूर्ण सिमुलेशन डेटा को स्थायी रूप से मिटाने के लिए 'Data Purge' तंत्र उपलब्ध है।</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: TERMS OF USE -->
+  <!-- ========================================================================= -->
+  <div id="termsModal" class="modal-layer" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
+    <div class="modal-dialog">
+      <button class="modal-dismiss" onclick="closeModal('termsModal')" aria-label="बंद करें">&times;</button>
+      <h3 id="termsTitle" class="text-xl font-bold text-amber-200 mb-3 flex items-center gap-2">
+        <img src="/assets/icons/scroll-3d.svg" class="icon-3d" alt="">
+        <span>नियम एवं शर्तें (Terms of Use)</span>
+      </h3>
+      <div class="text-xs text-amber-100/80 space-y-3 leading-relaxed">
+        <p><strong>1. Game of Skill Legal Framework:</strong> शुभ दीपावली धमाका 2026 भारतीय संविधान के अनुच्छेद 19(1)(g) एवं सर्वोच्च न्यायालय के स्थापित विधिक सिद्धांतों के तहत एक कौशल-आधारित प्रतियोगिता है, जिसमें विजेताओं का चयन सांस्कृतिक ज्ञान एवं समय सटीकता के आधार पर निष्पक्ष रूप से होता है।</p>
+        <p><strong>2. Transparent Prize Distribution:</strong> कुल ₹32,00,000 का भव्य उपहार पूल 100 शीर्ष विजेताओं में पारदर्शी रूप से वितरित किया जाता है (शीर्ष 30 को ₹50,000, अगले 50 को ₹30,000, शेष 20 को ₹10,000 मूल्य के उपहार/वाउचर)।</p>
+        <p><strong>3. Safe & Statutory Fulfillment:</strong> सभी उपहार PESO लाइसेंस्ड डिस्ट्रीब्यूटर्स एवं डिजिटल स्टोर वाउचर्स के माध्यम से पूर्णतः वैधानिक सुरक्षा नियमों के अंतर्गत वितरित किए जाते हैं।</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: CONTACT & REGULATORY INQUIRIES -->
+  <!-- ========================================================================= -->
+  <div id="contactModal" class="modal-layer" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <div class="modal-dialog">
+      <button class="modal-dismiss" onclick="closeModal('contactModal')" aria-label="बंद करें">&times;</button>
+      <h3 id="contactTitle" class="text-xl font-bold text-amber-200 mb-3 flex items-center gap-2">
+        <img src="/assets/icons/mailbox-3d.svg" class="icon-3d" alt="">
+        <span>Customer Support & Contact</span>
+      </h3>
+      <div class="text-xs text-amber-100/80 space-y-3 leading-relaxed">
+        <p>प्रतियोगिता, टिकट बुकिंग, डिजिटल वाउचर अथवा परिणाम से संबंधित किसी भी सहायता या प्रश्न के लिए हमारी सहायता टीम से संपर्क करें:</p>
+        <div class="bg-black/50 p-4 rounded-xl border border-amber-500/30 space-y-2">
+          <p class="flex items-center gap-2"><img src="/assets/icons/mailbox-3d.svg" class="icon-3d-xs" alt=""> <span><strong>सहायता ईमेल:</strong> support@shubhdiwalidhamaka.in</span></p>
+          <p class="flex items-center gap-2"><img src="/assets/icons/shield-3d.svg" class="icon-3d-xs" alt=""> <span><strong>परियोजना स्थिति:</strong> Live Contest Operations (All India Active)</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: ADMIN PORTAL (SECURE PBKDF2 AUTHENTICATION) -->
+  <!-- ========================================================================= -->
+  <div id="adminModal" class="modal-layer" role="dialog" aria-modal="true" aria-labelledby="adminTitle">
+    <div class="modal-dialog max-w-3xl">
+      <button class="modal-dismiss" onclick="closeModal('adminModal')" aria-label="बंद करें">&times;</button>
+
+      <!-- Admin Login View -->
+      <div id="adminLoginContainer" class="text-center py-4">
+        <div class="mb-2"><img src="/assets/icons/lock-3d.svg" class="icon-3d-xl mx-auto" alt=""></div>
+        <h3 id="adminTitle" class="text-xl font-bold text-amber-200 mb-1">व्यवस्थापक लॉगिन (Admin Login)</h3>
+        <p class="text-xs text-amber-100/70 mb-4">
+          सुरक्षा हेतु PBKDF2 पासवर्ड प्रमाणीकरण एवं दर-नियंत्रण (Rate Limiting) सक्रिय है।
+        </p>
+
+        <!-- Security Shield Indicator -->
+        <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-2.5 mb-4 max-w-sm mx-auto text-left flex items-center gap-2">
+          <span class="text-xs">🔒</span>
+          <span class="text-[11px] text-amber-200"><strong>सुरक्षा एन्क्रिप्शन सक्रिय:</strong> PBKDF2 प्रमाणीकरण एवं 100,000 राउंड्स क्रिप्टोग्राफिक हैश द्वारा सुरक्षित।</span>
+        </div>
+
+        <form onsubmit="handleAdminLoginSubmit(event)" class="space-y-3 max-w-sm mx-auto text-left">
+          <div>
+            <label class="field-label" for="adminUsernameInput">यूज़रनेम (Username):</label>
+            <input type="text" id="adminUsernameInput" class="text-input" value="admin" required autocomplete="username">
+          </div>
+          <div>
+            <label class="field-label" for="adminPasswordInput">पासवर्ड (Password):</label>
+            <div class="relative">
+              <input type="password" id="adminPasswordInput" class="text-input pr-10" placeholder="सुरक्षित पासवर्ड दर्ज करें" required autocomplete="current-password">
+              <button type="button" onclick="togglePasswordVisibility('adminPasswordInput')" class="absolute right-3 top-2.5 text-amber-400 hover:text-amber-200 text-xs" title="पासवर्ड देखें / छिपाएं">
+                👁️
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 text-xs text-amber-200/80 my-1">
+            <input type="checkbox" id="rememberAdminDevice" checked class="rounded accent-amber-500">
+            <label for="rememberAdminDevice">इस डिवाइस पर लॉगिन याद रखें</label>
+          </div>
+
+          <div id="adminLoginError" class="field-error-text text-center"></div>
+
+          <button type="submit" id="adminLoginBtn" class="btn-gold w-full justify-center py-3 text-sm mt-2 font-bold shadow-lg">
+            सुरक्षित लॉगिन करें (Secure Login)
+          </button>
+        </form>
+      </div>
+
+      <!-- Admin Dashboard View -->
+      <div id="adminDashboardContainer" style="display: none;" class="text-left space-y-4">
+        <div class="flex items-center justify-between border-b border-amber-500/30 pb-3">
+          <div>
+            <h3 class="text-lg font-bold text-amber-200 flex items-center gap-2">
+              <img src="/assets/icons/blast-3d.svg" class="icon-3d" alt="">
+              <span>व्यवस्थापक नियंत्रण केंद्र (Admin Dashboard)</span>
+            </h3>
+            <span class="text-xs text-emerald-400 font-mono">● प्रमाणीकृत सत्र सक्रिय</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <a href="/admin" target="_blank" class="bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 px-3 py-1.5 rounded-full text-xs font-bold inline-flex items-center gap-1 transition">
+              <span>↗️ फुलस्क्रीन पोर्टल (/admin)</span>
+            </a>
+            <button onclick="handleAdminLogout()" class="control-btn text-xs text-rose-300">
+              लॉगआउट
+            </button>
+          </div>
+        </div>
+
+        <!-- Live Platform Status Box -->
+        <div class="bg-black/50 border border-emerald-500/40 p-3.5 rounded-xl text-xs">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="font-bold text-emerald-300 flex items-center gap-1.5">
+              <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>लाइव संचालन स्थिति (Live Platform Status):</span>
+            </span>
+            <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded font-mono font-bold">100% PRODUCTION LIVE</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2 text-amber-100/90 text-[11px]">
+            <div>भुगतान गेटवे (Payments): <strong class="text-emerald-400">Active (UPI / Razorpay)</strong></div>
+            <div>टिकट बुकिंग (Entries): <strong class="text-emerald-400">Active (Multi-Qty ₹49)</strong></div>
+            <div>लाइव रैंकिंग (Leaderboard): <strong class="text-emerald-400">Active (Top 100 Live)</strong></div>
+            <div>पुरस्कार प्रेषण (Fulfillment): <strong class="text-emerald-400">Voucher / Safety Crate</strong></div>
+          </div>
+        </div>
+
+        <!-- Operational Counters (4 Metrics) -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
+          <div class="bg-black/40 p-2.5 rounded-xl border border-emerald-500/40">
+            <span class="text-[10px] text-emerald-200/80 block">कुल प्रतिभागी (Users)</span>
+            <strong id="admContestCount" class="text-lg text-emerald-300 font-mono">0</strong>
+          </div>
+          <div class="bg-black/40 p-2.5 rounded-xl border border-amber-500/40">
+            <span class="text-[10px] text-amber-200/80 block">कुल टिकट (Tickets)</span>
+            <strong id="admTicketsCount" class="text-lg text-amber-300 font-mono">0</strong>
+          </div>
+          <div class="bg-black/40 p-2.5 rounded-xl border border-amber-500/40">
+            <span class="text-[10px] text-amber-200/80 block">कुल राजस्व (Revenue)</span>
+            <strong id="admRevenueCount" class="text-lg text-white font-mono">₹0</strong>
+          </div>
+          <div class="bg-black/40 p-2.5 rounded-xl border border-amber-500/30">
+            <span class="text-[10px] text-amber-100/70 block">ईनाम पूल (100 Winners)</span>
+            <strong class="text-lg text-amber-300 font-serif">₹32L</strong>
+          </div>
+        </div>
+
+        <!-- Store Voucher vs Delivery Stats -->
+        <div class="flex items-center justify-between bg-black/40 px-3 py-2 rounded-xl border border-amber-500/20 text-xs">
+          <span class="text-amber-200 text-[11px]">विजेता प्राथमिकता:</span>
+          <div class="flex gap-3 text-[11px]">
+            <span class="text-emerald-300 font-mono flex items-center gap-1"><img src="/assets/icons/voucher-3d.svg" class="icon-3d-xs" alt="">स्टोर वाउचर: <strong id="admVoucherCount">0</strong></span>
+            <span class="text-amber-300 font-mono flex items-center gap-1"><img src="/assets/icons/crate-3d.svg" class="icon-3d-xs" alt="">होम डिलीवरी: <strong id="admDeliveryCount">0</strong></span>
+          </div>
+        </div>
+
+        <!-- Winner Decision Quick Engine -->
+        <div class="bg-gradient-to-r from-amber-950/70 via-black/80 to-rose-950/70 border border-amber-400/50 p-3 rounded-xl space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-amber-200 flex items-center gap-1.5">
+              <span class="text-sm">🎲</span>
+              <span>विजेता चयन (Decide Winners):</span>
+            </span>
+            <span id="modalDrawModeBadge" class="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded font-mono font-bold">RANDOM DRAW READY</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <button onclick="executeWinnerDecision('random')" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-black font-black py-2 px-3 rounded-lg text-xs flex items-center justify-center gap-1.5 shadow transition">
+              <span>🎲 रैंडम पिक (Random)</span>
+            </button>
+            <button onclick="openSingleWinnerSpinnerModal()" class="bg-gradient-to-r from-rose-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 text-white font-bold py-2 px-3 rounded-lg text-xs flex items-center justify-center gap-1.5 shadow transition">
+              <span>🎰 1 लकी स्पिनर</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Admin Actions -->
+        <div class="space-y-2">
+          <button onclick="exportWinnerDispatchCsv()" class="btn-gold py-2.5 px-4 text-xs w-full justify-center shadow-lg flex items-center gap-2">
+            <img src="/assets/icons/download-3d.svg" class="icon-3d-xs" alt="">
+            <span>Download Winner Dispatch & Store Voucher CSV (एक्सेल डाउनलोड)</span>
+          </button>
+          
+          <div class="flex gap-2">
+            <button onclick="loadAdminContestEntries()" class="btn-outline-gold py-1.5 px-3 text-xs w-full justify-center flex items-center gap-1.5">
+              <img src="/assets/icons/refresh-3d.svg" class="icon-3d-xs" alt="">
+              <span>रिफ्रेश डेटा (Refresh)</span>
+            </button>
+            <button onclick="triggerDataPurge()" class="bg-rose-900/50 hover:bg-rose-900 text-rose-200 border border-rose-500/40 py-1.5 px-3 rounded-full text-xs font-bold transition w-full flex items-center justify-center gap-1.5">
+              <img src="/assets/icons/trash-3d.svg" class="icon-3d-xs" alt="">
+              <span>सिमुलेशन डेटा रीसेट</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Live Registered Participants List Preview with Search -->
+        <div class="border-t border-amber-500/20 pt-3">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-amber-200 flex items-center gap-1.5">
+              <img src="/assets/icons/users-3d.svg" class="icon-3d-xs" alt="">
+              <span>हालिया प्रतिभागी एवं टिकट विवरण:</span>
+            </span>
+            <span class="text-[10px] text-amber-300 font-mono" id="admEntriesSubtitle">Loading...</span>
+          </div>
+          <div id="admEntriesTableContainer" class="max-h-72 overflow-y-auto bg-black/40 rounded-xl border border-amber-500/20 p-2 text-xs">
+            <div class="text-center py-4 text-amber-100/60 text-[11px]">प्रतिभागी लोड हो रहे हैं...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- SINGLE WINNER REEL SPINNER MODAL                                          -->
+  <!-- ========================================================================= -->
+  <div id="singleWinnerModal" class="modal-layer" role="dialog" aria-modal="true" style="display: none;">
+    <div class="modal-dialog max-w-lg text-center bg-gradient-to-b from-stone-950 via-festiveMaroon to-black border-2 border-amber-400 p-6 rounded-3xl shadow-2xl relative">
+      <button class="modal-dismiss" onclick="closeSingleWinnerSpinnerModal()" aria-label="बंद करें">&times;</button>
+      
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-bold mb-3">
+        <span class="text-base">🎰</span>
+        <span>दीपावली लकी व्हील स्पिनर (Live Lucky Draw Reel)</span>
+      </div>
+
+      <h3 class="text-xl font-black text-amber-200 mb-1">1 लकी विजेता चुनें</h3>
+      <p class="text-xs text-amber-100/70 mb-5">
+        कंप्यूटराइज्ड रैंडम सेलेक्शन द्वारा लाइव लकी विनर का चयन करें
+      </p>
+
+      <!-- Slot Machine Drum Visual -->
+      <div class="bg-black/80 border-2 border-amber-500/60 rounded-2xl p-5 mb-5 shadow-inner relative overflow-hidden">
+        <div class="text-[11px] uppercase tracking-widest text-amber-300 font-bold mb-2">✦ लकी टिकट नंबर ✦</div>
+        
+        <!-- Spinning Reel Item -->
+        <div class="min-h-[70px] flex flex-col justify-center items-center py-2 bg-gradient-to-r from-amber-500/10 via-amber-500/25 to-amber-500/10 rounded-xl border border-amber-400/40">
+          <div id="reelWinnerName" class="text-2xl font-black text-amber-300 font-serif">प्रतीक्षारत...</div>
+          <div id="reelWinnerTicket" class="font-mono text-sm text-emerald-400 font-bold mt-1">LUCKY-PASS-XXXXXX</div>
+          <div id="reelWinnerCity" class="text-xs text-amber-100/70 mt-0.5">स्पिन बटन दबाएं</div>
+        </div>
+      </div>
+
+      <!-- Action Button -->
+      <div class="flex gap-2 justify-center mb-4">
+        <button id="btnStartSpin" onclick="spinSingleLuckyWinner()" class="btn-gold py-3 px-6 text-sm font-black flex items-center justify-center gap-2 shadow-xl hover:scale-105 transition-all w-full">
+          <span>🎰 स्पिन शुरू करें (Spin Wheel)</span>
+        </button>
+      </div>
+
+      <!-- Result Card (Revealed on Stop) -->
+      <div id="spinResultCard" class="hidden bg-gradient-to-b from-amber-500/20 to-black/70 border border-amber-400/60 rounded-2xl p-4 text-left space-y-2 text-xs shadow-lg">
+        <div class="flex items-center justify-between border-b border-amber-400/30 pb-2">
+          <span class="text-emerald-400 font-bold flex items-center gap-1">
+            <span>🎉</span> <span>लकी ड्रॉ विजेता घोषित!</span>
+          </span>
+          <span class="bg-amber-500 text-black font-mono font-bold text-[10px] px-2 py-0.5 rounded">
+            Tier 1 • ₹50,000
+          </span>
+        </div>
+        <div class="grid grid-cols-2 gap-2 pt-1 text-[11px]">
+          <div>नाम: <strong id="spinResName" class="text-white block font-bold text-xs">—</strong></div>
+          <div>मोबाइल: <strong id="spinResPhone" class="text-amber-300 font-mono block">—</strong></div>
+          <div>स्थान: <strong id="spinResCity" class="text-amber-100/80 block">—</strong></div>
+          <div>टिकट पास: <strong id="spinResPass" class="text-emerald-300 font-mono block font-bold">—</strong></div>
+        </div>
+        <div class="pt-2 border-t border-amber-500/20 text-amber-200/90 text-[11px]">
+          पुरस्कार विकल्प: <strong id="spinResFulfillment" class="text-amber-300 font-semibold">—</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>

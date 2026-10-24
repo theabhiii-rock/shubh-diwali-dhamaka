@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="calcBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d0a14"/>
+      <stop offset="50%" stop-color="#140207"/>
+      <stop offset="100%" stop-color="#050002"/>
+    </linearGradient>
+    <linearGradient id="keyGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shadow -->
+  <rect x="28" y="24" width="64" height="84" rx="12" fill="#000" opacity="0.6" filter="blur(6px)"/>
+
+  <!-- Calculator Chassis -->
+  <rect x="28" y="18" width="64" height="84" rx="12" fill="url(#calcBody)" stroke="#d4af37" stroke-width="2.5" filter="drop-shadow(0 6px 10px rgba(0,0,0,0.5))"/>
+
+  <!-- LCD Screen -->
+  <rect x="36" y="26" width="48" height="18" rx="4" fill="#000000" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="78" y="40" font-family="'Courier New', monospace" font-size="12" font-weight="900" fill="#4ade80" text-anchor="end">₹32,00,000</text>
+
+  <!-- Keypad Buttons Grid (3 x 4) -->
+  <!-- Row 1 -->
+  <rect x="36" y="50" width="12" height="10" rx="3" fill="url(#keyGold)"/>
+  <rect x="54" y="50" width="12" height="10" rx="3" fill="url(#keyGold)"/>
+  <rect x="72" y="50" width="12" height="10" rx="3" fill="#ea580c"/>
+  <!-- Row 2 -->
+  <rect x="36" y="64" width="12" height="10" rx="3" fill="url(#keyGold)"/>
+  <rect x="54" y="64" width="12" height="10" rx="3" fill="url(#keyGold)"/>
+  <rect x="72" y="64" width="12" height="10" rx="3" fill="#ea580c"/>
+  <!-- Row 3 -->
+  <rect x="36" y="78" width="12" height="10" rx="3" fill="url(#keyGold)"/>
+  <rect x="54" y="78" width="12" height="10" rx="3" fill="url(#keyGold)"/>
+  <rect x="72" y="78" width="12" height="20" rx="3" fill="#16a34a"/>
+  <!-- Row 4 -->
+  <rect x="36" y="90" width="30" height="8" rx="3" fill="url(#keyGold)"/>
+</svg>

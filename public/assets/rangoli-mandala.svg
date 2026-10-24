@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="none" aria-label="Authentic Indian Floral Rangoli Mandala">
+  <defs>
+    <!-- Radiant Gold Linear Gradient -->
+    <linearGradient id="goldM" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9C4"/>
+      <stop offset="30%" stop-color="#FFD700"/>
+      <stop offset="70%" stop-color="#FFA000"/>
+      <stop offset="100%" stop-color="#FF6F00"/>
+    </linearGradient>
+
+    <!-- Crimson Rose Radial Gradient -->
+    <radialGradient id="crimsonR" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E91E63" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#9C27B0" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#311B92" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Warm Golden Aura Radial Gradient -->
+    <radialGradient id="goldAura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#FF6F00" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#BF360C" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Single Lotus Petal Template -->
+    <g id="mandala-petal">
+      <path d="M250,90 C235,130 235,170 250,210 C265,170 265,130 250,90 Z" fill="url(#goldM)" opacity="0.85"/>
+      <path d="M250,90 L250,210" stroke="#FFF59D" stroke-width="1.2" opacity="0.9"/>
+      <circle cx="250" cy="85" r="4" fill="#FFD700"/>
+    </g>
+
+    <!-- Outer Decorative Diya Leaf -->
+    <g id="mandala-outer-leaf">
+      <path d="M250,25 C230,55 240,75 250,85 C260,75 270,55 250,25 Z" fill="#FF9800" stroke="#FFE082" stroke-width="1.5"/>
+      <circle cx="250" cy="20" r="3.5" fill="#FFE082"/>
+    </g>
+  </defs>
+
+  <!-- Ambient Golden Center Glow -->
+  <circle cx="250" cy="250" r="220" fill="url(#goldAura)"/>
+  <circle cx="250" cy="250" r="140" fill="url(#crimsonR)"/>
+
+  <!-- Outer Ring with Dots -->
+  <circle cx="250" cy="250" r="235" stroke="url(#goldM)" stroke-width="2.5" stroke-dasharray="4,8" opacity="0.7"/>
+  <circle cx="250" cy="250" r="225" stroke="url(#goldM)" stroke-width="1.5" opacity="0.85"/>
+  <circle cx="250" cy="250" r="195" stroke="url(#goldM)" stroke-width="1.2" stroke-dasharray="2,5" opacity="0.6"/>
+
+  <!-- 16 Outer Leaves -->
+  <g>
+    <use href="#mandala-outer-leaf"/>
+    <use href="#mandala-outer-leaf" transform="rotate(22.5 250 250)"/>
+    <use href="#mandala-outer-leaf" transform="rotate(45 250 250)"/>
+    <use href="#mandala-outer-leaf" transform="rotate(67.5 250 250)"/>
+    <use href="#mandala-outer-leaf" transform="rotate(90 250 250)"/>
+    <use href="#mandala-outer-leaf" transform="rotate(112.5 250 250)"/>
+    <use href="#mandala-outer-leaf" transform="rotate(135 250 250)"/>
+    <use href="#mandala-outer-leaf" transform="rotate(157.5 250 250)"/>
+    <use href="#mandala-outer-leaf" transform="rotate(180 250 250)"/>
+    <use href="#mandala-outer-leaf" transform="rotate(202.5 250 250)"/>
+    <use href="#mandala-outer-leaf" transform="rotate(225 250 250)"/>
+    <use href="#mandala-outer-leaf" transform="rotate(247.5 250 250)"/>
+    <use href="#mandala-outer-leaf" transform="rotate(270 250 250)"/>
+    <use href="#mandala-outer-leaf" transform="rotate(292.5 250 250)"/>
+    <use href="#mandala-outer-leaf" transform="rotate(315 250 250)"/>
+    <use href="#mandala-outer-leaf" transform="rotate(337.5 250 250)"/>
+  </g>
+
+  <!-- 12 Mid Lotus Petals -->
+  <g>
+    <use href="#mandala-petal"/>
+    <use href="#mandala-petal" transform="rotate(30 250 250)"/>
+    <use href="#mandala-petal" transform="rotate(60 250 250)"/>
+    <use href="#mandala-petal" transform="rotate(90 250 250)"/>
+    <use href="#mandala-petal" transform="rotate(120 250 250)"/>
+    <use href="#mandala-petal" transform="rotate(150 250 250)"/>
+    <use href="#mandala-petal" transform="rotate(180 250 250)"/>
+    <use href="#mandala-petal" transform="rotate(210 250 250)"/>
+    <use href="#mandala-petal" transform="rotate(240 250 250)"/>
+    <use href="#mandala-petal" transform="rotate(270 250 250)"/>
+    <use href="#mandala-petal" transform="rotate(300 250 250)"/>
+    <use href="#mandala-petal" transform="rotate(330 250 250)"/>
+  </g>
+
+  <!-- Concentric Golden Circles -->
+  <circle cx="250" cy="250" r="110" stroke="url(#goldM)" stroke-width="2" opacity="0.9"/>
+  <circle cx="250" cy="250" r="95" stroke="#FFE082" stroke-width="1.2" stroke-dasharray="3,3"/>
+  <circle cx="250" cy="250" r="70" stroke="url(#goldM)" stroke-width="2.5"/>
+
+  <!-- Inner 8-Star Bloom -->
+  <g stroke="url(#goldM)" stroke-width="1.8" fill="rgba(255, 215, 0, 0.2)">
+    <polygon points="250,185 268,232 315,250 268,268 250,315 232,268 185,250 232,232"/>
+    <polygon points="250,185 268,232 315,250 268,268 250,315 232,268 185,250 232,232" transform="rotate(45 250 250)"/>
+  </g>
+
+  <!-- Central Core Golden Diya Star -->
+  <circle cx="250" cy="250" r="28" fill="url(#goldM)"/>
+  <circle cx="250" cy="250" r="18" fill="#D84315"/>
+  <circle cx="250" cy="250" r="8" fill="#FFF9C4"/>
+</svg>

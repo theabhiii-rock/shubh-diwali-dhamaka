@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <linearGradient id="palaceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3D061E" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#240412" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#140209" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="windowGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FF8F00" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="domeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD54F" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#FF8F00" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#B71C1C" stop-opacity="0.2"/>
+    </linearGradient>
+    <radialGradient id="lanternGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF9C4" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#FFB300" stop-opacity="0.6"/>
+      <stop offset="80%" stop-color="#E65100" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#FF8F00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Left Palace Heritage Cluster -->
+  <g id="left-palace" opacity="0.65">
+    <!-- Tall Tower 1 -->
+    <rect x="20" y="220" width="70" height="380" fill="url(#palaceGrad)"/>
+    <path d="M 20 220 Q 55 160 90 220 Z" fill="url(#domeGold)"/>
+    <line x1="55" y1="160" x2="55" y2="140" stroke="#FFD54F" stroke-width="2"/>
+    <circle cx="55" cy="138" r="3" fill="#FFD54F"/>
+    <!-- Windows -->
+    <path d="M 40 260 Q 55 245 70 260 L 70 290 L 40 290 Z" fill="url(#windowGlow)"/>
+    <path d="M 40 320 Q 55 305 70 320 L 70 350 L 40 350 Z" fill="url(#windowGlow)"/>
+    <path d="M 40 380 Q 55 365 70 380 L 70 410 L 40 410 Z" fill="url(#windowGlow)"/>
+
+    <!-- Pavilion / Haveli Facade -->
+    <rect x="80" y="280" width="130" height="320" fill="url(#palaceGrad)"/>
+    <path d="M 80 280 Q 145 210 210 280 Z" fill="url(#domeGold)"/>
+    <line x1="145" y1="210" x2="145" y2="190" stroke="#FFD54F" stroke-width="2"/>
+    <circle cx="145" cy="188" r="4" fill="#FFD54F"/>
+    <!-- Grand Arch Window -->
+    <path d="M 115 320 Q 145 290 175 320 L 175 380 L 115 380 Z" fill="url(#windowGlow)"/>
+    <path d="M 125 410 Q 145 395 165 410 L 165 450 L 125 450 Z" fill="url(#windowGlow)"/>
+
+    <!-- Chhatri / Dome 3 -->
+    <rect x="190" y="340" width="80" height="260" fill="url(#palaceGrad)"/>
+    <path d="M 190 340 Q 230 290 270 340 Z" fill="url(#domeGold)"/>
+    <line x1="230" y1="290" x2="230" y2="275" stroke="#FFD54F" stroke-width="2"/>
+    <circle cx="230" cy="273" r="3" fill="#FFD54F"/>
+    <path d="M 210 370 Q 230 355 250 370 L 250 420 L 210 420 Z" fill="url(#windowGlow)"/>
+  </g>
+
+  <!-- Right Palace Heritage Cluster (Mirrored with Variation) -->
+  <g id="right-palace" opacity="0.65">
+    <!-- Right Chhatri -->
+    <rect x="1170" y="340" width="80" height="260" fill="url(#palaceGrad)"/>
+    <path d="M 1170 340 Q 1210 290 1250 340 Z" fill="url(#domeGold)"/>
+    <line x1="1210" y1="290" x2="1210" y2="275" stroke="#FFD54F" stroke-width="2"/>
+    <circle cx="1210" cy="273" r="3" fill="#FFD54F"/>
+    <path d="M 1190 370 Q 1210 355 1230 370 L 1230 420 L 1190 420 Z" fill="url(#windowGlow)"/>
+
+    <!-- Right Grand Pavilion -->
+    <rect x="1230" y="280" width="130" height="320" fill="url(#palaceGrad)"/>
+    <path d="M 1230 280 Q 1295 210 1360 280 Z" fill="url(#domeGold)"/>
+    <line x1="1295" y1="210" x2="1295" y2="190" stroke="#FFD54F" stroke-width="2"/>
+    <circle cx="1295" cy="188" r="4" fill="#FFD54F"/>
+    <path d="M 1265 320 Q 1295 290 1325 320 L 1325 380 L 1265 380 Z" fill="url(#windowGlow)"/>
+    <path d="M 1275 410 Q 1295 395 1315 410 L 1315 450 L 1275 450 Z" fill="url(#windowGlow)"/>
+
+    <!-- Right Tower -->
+    <rect x="1350" y="220" width="70" height="380" fill="url(#palaceGrad)"/>
+    <path d="M 1350 220 Q 1385 160 1420 220 Z" fill="url(#domeGold)"/>
+    <line x1="1385" y1="160" x2="1385" y2="140" stroke="#FFD54F" stroke-width="2"/>
+    <circle cx="1385" cy="138" r="3" fill="#FFD54F"/>
+    <path d="M 1370 260 Q 1385 245 1400 260 L 1400 290 L 1370 290 Z" fill="url(#windowGlow)"/>
+    <path d="M 1370 320 Q 1385 305 1400 320 L 1400 350 L 1370 350 Z" fill="url(#windowGlow)"/>
+    <path d="M 1370 380 Q 1385 365 1400 380 L 1400 410 L 1370 410 Z" fill="url(#windowGlow)"/>
+  </g>
+
+  <!-- Hanging Akash Kandil (Lanterns) -->
+  <!-- Left Lantern -->
+  <g id="kandil-left" transform="translate(60, 40)">
+    <line x1="30" y1="0" x2="30" y2="45" stroke="#FFE082" stroke-width="1.5"/>
+    <circle cx="30" cy="70" r="35" fill="url(#lanternGlow)"/>
+    <polygon points="30,45 52,65 30,85 8,65" fill="#E65100" stroke="#FFD54F" stroke-width="1.5"/>
+    <polygon points="30,52 45,65 30,78 15,65" fill="#FFB300"/>
+    <circle cx="30" cy="65" r="5" fill="#FFFDE7"/>
+    <!-- Tassels / Streamers -->
+    <path d="M 18 85 L 15 130 M 24 85 L 22 135 M 30 85 L 30 140 M 36 85 L 38 135 M 42 85 L 45 130" stroke="#FFB300" stroke-width="1.5"/>
+  </g>
+
+  <!-- Right Lantern -->
+  <g id="kandil-right" transform="translate(1320, 40)">
+    <line x1="30" y1="0" x2="30" y2="45" stroke="#FFE082" stroke-width="1.5"/>
+    <circle cx="30" cy="70" r="35" fill="url(#lanternGlow)"/>
+    <polygon points="30,45 52,65 30,85 8,65" fill="#E65100" stroke="#FFD54F" stroke-width="1.5"/>
+    <polygon points="30,52 45,65 30,78 15,65" fill="#FFB300"/>
+    <circle cx="30" cy="65" r="5" fill="#FFFDE7"/>
+    <!-- Tassels / Streamers -->
+    <path d="M 18 85 L 15 130 M 24 85 L 22 135 M 30 85 L 30 140 M 36 85 L 38 135 M 42 85 L 45 130" stroke="#FFB300" stroke-width="1.5"/>
+  </g>
+</svg>
