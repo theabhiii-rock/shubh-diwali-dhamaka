@@ -15,20 +15,20 @@
   <meta property="og:url" content="http://localhost:8080/how-it-works">
   <meta property="og:title" content="कैसे भाग लें व टिकट सिम्युलेटर | शुभ दीपावली धमाका 2026">
   <meta property="og:description" content="सरल 4 चरणों में भाग लें • टिकट कैलकुलेटर • गोल्डन पास सिम्युलेटर • 100 विजेता • ₹32 लाख उपहार पूल">
-  <meta property="og:image" content="/assets/og-image.svg">
+  <meta property="og:image" content="assets/og-image.svg">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="कैसे भाग लें व टिकट सिम्युलेटर | शुभ दीपावली धमाका 2026">
   <meta name="twitter:description" content="सरल 4 चरणों में भाग लें • टिकट कैलकुलेटर • गोल्डन पास सिम्युलेटर">
-  <meta name="twitter:image" content="/assets/og-image.svg">
+  <meta name="twitter:image" content="assets/og-image.svg">
 
   <!-- Razorpay Standard Checkout SDK -->
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-  <link rel="apple-touch-icon" href="/assets/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
 
   <!-- Google Fonts: Cinzel, Tiro Devanagari Hindi, Noto Sans Devanagari, Outfit, Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,7 +56,7 @@
   </script>
 
   <!-- Production Festive Stylesheet -->
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -71,20 +71,20 @@
     <span>
       शुभ दीपावली महा धमाका 2026 — <strong>राष्ट्रीय सांस्कृतिक क्विज़ व ₹32 लाख का भव्य पटाखा उपहार पूल</strong>। प्रवेश खुला है!
     </span>
-    <a href="/prizes" class="announcement-link">ईनाम देखें &rarr;</a>
+    <a href="prizes.html" class="announcement-link">ईनाम देखें &rarr;</a>
   </div>
 
   <!-- Festive Marigold Toran Garland with Hanging Brass Diyas -->
   <div class="genda-toran-container" aria-hidden="true">
-    <img src="/assets/marigold-toran.svg" alt="गेंदा फूल तोरण व लटकते दीये" class="genda-toran-img">
+    <img src="assets/marigold-toran.svg" alt="गेंदा फूल तोरण व लटकते दीये" class="genda-toran-img">
   </div>
 
   <!-- Header Navigation Bar -->
   <header class="header-bar" role="banner">
     <div class="header-container container">
       <!-- Brand Logo -->
-      <a href="/" class="brand-link" aria-label="शुभ दीपावली धमाका होम">
-        <img src="/assets/logo-diya.svg" alt="शुभ दीपावली दीया" class="brand-emblem">
+      <a href="index.html" class="brand-link" aria-label="शुभ दीपावली धमाका होम">
+        <img src="assets/logo-diya.svg" alt="शुभ दीपावली दीया" class="brand-emblem">
         <div class="brand-title-group">
           <span class="brand-title-hindi">शुभ दीपावली धमाका</span>
           <span class="brand-title-sub">Mega Skill Contest 2026</span>
@@ -93,29 +93,29 @@
 
       <!-- Desktop Nav -->
       <nav class="nav-menu" role="navigation" aria-label="मुख्य नेविगेशन">
-        <a href="/" class="nav-item">होम (Home)</a>
-        <a href="/prizes" class="nav-item">इनाम (Prizes)</a>
-        <a href="/how-it-works" class="nav-item active">कैसे भाग लें (How It Works)</a>
-        <a href="/faq" class="nav-item">नियम व FAQ (FAQ & Legal)</a>
+        <a href="index.html" class="nav-item">होम (Home)</a>
+        <a href="prizes.html" class="nav-item">इनाम (Prizes)</a>
+        <a href="how-it-works.html" class="nav-item active">कैसे भाग लें (How It Works)</a>
+        <a href="faq.html" class="nav-item">नियम व FAQ (FAQ & Legal)</a>
       </nav>
 
       <!-- Action & Accessibility Controls -->
       <div class="controls-group">
         <!-- Direct Play Contest Button -->
         <button onclick="startContestFlow()" class="btn-gold py-2 px-4 text-xs font-bold sm:inline-flex hidden items-center gap-1.5">
-          <img src="/assets/icons/cart-3d.svg" class="btn-icon-3d" alt="">
+          <img src="assets/icons/cart-3d.svg" class="btn-icon-3d" alt="">
           <span>टिकट बुक करें (₹49)</span>
         </button>
 
         <!-- Fireworks Animation Toggle -->
         <button id="toggleMotionBtn" class="control-btn" onclick="toggleFireworksMotion()" title="आतिशबाजी एनीमेशन रोकें / चालू करें" aria-pressed="false">
-          <span id="motionIcon"><img src="/assets/icons/fireworks-3d.svg" class="icon-3d" alt=""></span>
+          <span id="motionIcon"><img src="assets/icons/fireworks-3d.svg" class="icon-3d" alt=""></span>
           <span class="hidden sm:inline" id="motionText">Animation ON</span>
         </button>
 
         <!-- Sound Toggle -->
         <button id="toggleAudioBtn" class="control-btn" onclick="toggleAudioSynthesis()" title="उत्सव ध्वनि प्रभाव चालू या बंद करें" aria-pressed="false">
-          <span id="audioIcon"><img src="/assets/icons/sound-off-3d.svg" class="icon-3d" alt=""></span>
+          <span id="audioIcon"><img src="assets/icons/sound-off-3d.svg" class="icon-3d" alt=""></span>
           <span class="hidden sm:inline" id="audioText">Sound Mute</span>
         </button>
       </div>
@@ -132,9 +132,9 @@
       <div class="section-header text-center max-w-3xl mx-auto mb-12">
         <span class="section-kicker">Simple 4-Step Process</span>
         <h1 class="section-title text-3xl sm:text-4xl md:text-5xl font-black mb-4 flex items-center justify-center gap-2">
-          <img src="/assets/icons/sparkles-3d.svg" class="icon-3d" alt="">
+          <img src="assets/icons/sparkles-3d.svg" class="icon-3d" alt="">
           <span>भाग लेना है बहुत आसान</span>
-          <img src="/assets/icons/sparkles-3d.svg" class="icon-3d" alt="">
+          <img src="assets/icons/sparkles-3d.svg" class="icon-3d" alt="">
         </h1>
         <p class="section-subtitle text-sm sm:text-base text-amber-100/90 leading-relaxed">
           सरल 4 चरणों में इस पावन पर्व पर अपना लकी टिकट प्राप्त करें और ₹32 लाख के 100 पुरस्कारों की दौड़ में शामिल हों।
@@ -171,7 +171,7 @@
         <!-- Bento Card 1: Ticket Calculator -->
         <div class="bento-card" id="tickets">
           <h2 class="bento-card-title text-lg flex items-center gap-2">
-            <img src="/assets/icons/calculator-3d.svg" class="icon-3d" alt="">
+            <img src="assets/icons/calculator-3d.svg" class="icon-3d" alt="">
             <span>टिकट कैलकुलेटर (Ticket Calculator)</span>
           </h2>
           <p class="text-xs text-amber-100/80 mb-3 leading-relaxed">
@@ -195,7 +195,7 @@
             <button type="button" class="sim-qty-btn text-xs py-2" onclick="setBookingQty(3, this)">3 (₹147)</button>
             <button type="button" class="sim-qty-btn text-xs py-2 border-amber-400 bg-amber-500/20 text-white font-bold flex items-center justify-center gap-1" onclick="setBookingQty(5, this)">
               <span>5 (₹245)</span>
-              <img src="/assets/icons/star-3d.svg" class="icon-3d-xs" alt="">
+              <img src="assets/icons/star-3d.svg" class="icon-3d-xs" alt="">
             </button>
             <button type="button" class="sim-qty-btn text-xs py-2" onclick="setBookingQty(10, this)">10 (₹490)</button>
             <button type="button" class="sim-qty-btn text-xs py-2" onclick="setBookingQty(20, this)">20 (₹980)</button>
@@ -216,7 +216,7 @@
           </div>
 
           <button type="button" id="bookTicketsCtaBtn" onclick="startContestFlowWithQty()" class="btn-gold py-3 px-6 text-sm w-full justify-center shadow-xl flex items-center gap-2">
-            <img src="/assets/icons/cart-3d.svg" class="btn-icon-3d" alt="">
+            <img src="assets/icons/cart-3d.svg" class="btn-icon-3d" alt="">
             <span>अभी टिकट बुक करें व खेलें</span>
             <span class="btn-arrow">&rarr;</span>
           </button>
@@ -225,7 +225,7 @@
         <!-- Bento Card 2: Demo Simulator / Live Pass Preview -->
         <div class="bento-card">
           <h2 class="bento-card-title text-lg flex items-center gap-2">
-            <img src="/assets/icons/ticket-3d.svg" class="icon-3d" alt="">
+            <img src="assets/icons/ticket-3d.svg" class="icon-3d" alt="">
             <span>डिजिटल पास पूर्वावलोकन (Pass Simulator)</span>
           </h2>
           <p class="text-xs text-amber-100/80 mb-3 leading-relaxed">
@@ -241,7 +241,7 @@
             <div class="ticket-header-line">
               <div>
                 <span class="text-[10px] uppercase tracking-wider text-amber-300 font-extrabold flex items-center gap-1.5">
-                  <img src="/assets/icons/diya-3d.svg" class="icon-3d-xs" alt=""><span>शुभ दीपावली धमाका 2026</span>
+                  <img src="assets/icons/diya-3d.svg" class="icon-3d-xs" alt=""><span>शुभ दीपावली धमाका 2026</span>
                 </span>
                 <div class="text-xs text-white font-bold mt-0.5">आधिकारिक डिजिटल एंट्री पास</div>
               </div>
@@ -263,7 +263,7 @@
 
           <div class="mt-4">
             <button type="button" id="generateDemoBtn" onclick="generateSimulatedTickets()" class="btn-outline-gold py-2.5 px-4 text-xs w-full justify-center flex items-center gap-1.5">
-              <img src="/assets/icons/refresh-3d.svg" class="icon-3d-xs" alt="">
+              <img src="assets/icons/refresh-3d.svg" class="icon-3d-xs" alt="">
               <span>नया डेमो टिकट जनरेट करें (Simulate Now)</span>
             </button>
           </div>
@@ -275,7 +275,7 @@
         <!-- Bento Card 3: Accepted Payment Methods & Security -->
         <div class="bento-card">
           <h2 class="bento-card-title text-lg flex items-center gap-2">
-            <img src="/assets/icons/card-3d.svg" class="icon-3d" alt="">
+            <img src="assets/icons/card-3d.svg" class="icon-3d" alt="">
             <span>स्वीकृत भुगतान विकल्प (Payment Modes)</span>
           </h2>
           <p class="text-xs text-amber-100/80 mb-2 leading-relaxed">
@@ -295,26 +295,26 @@
           <div class="bg-black/40 border border-amber-500/20 rounded-xl p-3 my-3 text-center">
             <div class="text-xs font-bold text-amber-200 mb-1">डेबिट / क्रेडिट कार्ड एवं नेटबैंकिंग</div>
             <div class="flex items-center justify-center gap-3 text-xs font-semibold text-amber-100">
-              <span class="flex items-center gap-1"><img src="/assets/icons/card-3d.svg" class="icon-3d-xs" alt="">Visa</span>
+              <span class="flex items-center gap-1"><img src="assets/icons/card-3d.svg" class="icon-3d-xs" alt="">Visa</span>
               <span>•</span>
-              <span class="flex items-center gap-1"><img src="/assets/icons/card-3d.svg" class="icon-3d-xs" alt="">MasterCard</span>
+              <span class="flex items-center gap-1"><img src="assets/icons/card-3d.svg" class="icon-3d-xs" alt="">MasterCard</span>
               <span>•</span>
-              <span class="flex items-center gap-1"><img src="/assets/icons/card-3d.svg" class="icon-3d-xs" alt="">RuPay</span>
+              <span class="flex items-center gap-1"><img src="assets/icons/card-3d.svg" class="icon-3d-xs" alt="">RuPay</span>
             </div>
           </div>
 
           <!-- Security Badges -->
           <div class="space-y-1.5 text-[11px] text-amber-100/80 mt-auto">
             <div class="flex items-center gap-1.5 text-emerald-400">
-              <img src="/assets/icons/lock-3d.svg" class="icon-3d-xs" alt="">
+              <img src="assets/icons/lock-3d.svg" class="icon-3d-xs" alt="">
               <strong>256-Bit SSL एन्क्रिप्टेड लेन-देन</strong>
             </div>
             <div class="flex items-center gap-1.5 text-amber-300">
-              <img src="/assets/icons/lightning-3d.svg" class="icon-3d-xs" alt="">
+              <img src="assets/icons/lightning-3d.svg" class="icon-3d-xs" alt="">
               <span>तत्काल SMS एवं WhatsApp डिजिटल टिकट डिलीवरी</span>
             </div>
             <div class="flex items-center gap-1.5 text-amber-200">
-              <img src="/assets/icons/shield-3d.svg" class="icon-3d-xs" alt="">
+              <img src="assets/icons/shield-3d.svg" class="icon-3d-xs" alt="">
               <span>Razorpay अधिकृत मर्चेंट पार्टनरशिप</span>
             </div>
           </div>
@@ -326,7 +326,7 @@
       <section class="bg-card border border-amber-500/30 rounded-2xl p-6 sm:p-8 mb-16">
         <div class="flex flex-col md:flex-row items-center gap-6">
           <div class="w-16 h-16 rounded-2xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center shrink-0">
-            <img src="/assets/icons/brain-3d.svg" class="icon-3d-xl floating-3d" alt="">
+            <img src="assets/icons/brain-3d.svg" class="icon-3d-xl floating-3d" alt="">
           </div>
           <div class="space-y-2">
             <span class="text-xs uppercase tracking-widest text-amber-300 font-bold">अनुच्छेद 19(1)(g) विधिक अनुपालन</span>
@@ -347,13 +347,13 @@
           30 विजेता ₹50,000, 50 विजेता ₹30,000, 20 विजेता ₹10,000 के भव्य उपहार वाउचर्स व वुडन सेफ्टी क्रेट डिलीवरी।
         </p>
         <div class="flex items-center justify-center gap-4 flex-wrap">
-          <a href="/prizes" class="btn-gold py-3.5 px-8 text-sm flex items-center gap-2">
-            <img src="/assets/icons/gift-3d.svg" class="btn-icon-3d" alt="">
+          <a href="prizes.html" class="btn-gold py-3.5 px-8 text-sm flex items-center gap-2">
+            <img src="assets/icons/gift-3d.svg" class="btn-icon-3d" alt="">
             <span>सभी 3 ईनाम श्रेणियां देखें (Prize Hampers)</span>
             <span class="btn-arrow">&rarr;</span>
           </a>
           <button onclick="startContestFlow()" class="btn-outline-gold py-3.5 px-8 text-sm flex items-center gap-2">
-            <img src="/assets/icons/cart-3d.svg" class="btn-icon-3d" alt="">
+            <img src="assets/icons/cart-3d.svg" class="btn-icon-3d" alt="">
             <span>अभी टिकट खरीदें (₹49)</span>
           </button>
         </div>
@@ -368,7 +368,7 @@
   <footer class="border-t border-amber-500/30 bg-black/85 py-12 relative z-10" role="contentinfo">
     <div class="container text-center">
       <div class="flex items-center justify-center gap-3 mb-4">
-        <img src="/assets/logo-diya.svg" alt="दीया" class="w-9 h-9">
+        <img src="assets/logo-diya.svg" alt="दीया" class="w-9 h-9">
         <span class="font-serif font-bold text-xl text-amber-200">शुभ दीपावली धमाका</span>
       </div>
 
@@ -378,10 +378,10 @@
       </p>
 
       <div class="flex flex-wrap justify-center gap-6 text-xs text-amber-200 mb-6 font-semibold">
-        <a href="/" class="hover:text-amber-300">होम (Home)</a>
-        <a href="/prizes" class="hover:text-amber-300">इनाम (Prizes)</a>
-        <a href="/how-it-works" class="hover:text-amber-300 underline">कैसे भाग लें (How It Works)</a>
-        <a href="/faq" class="hover:text-amber-300">FAQ व नियम</a>
+        <a href="index.html" class="hover:text-amber-300">होम (Home)</a>
+        <a href="prizes.html" class="hover:text-amber-300">इनाम (Prizes)</a>
+        <a href="how-it-works.html" class="hover:text-amber-300 underline">कैसे भाग लें (How It Works)</a>
+        <a href="faq.html" class="hover:text-amber-300">FAQ व नियम</a>
         <button onclick="openModal('privacyModal')" class="hover:text-amber-300 underline">गोपनीयता नीति</button>
         <button onclick="openModal('termsModal')" class="hover:text-amber-300 underline">नियम व शर्तें</button>
         <button onclick="openModal('contactModal')" class="hover:text-amber-300 underline">संपर्क</button>
@@ -394,7 +394,7 @@
       <!-- Secret / Discreet Operations Trigger (BLAST) -->
       <div class="footer-blast-container">
         <button id="blastAdminTrigger" onclick="handleBlastTap(event)" class="blast-btn" title="Operations & Admin Console (Tap 5x to Unlock)" aria-label="व्यवस्थापक डैशबोर्ड">
-          <span class="blast-spark-icon"><img src="/assets/icons/blast-3d.svg" class="icon-3d-sm" alt=""></span>
+          <span class="blast-spark-icon"><img src="assets/icons/blast-3d.svg" class="icon-3d-sm" alt=""></span>
           <span class="blast-text">BLAST</span>
         </button>
       </div>
@@ -405,24 +405,24 @@
   <!-- STICKY MOBILE BOTTOM ACTION DOCK (OPTIMIZED FOR SMARTPHONES & TABLETS) -->
   <!-- ========================================================================= -->
   <nav id="mobileBottomDock" class="mobile-bottom-dock" aria-label="त्वरित मोबाइल नेविगेशन">
-    <a href="/" class="mobile-dock-btn" aria-label="होम पेज">
-      <span class="dock-icon"><img src="/assets/icons/diya-3d.svg" class="dock-icon-3d" alt=""></span>
+    <a href="index.html" class="mobile-dock-btn" aria-label="होम पेज">
+      <span class="dock-icon"><img src="assets/icons/diya-3d.svg" class="dock-icon-3d" alt=""></span>
       <span>होम</span>
     </a>
-    <a href="/prizes" class="mobile-dock-btn" aria-label="इनाम देखें">
-      <span class="dock-icon"><img src="/assets/icons/gift-3d.svg" class="dock-icon-3d" alt=""></span>
+    <a href="prizes.html" class="mobile-dock-btn" aria-label="इनाम देखें">
+      <span class="dock-icon"><img src="assets/icons/gift-3d.svg" class="dock-icon-3d" alt=""></span>
       <span>इनाम</span>
     </a>
-    <a href="/how-it-works" class="mobile-dock-btn active" aria-label="कैसे भाग लें">
-      <span class="dock-icon"><img src="/assets/icons/sparkles-3d.svg" class="dock-icon-3d" alt=""></span>
+    <a href="how-it-works.html" class="mobile-dock-btn active" aria-label="कैसे भाग लें">
+      <span class="dock-icon"><img src="assets/icons/sparkles-3d.svg" class="dock-icon-3d" alt=""></span>
       <span>प्रक्रिया</span>
     </a>
-    <a href="/faq" class="mobile-dock-btn" aria-label="नियम व FAQ">
-      <span class="dock-icon"><img src="/assets/icons/faq-3d.svg" class="dock-icon-3d" alt=""></span>
+    <a href="faq.html" class="mobile-dock-btn" aria-label="नियम व FAQ">
+      <span class="dock-icon"><img src="assets/icons/faq-3d.svg" class="dock-icon-3d" alt=""></span>
       <span>FAQ</span>
     </a>
     <button type="button" onclick="startContestFlow()" class="mobile-dock-btn dock-cta-primary" aria-label="टिकट खरीदें">
-      <span class="dock-icon"><img src="/assets/icons/cart-3d.svg" class="dock-icon-3d" alt=""></span>
+      <span class="dock-icon"><img src="assets/icons/cart-3d.svg" class="dock-icon-3d" alt=""></span>
       <span>टिकट (₹49)</span>
     </button>
   </nav>
@@ -457,7 +457,7 @@
       <!-- Step 1: Booking Details & Ticket Quantity Selection -->
       <div id="contestStep1" class="contest-step-content active">
         <div class="text-center mb-5">
-          <div class="mb-2"><img src="/assets/icons/diya-3d.svg" class="icon-3d-xl mx-auto floating-3d" alt=""></div>
+          <div class="mb-2"><img src="assets/icons/diya-3d.svg" class="icon-3d-xl mx-auto floating-3d" alt=""></div>
           <h2 id="contestModalTitle" class="text-xl font-serif font-black text-amber-200 mt-1">
             शुभ दीपावली महा धमाका 2026 में भाग लें
           </h2>
@@ -470,7 +470,7 @@
           <!-- Ticket Stepper -->
           <div class="bg-black/50 border border-amber-500/30 p-3.5 rounded-xl">
             <label class="block text-xs font-bold text-amber-200 mb-2 flex items-center gap-1.5">
-              <img src="/assets/icons/ticket-3d.svg" class="icon-3d-xs" alt="">
+              <img src="assets/icons/ticket-3d.svg" class="icon-3d-xs" alt="">
               <span>टिकट संख्या चुनें (Select Ticket Quantity):</span>
             </label>
             <div class="flex items-center justify-center gap-3">
@@ -531,7 +531,7 @@
           <!-- Fulfillment Preference -->
           <div class="bg-black/40 border border-amber-500/30 p-3 rounded-xl">
             <label class="block text-xs font-bold text-amber-200 mb-1.5 flex items-center gap-1.5">
-              <img src="/assets/icons/gift-3d.svg" class="icon-3d-xs" alt="">
+              <img src="assets/icons/gift-3d.svg" class="icon-3d-xs" alt="">
               <span>विजेता बनने पर आपकी प्राथमिकता (Prize Preference):</span>
             </label>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -539,7 +539,7 @@
                 <input type="radio" name="fulfillmentChoice" value="STORE_VOUCHER" checked class="mt-0.5 text-amber-400">
                 <div>
                   <strong class="text-white block flex items-center gap-1">
-                    <img src="/assets/icons/voucher-3d.svg" class="icon-3d-xs" alt="">
+                    <img src="assets/icons/voucher-3d.svg" class="icon-3d-xs" alt="">
                     <span>लाइसेंस्ड स्टोर वाउचर</span>
                   </strong>
                   <span class="text-[10px] text-amber-200/80">नज़दीकी दुकान से सेल्फ-पिकअप (सुरक्षित)</span>
@@ -549,7 +549,7 @@
                 <input type="radio" name="fulfillmentChoice" value="WOODEN_CRATE" class="mt-0.5 text-amber-400">
                 <div>
                   <strong class="text-white block flex items-center gap-1">
-                    <img src="/assets/icons/crate-3d.svg" class="icon-3d-xs" alt="">
+                    <img src="assets/icons/crate-3d.svg" class="icon-3d-xs" alt="">
                     <span>वुडन सेफ्टी क्रेट</span>
                   </strong>
                   <span class="text-[10px] text-amber-200/80">स्थानीय अधिकृत डिस्ट्रीब्यूटर डिलीवरी</span>
@@ -570,7 +570,7 @@
       <!-- Step 2: Payment Gateway Screen -->
       <div id="contestStep2" class="contest-step-content">
         <div class="text-center mb-4">
-          <div class="mb-2"><img src="/assets/icons/card-3d.svg" class="icon-3d-xl mx-auto" alt=""></div>
+          <div class="mb-2"><img src="assets/icons/card-3d.svg" class="icon-3d-xl mx-auto" alt=""></div>
           <h2 class="text-xl font-serif font-black text-amber-200 mt-1">सुरक्षित भुगतान (Razorpay Gateway)</h2>
           <p class="text-xs text-amber-100/80">256-Bit SSL एन्क्रिप्टेड • 100% सुरक्षित भुगतान</p>
         </div>
@@ -592,14 +592,14 @@
 
         <div class="space-y-3">
           <button type="button" onclick="triggerRazorpayCheckout()" id="payRazorpayBtn" class="btn-gold py-3 px-6 text-sm w-full justify-center flex items-center gap-2">
-            <img src="/assets/icons/lightning-3d.svg" class="icon-3d-xs" alt="">
+            <img src="assets/icons/lightning-3d.svg" class="icon-3d-xs" alt="">
             <span>Razorpay से भुगतान करें (UPI / Card / Netbanking)</span>
           </button>
           <div class="text-center">
             <span class="text-[11px] text-amber-200/70">अथवा टेस्ट/सिमुलेशन मोड में तुरंत खेलें:</span>
           </div>
           <button type="button" onclick="simulateSuccessfulPayment()" class="btn-outline-gold py-2.5 px-4 text-xs w-full justify-center flex items-center gap-1.5">
-            <img src="/assets/icons/sparkles-3d.svg" class="icon-3d-xs" alt="">
+            <img src="assets/icons/sparkles-3d.svg" class="icon-3d-xs" alt="">
             <span>परीक्षण मोड — सीधा क्विज़ प्रारंभ करें (Instant Quiz)</span>
           </button>
         </div>
@@ -609,7 +609,7 @@
       <div id="contestStep3" class="contest-step-content">
         <div class="flex items-center justify-between mb-4 pb-2 border-b border-amber-500/25">
           <div class="flex items-center gap-2">
-            <img src="/assets/icons/diya-3d.svg" class="icon-3d inline-block" alt="">
+            <img src="assets/icons/diya-3d.svg" class="icon-3d inline-block" alt="">
             <div>
               <div class="text-xs uppercase font-bold text-amber-300">सांस्कृतिक ट्रिविया क्विज़ (Game of Skill)</div>
               <div class="text-[11px] text-amber-100/70">प्रश्न <span id="quizCurrentQ">1</span> / 5</div>
@@ -641,7 +641,7 @@
       <!-- Step 4: Official Digital Pass Display -->
       <div id="contestStep4" class="contest-step-content">
         <div class="text-center mb-4">
-          <div class="mb-2"><img src="/assets/icons/trophy-3d.svg" class="icon-3d-xl mx-auto floating-3d" alt=""></div>
+          <div class="mb-2"><img src="assets/icons/trophy-3d.svg" class="icon-3d-xl mx-auto floating-3d" alt=""></div>
           <h2 class="text-xl font-serif font-black text-amber-200 mt-1">बधाई! आपकी प्रविष्टि सफल रही</h2>
           <p class="text-xs text-amber-100/80">आपका आधिकारिक डिजिटल गोल्डन एंट्री पास जारी कर दिया गया है</p>
         </div>
@@ -650,11 +650,11 @@
 
         <div class="flex items-center justify-center gap-3 flex-wrap">
           <button type="button" onclick="window.print()" class="btn-outline-gold py-2.5 px-5 text-xs flex items-center gap-1.5">
-            <img src="/assets/icons/printer-3d.svg" class="icon-3d-xs" alt="">
+            <img src="assets/icons/printer-3d.svg" class="icon-3d-xs" alt="">
             <span>पास प्रिंट / सेव करें</span>
           </button>
           <button type="button" onclick="closeModal('contestModal');" class="btn-gold py-2.5 px-6 text-xs flex items-center gap-1.5">
-            <img src="/assets/icons/trophy-3d.svg" class="btn-icon-3d" alt="">
+            <img src="assets/icons/trophy-3d.svg" class="btn-icon-3d" alt="">
             <span>लाइव लीडरबोर्ड देखें</span>
           </button>
         </div>
@@ -667,7 +667,7 @@
     <div class="modal-dialog">
       <button class="modal-dismiss" onclick="closeModal('privacyModal')" aria-label="बंद करें">&times;</button>
       <h2 id="privacyTitle" class="text-xl font-serif font-bold text-amber-200 mb-3 flex items-center gap-2">
-        <img src="/assets/icons/lock-3d.svg" class="icon-3d" alt="">
+        <img src="assets/icons/lock-3d.svg" class="icon-3d" alt="">
         <span>गोपनीयता नीति (Privacy Notice)</span>
       </h2>
       <div class="text-xs text-amber-100/90 space-y-3 max-h-[60vh] overflow-y-auto pr-2 leading-relaxed">
@@ -683,7 +683,7 @@
     <div class="modal-dialog">
       <button class="modal-dismiss" onclick="closeModal('termsModal')" aria-label="बंद करें">&times;</button>
       <h2 id="termsTitle" class="text-xl font-serif font-bold text-amber-200 mb-3 flex items-center gap-2">
-        <img src="/assets/icons/scroll-3d.svg" class="icon-3d" alt="">
+        <img src="assets/icons/scroll-3d.svg" class="icon-3d" alt="">
         <span>नियम व शर्तें (Terms & Conditions)</span>
       </h2>
       <div class="text-xs text-amber-100/90 space-y-3 max-h-[60vh] overflow-y-auto pr-2 leading-relaxed">
@@ -699,7 +699,7 @@
     <div class="modal-dialog">
       <button class="modal-dismiss" onclick="closeModal('contactModal')" aria-label="बंद करें">&times;</button>
       <h2 id="contactTitle" class="text-xl font-serif font-bold text-amber-200 mb-3 flex items-center gap-2">
-        <img src="/assets/icons/mailbox-3d.svg" class="icon-3d" alt="">
+        <img src="assets/icons/mailbox-3d.svg" class="icon-3d" alt="">
         <span>संपर्क एवं विधिक हेल्पडेस्क</span>
       </h2>
       <div class="text-xs text-amber-100/90 space-y-3 leading-relaxed">
@@ -720,7 +720,7 @@
 
       <!-- Admin Login View -->
       <div id="adminLoginContainer" class="text-center py-4">
-        <div class="mb-2"><img src="/assets/icons/lock-3d.svg" class="icon-3d-xl mx-auto" alt=""></div>
+        <div class="mb-2"><img src="assets/icons/lock-3d.svg" class="icon-3d-xl mx-auto" alt=""></div>
         <h3 id="adminTitle" class="text-xl font-bold text-amber-200 mb-1">व्यवस्थापक लॉगिन (Admin Login)</h3>
         <p class="text-xs text-amber-100/70 mb-4">
           सुरक्षा हेतु PBKDF2 पासवर्ड प्रमाणीकरण एवं दर-नियंत्रण (Rate Limiting) सक्रिय है।
@@ -765,7 +765,7 @@
         <div class="flex items-center justify-between border-b border-amber-500/30 pb-3">
           <div>
             <h3 class="text-lg font-bold text-amber-200 flex items-center gap-2">
-              <img src="/assets/icons/blast-3d.svg" class="icon-3d" alt="">
+              <img src="assets/icons/blast-3d.svg" class="icon-3d" alt="">
               <span>व्यवस्थापक नियंत्रण केंद्र (Admin Dashboard)</span>
             </h3>
             <span class="text-xs text-emerald-400 font-mono">● प्रमाणीकृत सत्र सक्रिय</span>
@@ -821,8 +821,8 @@
         <div class="flex items-center justify-between bg-black/40 px-3 py-2 rounded-xl border border-amber-500/20 text-xs">
           <span class="text-amber-200 text-[11px]">विजेता प्राथमिकता:</span>
           <div class="flex gap-3 text-[11px]">
-            <span class="text-emerald-300 font-mono flex items-center gap-1"><img src="/assets/icons/voucher-3d.svg" class="icon-3d-xs" alt="">स्टोर वाउचर: <strong id="admVoucherCount">0</strong></span>
-            <span class="text-amber-300 font-mono flex items-center gap-1"><img src="/assets/icons/crate-3d.svg" class="icon-3d-xs" alt="">होम डिलीवरी: <strong id="admDeliveryCount">0</strong></span>
+            <span class="text-emerald-300 font-mono flex items-center gap-1"><img src="assets/icons/voucher-3d.svg" class="icon-3d-xs" alt="">स्टोर वाउचर: <strong id="admVoucherCount">0</strong></span>
+            <span class="text-amber-300 font-mono flex items-center gap-1"><img src="assets/icons/crate-3d.svg" class="icon-3d-xs" alt="">होम डिलीवरी: <strong id="admDeliveryCount">0</strong></span>
           </div>
         </div>
 
@@ -848,17 +848,17 @@
         <!-- Admin Actions -->
         <div class="space-y-2">
           <button onclick="exportWinnerDispatchCsv()" class="btn-gold py-2.5 px-4 text-xs w-full justify-center shadow-lg flex items-center gap-2">
-            <img src="/assets/icons/download-3d.svg" class="icon-3d-xs" alt="">
+            <img src="assets/icons/download-3d.svg" class="icon-3d-xs" alt="">
             <span>Download Winner Dispatch & Store Voucher CSV (एक्सेल डाउनलोड)</span>
           </button>
           
           <div class="flex gap-2">
             <button onclick="loadAdminContestEntries()" class="btn-outline-gold py-1.5 px-3 text-xs w-full justify-center flex items-center gap-1.5">
-              <img src="/assets/icons/refresh-3d.svg" class="icon-3d-xs" alt="">
+              <img src="assets/icons/refresh-3d.svg" class="icon-3d-xs" alt="">
               <span>रिफ्रेश डेटा (Refresh)</span>
             </button>
             <button onclick="triggerDataPurge()" class="bg-rose-900/50 hover:bg-rose-900 text-rose-200 border border-rose-500/40 py-1.5 px-3 rounded-full text-xs font-bold transition w-full flex items-center justify-center gap-1.5">
-              <img src="/assets/icons/trash-3d.svg" class="icon-3d-xs" alt="">
+              <img src="assets/icons/trash-3d.svg" class="icon-3d-xs" alt="">
               <span>सिमुलेशन डेटा रीसेट</span>
             </button>
           </div>
@@ -868,7 +868,7 @@
         <div class="border-t border-amber-500/20 pt-3">
           <div class="flex items-center justify-between mb-2">
             <span class="text-xs font-bold text-amber-200 flex items-center gap-1.5">
-              <img src="/assets/icons/users-3d.svg" class="icon-3d-xs" alt="">
+              <img src="assets/icons/users-3d.svg" class="icon-3d-xs" alt="">
               <span>हालिया प्रतिभागी एवं टिकट विवरण:</span>
             </span>
             <span class="text-[10px] text-amber-300 font-mono" id="admEntriesSubtitle">Loading...</span>
@@ -941,6 +941,6 @@
   </div>
 
   <!-- Client-side Interactive Engine -->
-  <script src="/app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

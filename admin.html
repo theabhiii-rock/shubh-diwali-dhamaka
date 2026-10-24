@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>व्यवस्थापक पोर्टल | शुभ दीपावली धमाका (Admin Console)</title>
+
+  <!-- Google Devanagari & Latin Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Theme Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tailwind CSS Engine -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <style>
+    .admin-tab-btn {
+      padding: 0.65rem 1.25rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border-radius: 9999px;
+      transition: all 0.25s ease;
+      color: rgba(254, 240, 138, 0.7);
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      white-space: nowrap;
+    }
+    .admin-tab-btn:hover {
+      background: rgba(245, 158, 11, 0.15);
+      color: #ffffff;
+      border-color: rgba(245, 158, 11, 0.5);
+    }
+    .admin-tab-btn.active {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #1a0802;
+      border-color: #fef08a;
+      box-shadow: 0 0 16px rgba(245, 158, 11, 0.45);
+    }
+    .admin-kpi-card {
+      background: linear-gradient(180deg, rgba(40, 6, 20, 0.85) 0%, rgba(20, 3, 10, 0.95) 100%);
+      border: 1.5px solid rgba(245, 158, 11, 0.35);
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(12px);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .admin-kpi-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(245, 158, 11, 0.65);
+    }
+    .admin-table-row {
+      transition: background 0.15s ease;
+    }
+    .admin-table-row:hover {
+      background: rgba(245, 158, 11, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-[#120205] text-amber-100 min-h-screen flex flex-col font-sans">
+
+  <!-- Ambient Glowing Background -->
+  <div class="fixed inset-0 pointer-events-none z-0">
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-rose-600/10 rounded-full blur-3xl"></div>
+  </div>
+
+  <!-- Top Festive Admin Header Bar -->
+  <header class="relative z-20 bg-black/70 border-b border-amber-500/30 backdrop-blur-md sticky top-0">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <!-- Brand Logo & Title -->
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/logo-diya.svg" alt="शुभ दीया" class="w-9 h-9">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-serif font-black text-lg text-amber-300">शुभ दीपावली धमाका</span>
+            <span class="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] px-2 py-0.5 rounded-full font-mono font-bold uppercase">
+              Admin Console
+            </span>
+          </div>
+          <span class="text-[11px] text-amber-200/70 block">केंद्रीय प्रशासनिक नियंत्रण एवं लाइव डैशबोर्ड</span>
+        </div>
+      </a>
+
+      <!-- Quick Actions & Session State -->
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="hidden sm:inline-flex items-center gap-1.5 text-xs text-amber-200/90 hover:text-white bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-full border border-amber-500/20 transition">
+          <span>← मुख्य वेबसाइट देखें</span>
+        </a>
+
+        <!-- Authenticated Header Controls (Visible when logged in) -->
+        <div id="authHeaderControls" class="hidden flex items-center gap-2">
+          <button onclick="refreshAdminDataWithToast()" class="bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 px-3 py-1.5 rounded-full text-xs font-bold transition flex items-center gap-1">
+            <img src="assets/icons/refresh-3d.svg" class="w-3.5 h-3.5" alt="">
+            <span class="hidden md:inline">रिफ्रेश</span>
+          </button>
+          <button onclick="handleAdminLogout()" class="bg-rose-900/60 hover:bg-rose-900 text-rose-200 border border-rose-500/40 px-3 py-1.5 rounded-full text-xs font-bold transition">
+            लॉगआउट
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN CONTAINER                                                            -->
+  <!-- ========================================================================= -->
+  <main class="relative z-10 flex-grow max-w-7xl w-full mx-auto px-4 py-8">
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!-- VIEW A: ADMIN LOGIN FORM (If not logged in)                             -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div id="adminLoginView" class="max-w-md mx-auto my-12 bg-black/60 border-2 border-amber-500/40 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl text-center">
+      <div class="w-16 h-16 mx-auto mb-3 bg-amber-500/10 border border-amber-500/30 rounded-2xl flex items-center justify-center shadow-inner">
+        <img src="assets/icons/lock-3d.svg" class="w-9 h-9" alt="Lock">
+      </div>
+      
+      <h1 class="text-2xl font-serif font-black text-amber-200 mb-1">व्यवस्थापक लॉगिन</h1>
+      <p class="text-xs text-amber-100/70 mb-6">
+        सुरक्षित PBKDF2 प्रमाणीकरण एवं 100K राउंड्स क्रिप्टोग्राफिक हैशिंग
+      </p>
+
+      <!-- Security Shield Indicator -->
+      <div class="bg-amber-500/10 border border-amber-500/30 rounded-xl p-2.5 mb-5 text-left flex items-center gap-2.5">
+        <span class="text-sm">🔒</span>
+        <div class="text-[11px] text-amber-200">
+          <strong class="text-amber-300">सुरक्षा एन्क्रिप्शन लॉक:</strong> अधिकृत व्यवस्थापक क्रेडेंशियल्स दर्ज करें।
+        </div>
+      </div>
+
+      <form id="standaloneLoginForm" onsubmit="handleAdminLoginSubmit(event)" class="space-y-4 text-left">
+        <div>
+          <label class="block text-xs font-bold text-amber-200 mb-1" for="adminUsernameInput">
+            यूज़रनेम (Username):
+          </label>
+          <input type="text" id="adminUsernameInput" class="w-full bg-black/70 border border-amber-500/40 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400" value="admin" required autocomplete="username">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-amber-200 mb-1" for="adminPasswordInput">
+            पासवर्ड (Password):
+          </label>
+          <div class="relative">
+            <input type="password" id="adminPasswordInput" class="w-full bg-black/70 border border-amber-500/40 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-amber-400 pr-10" placeholder="सुरक्षित पासवर्ड दर्ज करें" required autocomplete="current-password">
+            <button type="button" onclick="togglePasswordVisibility('adminPasswordInput')" class="absolute right-3 top-2.5 text-amber-400 hover:text-amber-200 text-xs" title="पासवर्ड देखें / छिपाएं">
+              👁️
+            </button>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2 text-xs text-amber-200/80">
+          <input type="checkbox" id="rememberAdminDevice" checked class="rounded accent-amber-500">
+          <label for="rememberAdminDevice">इस डिवाइस पर लॉगिन याद रखें (Stay Logged In)</label>
+        </div>
+
+        <div id="adminLoginError" class="text-xs text-rose-400 hidden bg-rose-950/40 border border-rose-500/30 p-2.5 rounded-lg text-center font-bold"></div>
+
+        <button type="submit" id="adminLoginBtn" class="btn-gold w-full justify-center py-3 text-sm font-bold shadow-lg">
+          <span>सुरक्षित लॉगिन करें (Enter Dashboard)</span>
+        </button>
+      </form>
+    </div>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!-- VIEW B: FULL ADMIN DASHBOARD (When authenticated)                       -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div id="adminDashboardView" class="hidden space-y-6">
+
+      <!-- Navigation Tabs Strip -->
+      <div class="flex items-center justify-between flex-wrap gap-3 pb-2 border-b border-amber-500/30">
+        <div class="flex items-center gap-2 overflow-x-auto py-1 max-w-full">
+          <button onclick="switchAdminTab('overview')" id="tabBtn-overview" class="admin-tab-btn active">
+            <img src="assets/icons/target-3d.svg" class="w-4 h-4" alt="">
+            <span>1. ओवरव्यू व सांख्यिकी</span>
+          </button>
+          <button onclick="switchAdminTab('participants')" id="tabBtn-participants" class="admin-tab-btn">
+            <img src="assets/icons/users-3d.svg" class="w-4 h-4" alt="">
+            <span>2. प्रतिभागी व टिकट (<span id="tabCountBadge">0</span>)</span>
+          </button>
+          <button onclick="switchAdminTab('winners')" id="tabBtn-winners" class="admin-tab-btn">
+            <img src="assets/icons/medal1-3d.svg" class="w-4 h-4" alt="">
+            <span>3. Top 100 विजेता व ड्रॉ</span>
+          </button>
+          <button onclick="switchAdminTab('settings')" id="tabBtn-settings" class="admin-tab-btn">
+            <img src="assets/icons/shield-3d.svg" class="w-4 h-4" alt="">
+            <span>4. सेटिंग्स व सुरक्षा</span>
+          </button>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button onclick="exportWinnerDispatchCsv()" class="btn-gold py-2 px-3 text-xs font-bold flex items-center gap-1.5 shadow-md">
+            <img src="assets/icons/download-3d.svg" class="w-3.5 h-3.5" alt="">
+            <span>Excel / CSV डाउनलोड</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- TAB 1: OVERVIEW & KPIS                                                -->
+      <!-- ===================================================================== -->
+      <section id="adminTab-overview" class="space-y-6">
+
+        <!-- 4 Top KPI Cards -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="admin-kpi-card">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs text-amber-200/80 font-bold uppercase">कुल प्रतिभागी</span>
+              <img src="assets/icons/users-3d.svg" class="w-6 h-6" alt="">
+            </div>
+            <div id="admContestCount" class="text-2xl sm:text-3xl font-mono font-black text-emerald-400">0</div>
+            <div class="text-[11px] text-amber-200/70 mt-1">क्विज़ पूर्ण व पंजीकृत यूज़र्स</div>
+          </div>
+
+          <div class="admin-kpi-card">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs text-amber-200/80 font-bold uppercase">कुल टिकट बुक्ड</span>
+              <img src="assets/icons/ticket-3d.svg" class="w-6 h-6" alt="">
+            </div>
+            <div id="admTicketsCount" class="text-2xl sm:text-3xl font-mono font-black text-amber-300">0</div>
+            <div class="text-[11px] text-amber-200/70 mt-1">प्रविष्ट टिकट संख्या (₹49 प्रति टिकट)</div>
+          </div>
+
+          <div class="admin-kpi-card">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs text-amber-200/80 font-bold uppercase">कुल राजस्व</span>
+              <img src="assets/icons/card-3d.svg" class="w-6 h-6" alt="">
+            </div>
+            <div id="admRevenueCount" class="text-2xl sm:text-3xl font-mono font-black text-white">₹0</div>
+            <div class="text-[11px] text-amber-200/70 mt-1">UPI व Razorpay कुल प्राप्त राशि</div>
+          </div>
+
+          <div class="admin-kpi-card">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs text-amber-200/80 font-bold uppercase">ईनाम पूल</span>
+              <img src="assets/icons/gift-3d.svg" class="w-6 h-6" alt="">
+            </div>
+            <div class="text-2xl sm:text-3xl font-serif font-black text-amber-300">₹32,00,000</div>
+            <div class="text-[11px] text-amber-200/70 mt-1">100 विजेताओं में पूर्णतः आबंटित</div>
+          </div>
+        </div>
+
+        <!-- Live Declared Winners Quick Control Banner -->
+        <div class="bg-gradient-to-r from-amber-950/70 via-[#3d0912] to-yellow-950/50 border-2 border-yellow-500/40 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-xl">
+          <div class="flex items-center gap-3 text-left">
+            <span class="text-3xl">🏆</span>
+            <div>
+              <h3 class="text-sm font-black text-yellow-300">लाइव विजेता नियंत्रण (Live Manual Winner System)</h3>
+              <p class="text-[11px] text-amber-200/80">टैब 2 ("प्रतिभागी") में किसी भी टिकट के आगे <strong class="text-yellow-300">"🏆 WINNER बनाएं"</strong> दबाएं — विजेता तुरंत मुख्य होमपेज टाइमर पर 2 मिनट के लिए लाइव दिखेगा!</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="text-right">
+              <span id="admDeclaredWinnersCount" class="text-2xl font-mono font-black text-yellow-300">0</span>
+              <span class="text-[10px] text-amber-200/70 block">घोषित विजेता</span>
+            </div>
+            <button onclick="switchAdminTab('participants')" class="btn-gold text-xs py-2 px-3 font-bold whitespace-nowrap shadow">
+              प्रतिभागी देखें &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Preference Ratio & System Health -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Store Voucher vs Doorstep Delivery -->
+          <div class="bg-black/50 border border-amber-500/30 rounded-2xl p-5 shadow-lg">
+            <h2 class="text-sm font-bold text-amber-300 mb-3 flex items-center gap-2">
+              <img src="assets/icons/target-3d.svg" class="w-4 h-4" alt="">
+              <span>विजेता डिलीवरी प्राथमिकता (Fulfillment Choice)</span>
+            </h2>
+            <div class="grid grid-cols-2 gap-3 mb-3">
+              <div class="bg-emerald-950/40 border border-emerald-500/40 p-3 rounded-xl text-center">
+                <div class="text-xs text-emerald-300 font-bold mb-1 flex items-center justify-center gap-1">
+                  <img src="assets/icons/voucher-3d.svg" class="w-3.5 h-3.5" alt="">
+                  <span>स्टोर वाउचर</span>
+                </div>
+                <div id="admVoucherCount" class="text-xl font-mono font-bold text-white">0</div>
+                <div class="text-[10px] text-emerald-200/70">नज़दीकी लाइसेंस्ड स्टोर</div>
+              </div>
+
+              <div class="bg-amber-950/40 border border-amber-500/40 p-3 rounded-xl text-center">
+                <div class="text-xs text-amber-300 font-bold mb-1 flex items-center justify-center gap-1">
+                  <img src="assets/icons/crate-3d.svg" class="w-3.5 h-3.5" alt="">
+                  <span>होम डिलीवरी</span>
+                </div>
+                <div id="admDeliveryCount" class="text-xl font-mono font-bold text-white">0</div>
+                <div class="text-[10px] text-amber-200/70">सुरक्षित वुडन क्रेट</div>
+              </div>
+            </div>
+            <p class="text-[11px] text-amber-100/70 leading-relaxed">
+              *PESO 2008 नियमों के तहत विजेताओं को डिजिटल वाउचर या अधिकृत वुडन सेफ्टी क्रेट से प्रेषण सुनिश्चित किया जाता है।
+            </p>
+          </div>
+
+          <!-- Live Platform Status -->
+          <div class="bg-black/50 border border-emerald-500/30 rounded-2xl p-5 shadow-lg">
+            <h2 class="text-sm font-bold text-emerald-300 mb-3 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>सिस्टम एवं अनुपालन स्थिति (System Compliance)</span>
+            </h2>
+            <ul class="space-y-2 text-xs text-amber-100/90">
+              <li class="flex items-center justify-between pb-1.5 border-b border-white/5">
+                <span>डेटाबेस (SQLite WAL):</span>
+                <strong class="text-emerald-400 font-mono">Connected & Synced</strong>
+              </li>
+              <li class="flex items-center justify-between pb-1.5 border-b border-white/5">
+                <span>लीगल सुरक्षा गेट (Safety Gates):</span>
+                <strong class="text-amber-300 font-mono">Active & Controlled</strong>
+              </li>
+              <li class="flex items-center justify-between pb-1.5 border-b border-white/5">
+                <span>प्रतियोगिता प्रारूप:</span>
+                <strong class="text-emerald-300 font-mono">Game of Skill (Trivia Quiz)</strong>
+              </li>
+              <li class="flex items-center justify-between">
+                <span>लकी ड्रॉ / परिणाम तिथि:</span>
+                <strong class="text-white font-mono">4 Nov 2026, 8:00 PM IST</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- TAB 2: PARTICIPANTS & TICKETS SEARCH                                  -->
+      <!-- ===================================================================== -->
+      <section id="adminTab-participants" class="space-y-4 hidden">
+
+        <!-- Verification Stats Bar -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="bg-black/60 border border-amber-400/40 rounded-xl p-3 text-center">
+            <div class="text-[10px] text-amber-200/80 uppercase font-bold">कुल प्रतिभागी</div>
+            <div id="statTotalPart" class="text-2xl font-mono font-black text-amber-300">—</div>
+          </div>
+          <div class="bg-emerald-950/60 border border-emerald-400/40 rounded-xl p-3 text-center">
+            <div class="text-[10px] text-emerald-200/80 uppercase font-bold">✅ Verified</div>
+            <div id="statVerifiedPart" class="text-2xl font-mono font-black text-emerald-400">—</div>
+          </div>
+          <div class="bg-rose-950/60 border border-rose-400/40 rounded-xl p-3 text-center">
+            <div class="text-[10px] text-rose-200/80 uppercase font-bold">⏳ Pending</div>
+            <div id="statPendingPart" class="text-2xl font-mono font-black text-rose-400">—</div>
+          </div>
+          <div class="bg-black/60 border border-amber-500/30 rounded-xl p-3 text-center">
+            <div class="text-[10px] text-amber-200/80 uppercase font-bold">🏆 Draw Pool</div>
+            <div id="statDrawPool" class="text-xs font-bold text-amber-300 mt-1 leading-tight">—</div>
+          </div>
+        </div>
+
+        <!-- Search & Filter Bar -->
+        <div class="bg-black/50 border border-amber-500/30 rounded-2xl p-4 flex flex-col md:flex-row items-center justify-between gap-3 shadow-lg">
+          <div class="relative w-full md:w-96">
+            <input type="text" id="participantSearchInput" oninput="filterParticipantsList()" placeholder="🔍 नाम, फोन नंबर, शहर या पास नंबर से खोजें..." class="w-full bg-black/70 border border-amber-500/40 rounded-xl px-4 py-2 text-xs text-white placeholder-amber-200/50 focus:outline-none focus:border-amber-400">
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2 w-full md:w-auto">
+            <button onclick="setParticipantFilter('ALL')" id="filterBtn-ALL" class="text-xs px-3 py-1.5 rounded-lg font-bold bg-amber-500 text-black">
+              सभी (All)
+            </button>
+            <button onclick="setParticipantFilter('WINNERS')" id="filterBtn-WINNERS" class="text-xs px-3 py-1.5 rounded-lg font-bold bg-black/40 text-yellow-300 border border-yellow-500/40 hover:bg-yellow-500/10">
+              🏆 Winners (<span id="filterWinnersCount">0</span>)
+            </button>
+            <button onclick="setParticipantFilter('VERIFIED')" id="filterBtn-VERIFIED" class="text-xs px-3 py-1.5 rounded-lg font-bold bg-black/40 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/10">
+              ✅ Verified
+            </button>
+            <button onclick="setParticipantFilter('PENDING')" id="filterBtn-PENDING" class="text-xs px-3 py-1.5 rounded-lg font-bold bg-black/40 text-rose-300 border border-rose-500/40 hover:bg-rose-500/10">
+              ⏳ Pending
+            </button>
+            <button onclick="setParticipantFilter('STORE_VOUCHER')" id="filterBtn-STORE_VOUCHER" class="text-xs px-3 py-1.5 rounded-lg font-bold bg-black/40 text-amber-200 border border-amber-500/30 hover:bg-amber-500/10">
+              🎫 वाउचर
+            </button>
+            <button onclick="setParticipantFilter('DOORSTEP_DELIVERY')" id="filterBtn-DOORSTEP_DELIVERY" class="text-xs px-3 py-1.5 rounded-lg font-bold bg-black/40 text-amber-200 border border-amber-500/30 hover:bg-amber-500/10">
+              📦 डिलीवरी
+            </button>
+          </div>
+        </div>
+
+        <!-- Participants Table Container -->
+        <div class="bg-black/60 border border-amber-500/30 rounded-2xl overflow-hidden shadow-xl">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-amber-500/10 border-b border-amber-500/30 text-amber-200 uppercase font-bold text-[10px]">
+                <tr>
+                  <th class="py-3 px-3">#</th>
+                  <th class="py-3 px-3">स्थिति</th>
+                  <th class="py-3 px-3">प्रतिभागी</th>
+                  <th class="py-3 px-3">फोन</th>
+                  <th class="py-3 px-3">पता व शहर</th>
+                  <th class="py-3 px-3">टिकट</th>
+                  <th class="py-3 px-3">स्कोर</th>
+                  <th class="py-3 px-3">पास ID</th>
+                  <th class="py-3 px-3">एडमिन नोट</th>
+                  <th class="py-3 px-3">कार्य</th>
+                </tr>
+              </thead>
+              <tbody id="participantsTableBody" class="divide-y divide-amber-500/10">
+                <tr>
+                  <td colspan="10" class="text-center py-8 text-amber-200/60">डेटा लोड हो रहा है...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- TAB 3: TOP 100 WINNERS & DRAW                                         -->
+      <!-- ===================================================================== -->
+      <section id="adminTab-winners" class="space-y-6 hidden">
+        
+        <!-- Winner Decision & Random Lucky Draw Engine Card -->
+        <div class="bg-gradient-to-r from-amber-950/90 via-black/90 to-rose-950/90 border-2 border-amber-400/60 rounded-2xl p-5 shadow-2xl relative overflow-hidden">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-black shadow">
+                  <img src="assets/icons/blast-3d.svg" class="w-4 h-4" alt="">
+                  <span>विजेता चयन एवं लकी ड्रॉ इंजन</span>
+                </span>
+                <span id="activeDrawModeBadge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold border border-emerald-400/60 bg-emerald-950/80 text-emerald-300 shadow">
+                  🎲 रैंडम लकी ड्रॉ सक्रिय (RANDOM PICK)
+                </span>
+              </div>
+              <h2 class="text-lg sm:text-xl font-bold text-amber-100 flex items-center gap-2">
+                <span>विजेता तय करें — 🎲 रैंडम पिक या 🧠 मेरिट स्कोर</span>
+              </h2>
+              <p class="text-xs text-amber-200/80 max-w-2xl mt-1 leading-relaxed">
+                यहाँ से आप एक क्लिक में सभी पंजीकृत प्रतिभागियों में से <strong>रैंडम लकी ड्रॉ (Random Pick)</strong> द्वारा निष्पक्ष विजेता चुन सकते हैं, अथवा <strong>1 लकी विजेता</strong> का लाइव लकी व्हील स्पिन कर सकते हैं।
+              </p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-2.5">
+              <!-- 1. Random Pick Button -->
+              <button onclick="executeWinnerDecision('random')" id="btnRandomPick" class="btn-gold py-3 px-5 text-sm font-black flex items-center gap-2 shadow-xl hover:scale-105 transition-all">
+                <span class="text-lg">🎲</span>
+                <span>रैंडम पिक करें (Random Pick)</span>
+              </button>
+
+              <!-- 2. Interactive 1 Winner Live Reel Spinner -->
+              <button onclick="openSingleWinnerSpinnerModal()" class="bg-gradient-to-r from-rose-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 text-white font-bold py-3 px-4 rounded-xl text-xs flex items-center gap-2 shadow-lg border border-amber-300/40 hover:scale-105 transition-all">
+                <span class="text-base">🎰</span>
+                <span>1 लकी विजेता स्पिनर</span>
+              </button>
+
+              <!-- 3. Reset to Merit Score -->
+              <button onclick="executeWinnerDecision('merit')" id="btnMeritRank" title="स्कोर व समय अनुसार रैंकिंग" class="bg-black/60 hover:bg-black/80 text-amber-200 border border-amber-500/40 py-3 px-3 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition">
+                <span>🧠 मेरिट स्कोर</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tier Breakdown Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-gradient-to-b from-amber-500/20 to-black/60 border-2 border-amber-400/50 rounded-2xl p-4 text-center">
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500 text-black font-bold text-xs uppercase mb-2">
+              <img src="assets/icons/medal1-3d.svg" class="w-3.5 h-3.5" alt="">
+              <span>Tier 1 • रैंक 1 से 30</span>
+            </div>
+            <div class="text-2xl font-black text-amber-300">₹50,000 प्रत्येक</div>
+            <div class="text-xs text-amber-200/80 mt-1">30 विजेता • कुल ₹15,00,000 VIP हैंपर</div>
+          </div>
+
+          <div class="bg-gradient-to-b from-slate-400/20 to-black/60 border-2 border-slate-400/40 rounded-2xl p-4 text-center">
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-300 text-slate-900 font-bold text-xs uppercase mb-2">
+              <img src="assets/icons/medal2-3d.svg" class="w-3.5 h-3.5" alt="">
+              <span>Tier 2 • रैंक 31 से 80</span>
+            </div>
+            <div class="text-2xl font-black text-slate-200">₹30,000 प्रत्येक</div>
+            <div class="text-xs text-slate-300/80 mt-1">50 विजेता • कुल ₹15,00,000 ग्रैंड हैंपर</div>
+          </div>
+
+          <div class="bg-gradient-to-b from-orange-500/20 to-black/60 border-2 border-orange-500/40 rounded-2xl p-4 text-center">
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-orange-500 text-white font-bold text-xs uppercase mb-2">
+              <img src="assets/icons/medal3-3d.svg" class="w-3.5 h-3.5" alt="">
+              <span>Tier 3 • रैंक 81 से 100</span>
+            </div>
+            <div class="text-2xl font-black text-orange-300">₹10,000 प्रत्येक</div>
+            <div class="text-xs text-orange-200/80 mt-1">20 विजेता • कुल ₹2,00,000 स्पेशल हैंपर</div>
+          </div>
+        </div>
+
+        <!-- 1-Click Export CSV Banner -->
+        <div class="bg-black/50 border border-amber-500/30 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <h3 class="text-sm font-bold text-amber-300">विजेता डिस्चार्ज व स्टोर वाउचर मास्टर सूची</h3>
+            <p class="text-xs text-amber-100/70">लाइसेंस्ड स्टोर पार्टनर्स व कूरियर क्रेट प्रेषण हेतु आधिकारिक एक्सेल सूची</p>
+          </div>
+          <button onclick="exportWinnerDispatchCsv()" class="btn-gold py-2.5 px-5 text-xs font-bold whitespace-nowrap shadow-xl">
+            📥 Download Complete Winner CSV
+          </button>
+        </div>
+
+        <!-- Top 100 Live Ranked Table -->
+        <div class="bg-black/60 border border-amber-500/30 rounded-2xl overflow-hidden shadow-xl">
+          <div class="p-3 bg-amber-500/10 border-b border-amber-500/20 flex items-center justify-between">
+            <span class="text-xs font-bold text-amber-200">लाइव शीर्ष 100 विजेता रैंकिंग (ऑब्जेक्टिव क्विज़ स्कोर व समय आधार)</span>
+            <span class="text-[11px] text-amber-300 font-mono" id="winnersListSummary">Top 100 Allocations</span>
+          </div>
+          <div class="overflow-x-auto max-h-[500px]">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-black/80 text-amber-200 uppercase font-bold text-[10px] sticky top-0">
+                <tr>
+                  <th class="py-2.5 px-4">रैंक</th>
+                  <th class="py-2.5 px-4">विजेता का नाम</th>
+                  <th class="py-2.5 px-4">ईनाम श्रेणी (Tier)</th>
+                  <th class="py-2.5 px-4">ईनाम मूल्य</th>
+                  <th class="py-2.5 px-4">वितरण विकल्प</th>
+                  <th class="py-2.5 px-4">शहर</th>
+                  <th class="py-2.5 px-4">क्विज़ स्कोर</th>
+                </tr>
+              </thead>
+              <tbody id="winnersTableBody" class="divide-y divide-amber-500/15 font-mono">
+                <!-- Dynamically Populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ===================================================================== -->
+      <!-- TAB 4: SETTINGS & CONTROLS                                            -->
+      <!-- ===================================================================== -->
+      <section id="adminTab-settings" class="space-y-6 hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Gateway & Operations Info -->
+          <div class="bg-black/50 border border-amber-500/30 rounded-2xl p-5 shadow-lg space-y-3">
+            <h3 class="text-sm font-bold text-amber-300">पेमेंट गेटवे व तकनीकी सेटिंग्स</h3>
+            <div class="text-xs text-amber-100/80 space-y-2">
+              <div class="flex justify-between pb-1.5 border-b border-white/5">
+                <span>Razorpay Key ID:</span>
+                <span class="font-mono text-emerald-400">rzp_test_diwali2026 (Ready)</span>
+              </div>
+              <div class="flex justify-between pb-1.5 border-b border-white/5">
+                <span>UPI Merchant VPA:</span>
+                <span class="font-mono text-amber-300">diwalidhamaka@upi</span>
+              </div>
+              <div class="flex justify-between pb-1.5 border-b border-white/5">
+                <span>टिकट शुल्क:</span>
+                <span class="font-mono text-white">₹49 (Multi-Qty Supported)</span>
+              </div>
+              <div class="flex justify-between">
+                <span>अधिकतम टिकट क्षमता:</span>
+                <span class="font-mono text-white">1,00,000 Tickets</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Safe Data Minimization & Reset Control -->
+          <div class="bg-black/50 border border-rose-500/30 rounded-2xl p-5 shadow-lg space-y-3">
+            <h3 class="text-sm font-bold text-rose-300">डेटा नियंत्रण व सुरक्षा (DPDP Act)</h3>
+            <p class="text-xs text-amber-100/70 leading-relaxed">
+              डिजिटल पर्सनल डेटा प्रोटेक्शन (DPDP) नियमों के तहत सिमुलेशन या टेस्ट प्रविष्टियों को आवश्यकता पड़ने पर सुरक्षित रीसेट किया जा सकता है।
+            </p>
+            <button onclick="triggerDataPurge()" class="bg-rose-900/60 hover:bg-rose-900 text-rose-200 border border-rose-500/40 py-2.5 px-4 rounded-xl text-xs font-bold transition w-full flex items-center justify-center gap-2 shadow-lg">
+              <img src="assets/icons/trash-3d.svg" class="w-4 h-4" alt="">
+              <span>सिमुलेशन डेटा रीसेट करें (Purge Demo Data)</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Notification Toast -->
+  <div id="adminToast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-amber-500 text-black px-4 py-2.5 rounded-xl font-bold text-xs shadow-2xl flex items-center gap-2">
+    <span>✅</span>
+    <span id="adminToastMsg">सफलतापूर्वक अपडेट किया गया।</span>
+  </div>
+
+  <!-- Client-side Interactive Engine -->
+  <script src="app.js"></script>
+
+  <script>
+    // State for standalone Admin Page
+    let allAdminEntries = [];
+    let currentFilter = 'ALL';
+
+    // Credential autofill permanently disabled for security lockdown
+    function autoFillAdminCredentials() {
+      console.warn("Autofill disabled for security lockdown.");
+    }
+
+    function togglePasswordVisibility(id) {
+      const el = document.getElementById(id);
+      if (el) el.type = (el.type === 'password') ? 'text' : 'password';
+    }
+
+    function showAdminToast(msg) {
+      const toast = document.getElementById('adminToast');
+      const toastMsg = document.getElementById('adminToastMsg');
+      if (!toast) return;
+      if (toastMsg) toastMsg.innerText = msg;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+
+    function switchAdminTab(tabName) {
+      const tabs = ['overview', 'participants', 'winners', 'settings'];
+      tabs.forEach(t => {
+        const sec = document.getElementById(`adminTab-${t}`);
+        const btn = document.getElementById(`tabBtn-${t}`);
+        if (sec) sec.classList.add('hidden');
+        if (btn) btn.classList.remove('active');
+      });
+      const targetSec = document.getElementById(`adminTab-${tabName}`);
+      const targetBtn = document.getElementById(`tabBtn-${tabName}`);
+      if (targetSec) targetSec.classList.remove('hidden');
+      if (targetBtn) targetBtn.classList.add('active');
+    }
+
+    async function refreshAdminDataWithToast() {
+      await loadAdminDashboard();
+      showAdminToast('✅ डेटा रिफ्रेश किया गया!');
+    }
+
+    // Override or hook into loadAdminDashboard for the standalone page
+    const originalLoadAdminDashboard = window.loadAdminDashboard;
+    window.loadAdminDashboard = async function() {
+      const loginView = document.getElementById('adminLoginView');
+      const dashView = document.getElementById('adminDashboardView');
+      const authHeader = document.getElementById('authHeaderControls');
+
+      if (appState.adminToken) {
+        if (loginView) loginView.classList.add('hidden');
+        if (dashView) dashView.classList.remove('hidden');
+        if (authHeader) authHeader.classList.remove('hidden');
+      } else {
+        if (loginView) loginView.classList.remove('hidden');
+        if (dashView) dashView.classList.add('hidden');
+        if (authHeader) authHeader.classList.add('hidden');
+        return;
+      }
+
+      // Fetch overview
+      try {
+        const res = await fetch('/api/admin/overview', {
+          headers: { 'Authorization': `Bearer ${appState.adminToken}` }
+        });
+        const data = await res.json();
+        if (data.contest_participants_count !== undefined) {
+          const el = document.getElementById('admContestCount');
+          if (el) el.innerText = data.contest_participants_count;
+        }
+        if (data.total_tickets_sold !== undefined) {
+          const el = document.getElementById('admTicketsCount');
+          if (el) el.innerText = data.total_tickets_sold;
+        }
+        if (data.total_revenue_inr !== undefined) {
+          const el = document.getElementById('admRevenueCount');
+          if (el) el.innerText = `₹${data.total_revenue_inr.toLocaleString('en-IN')}`;
+        }
+        if (data.store_voucher_count !== undefined) {
+          const el = document.getElementById('admVoucherCount');
+          if (el) el.innerText = data.store_voucher_count;
+        }
+        if (data.doorstep_delivery_count !== undefined) {
+          const el = document.getElementById('admDeliveryCount');
+          if (el) el.innerText = data.doorstep_delivery_count;
+        }
+        if (data.total_declared_winners !== undefined) {
+          const el = document.getElementById('admDeclaredWinnersCount');
+          if (el) el.innerText = data.total_declared_winners;
+        }
+      } catch (e) {
+        console.error('Error fetching admin overview', e);
+      }
+
+      // Fetch all entries for rich tables
+      try {
+        const entriesRes = await fetch('/api/admin/contest-entries', {
+          headers: { 'Authorization': `Bearer ${appState.adminToken}` }
+        });
+        const entriesData = await entriesRes.json();
+        if (entriesData.success && entriesData.entries) {
+          allAdminEntries = entriesData.entries;
+          const badge = document.getElementById('tabCountBadge');
+          if (badge) badge.innerText = allAdminEntries.length;
+          renderParticipantsTable(allAdminEntries);
+          updateVerificationStats(allAdminEntries);
+        }
+
+        // Fetch latest official draw or fallback to merit ranking
+        try {
+          const drawRes = await fetch('/api/admin/draw/latest', {
+            headers: { 'Authorization': `Bearer ${appState.adminToken}` }
+          });
+          const drawData = await drawRes.json();
+          const modeBadge = document.getElementById('activeDrawModeBadge');
+          if (drawData.has_draw && drawData.winners && drawData.winners.length > 0) {
+            if (modeBadge) {
+              if (drawData.mode === 'RANDOM') {
+                modeBadge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold border border-emerald-400/60 bg-emerald-950/80 text-emerald-300 shadow';
+                modeBadge.innerHTML = '🎲 रैंडम लकी ड्रॉ सक्रिय (RANDOM PICK)';
+              } else {
+                modeBadge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold border border-amber-400/60 bg-amber-950/80 text-amber-300 shadow';
+                modeBadge.innerHTML = '🧠 मेरिट स्कोर रैंकिंग (MERIT RANK)';
+              }
+            }
+            renderWinnersTable(drawData.winners);
+          } else {
+            if (modeBadge) {
+              modeBadge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold border border-amber-400/60 bg-amber-950/80 text-amber-300 shadow';
+              modeBadge.innerHTML = '🧠 मेरिट स्कोर रैंकिंग (डिफ़ॉल्ट)';
+            }
+            renderWinnersTable(allAdminEntries);
+          }
+        } catch (err) {
+          renderWinnersTable(allAdminEntries);
+        }
+      } catch (err) {
+        console.error('Error fetching contest entries', err);
+      }
+    };
+
+    function updateVerificationStats(entries) {
+      const total = entries.length;
+      const verified = entries.filter(e => e.is_verified == 1).length;
+      const pending = total - verified;
+      const winners = entries.filter(e => Number(e.is_winner || 0) === 1).length;
+
+      const elTotal = document.getElementById('statTotalPart');
+      const elVerified = document.getElementById('statVerifiedPart');
+      const elPending = document.getElementById('statPendingPart');
+      const elPool = document.getElementById('statDrawPool');
+      const elWinnersBadge = document.getElementById('filterWinnersCount');
+
+      if (elTotal) elTotal.innerText = total;
+      if (elVerified) elVerified.innerText = verified;
+      if (elPending) elPending.innerText = pending;
+      if (elWinnersBadge) elWinnersBadge.innerText = winners;
+      if (elPool) {
+        if (verified > 0) {
+          elPool.innerHTML = `<span class="text-emerald-400 font-mono font-bold">${verified} Verified</span><br><span class="text-[10px] text-emerald-200/70">ड्रॉ केवल Verified से</span>`;
+        } else {
+          elPool.innerHTML = `<span class="text-amber-300 font-mono">${total} All</span><br><span class="text-[10px] text-amber-200/60">कोई verified नहीं</span>`;
+        }
+      }
+    }
+
+    async function adminToggleWinner(entryId, action, participantName, ticketPass, phone, city) {
+      if (action === 'remove') {
+        if (!confirm(`⚠️ क्या आप "${participantName}" का WINNER स्टेटस हटाना चाहते हैं?`)) return;
+        try {
+          const res = await fetch('/api/admin/entry/remove-winner', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${appState.adminToken}` },
+            body: JSON.stringify({ entry_id: entryId })
+          });
+          const data = await res.json();
+          if (data.success) {
+            const entry = allAdminEntries.find(e => e.id == entryId);
+            if (entry) {
+              entry.is_winner = 0;
+              entry.winner_declared_at = '';
+              entry.winner_prize_tier = '';
+            }
+            showAdminToast(`विजेता स्टेटस हटाया गया।`);
+            updateVerificationStats(allAdminEntries);
+            filterParticipantsList();
+          } else {
+            alert('त्रुटि: ' + (data.message || 'Action failed'));
+          }
+        } catch (err) {
+          alert('नेटवर्क त्रुटि।');
+        }
+        return;
+      }
+
+      // Declare Winner Flow
+      const choice = prompt(
+        `🏆 ${participantName} (टिकट: ${ticketPass || ''}) को LIVE WINNER बनाएं!\n\n` +
+        `यह होमपेज पर टाइमर के पास 2 मिनट तक टिकट नंबर के साथ लाइव दिखेगा।\n\n` +
+        `ईनाम श्रेणी चुनें (1, 2, 3 या 4 टाइप करें):\n` +
+        `1: TIER 1 (₹50,000 VIP पटाखा हैंपर)\n` +
+        `2: TIER 2 (₹30,000 ग्रैंड सेलिब्रेशन हैंपर)\n` +
+        `3: TIER 3 (₹10,000 स्पेशल दीवाली हैंपर)\n` +
+        `4: कस्टम / बंपर लकी प्राइज (₹25,000)`,
+        '1'
+      );
+
+      if (!choice) return;
+
+      let prize_tier = 'TIER 1 (₹50,000 VIP पटाखा हैंपर)';
+      let prize_amount = 50000;
+      if (choice === '2') {
+        prize_tier = 'TIER 2 (₹30,000 ग्रैंड सेलिब्रेशन हैंपर)';
+        prize_amount = 30000;
+      } else if (choice === '3') {
+        prize_tier = 'TIER 3 (₹10,000 स्पेशल दीवाली हैंपर)';
+        prize_amount = 10000;
+      } else if (choice === '4') {
+        prize_tier = 'बंपर लकी प्राइज (₹25,000 हैंपर)';
+        prize_amount = 25000;
+      }
+
+      try {
+        const res = await fetch('/api/admin/entry/declare-winner', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${appState.adminToken}` },
+          body: JSON.stringify({ entry_id: entryId, prize_tier, prize_amount })
+        });
+        const data = await res.json();
+        if (data.success) {
+          const entry = allAdminEntries.find(e => e.id == entryId);
+          if (entry) {
+            entry.is_winner = 1;
+            entry.is_verified = 1;
+            entry.winner_declared_at = data.winner.declared_at;
+            entry.winner_prize_tier = prize_tier;
+            entry.winner_ticket_number = data.winner.ticket_number;
+          }
+          showAdminToast(`🎉 ${participantName} को LIVE WINNER घोषित किया गया! टाइमर पर 2 मिनट तक दिखेगा!`);
+          updateVerificationStats(allAdminEntries);
+          filterParticipantsList();
+        } else {
+          alert('त्रुटि: ' + (data.message || 'Action failed'));
+        }
+      } catch (err) {
+        alert('नेटवर्क त्रुटि।');
+      }
+    }
+
+    async function adminVerifyEntry(entryId, action) {
+      let note = '';
+      if (action === 'verify') {
+        note = prompt(`✅ "${action}" — कोई एडमिन नोट जोड़ें (वैकल्पिक):`, '') || '';
+      } else if (action === 'unverify') {
+        note = prompt(`🚫 Unverify — कारण नोट करें (वैकल्पिक):`, '') || '';
+      } else if (action === 'note') {
+        note = prompt('📝 एडमिन नोट लिखें:', '') || '';
+        if (!note) return;
+      }
+
+      try {
+        const res = await fetch('/api/admin/entry/verify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${appState.adminToken}` },
+          body: JSON.stringify({ entry_id: entryId, action, note })
+        });
+        const data = await res.json();
+        if (data.success) {
+          // Update local data
+          const entry = allAdminEntries.find(e => e.id == entryId);
+          if (entry) {
+            entry.is_verified = (action === 'verify') ? 1 : (action === 'unverify' ? 0 : entry.is_verified);
+            entry.admin_notes = note || entry.admin_notes;
+          }
+          showAdminToast(`✅ ${data.message}`);
+          updateVerificationStats(allAdminEntries);
+          filterParticipantsList();
+        } else {
+          alert('त्रुटि: ' + (data.message || 'Action failed'));
+        }
+      } catch (err) {
+        alert('नेटवर्क त्रुटि।');
+      }
+    }
+
+    async function adminDeleteEntry(entryId, participantName) {
+      if (!confirm(`⚠️ क्या आप "${participantName}" (ID: #${entryId}) को स्थायी रूप से हटाना चाहते हैं?\n\nयह undo नहीं होगा।`)) return;
+
+      try {
+        const res = await fetch('/api/admin/entry/delete', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${appState.adminToken}` },
+          body: JSON.stringify({ entry_id: entryId, confirm: true })
+        });
+        const data = await res.json();
+        if (data.success) {
+          allAdminEntries = allAdminEntries.filter(e => e.id != entryId);
+          updateVerificationStats(allAdminEntries);
+          filterParticipantsList();
+          showAdminToast(`🗑️ ${data.message}`);
+          const badge = document.getElementById('tabCountBadge');
+          if (badge) badge.innerText = allAdminEntries.length;
+        } else {
+          alert('त्रुटि: ' + (data.message || 'Delete failed'));
+        }
+      } catch (err) {
+        alert('नेटवर्क त्रुटि।');
+      }
+    }
+
+    function renderParticipantsTable(entries) {
+      const tbody = document.getElementById('participantsTableBody');
+      if (!tbody) return;
+
+      if (!entries || entries.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="10" class="text-center py-8 text-amber-200/60">कोई प्रविष्टि नहीं मिली।</td></tr>`;
+        return;
+      }
+
+      let html = '';
+      entries.forEach((e, idx) => {
+        const qty = e.ticket_quantity || 1;
+        const amt = e.amount_paid || (qty * 49);
+        const isVerified = e.is_verified == 1;
+        const isWinner = Number(e.is_winner || 0) === 1;
+        const note = e.admin_notes || '';
+
+        const verifyBadge = isWinner
+          ? `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-black bg-gradient-to-r from-yellow-400 to-amber-500 text-black border border-yellow-300 shadow animate-pulse">🏆 WINNER</span>`
+          : (isVerified
+            ? `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">✅ Verified</span>`
+            : `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-rose-500/20 text-rose-300 border border-rose-500/40">⏳ Pending</span>`);
+
+        const rowBg = isWinner 
+          ? 'bg-yellow-950/30 border-l-4 border-l-yellow-400' 
+          : (isVerified ? 'bg-emerald-950/20' : '');
+
+        const choiceBadge = (e.fulfillment_choice === 'STORE_VOUCHER')
+          ? `<span class="text-[10px] text-emerald-300">🎫 Voucher</span>`
+          : `<span class="text-[10px] text-amber-300">📦 Crate</span>`;
+
+        const safeName = (e.participant_name || '').replace(/'/g, "\\'");
+        const ticketDisplay = e.winner_ticket_number || e.entry_pass;
+
+        html += `
+          <tr class="admin-table-row ${rowBg} hover:bg-amber-500/5 transition">
+            <td class="py-2.5 px-3 font-mono text-[11px] text-amber-300/80">${idx + 1}</td>
+            <td class="py-2.5 px-3">${verifyBadge}</td>
+            <td class="py-2.5 px-3">
+              <div class="font-bold text-white text-xs flex items-center gap-1">
+                <span>${e.participant_name}</span>
+                ${isWinner ? '<span class="text-yellow-400" title="लाइव विजेता">👑</span>' : ''}
+              </div>
+              ${isWinner && e.winner_prize_tier ? `<div class="text-[10px] text-yellow-300 font-bold">${e.winner_prize_tier}</div>` : ''}
+            </td>
+            <td class="py-2.5 px-3 font-mono text-[11px] text-amber-200">
+              <a href="tel:${e.phone}" class="hover:underline flex items-center gap-1" title="कॉल करें">
+                📞 <span>${e.phone}</span>
+              </a>
+            </td>
+            <td class="py-2.5 px-3">
+              <div class="text-[11px] text-white">${e.city || '—'}</div>
+              <div class="text-[10px] text-amber-200/60">${e.delivery_address || ''}</div>
+              <div class="text-[10px] text-amber-200/50">PIN: ${e.pincode || '—'}</div>
+            </td>
+            <td class="py-2.5 px-3">
+              <div class="font-mono text-[11px] text-emerald-300">${qty}×₹49</div>
+              <div class="text-[10px] text-white/70">= ₹${amt}</div>
+              ${choiceBadge}
+            </td>
+            <td class="py-2.5 px-3">
+              <span class="font-mono font-bold text-amber-300 text-[11px]">${e.score}/${e.total_questions}</span>
+              <span class="text-[10px] text-amber-200/60 block">${Number(e.time_taken_seconds).toFixed(1)}s</span>
+            </td>
+            <td class="py-2.5 px-3 font-mono text-[10px] text-amber-200/90 max-w-[100px] break-all font-bold">
+              ${ticketDisplay}
+            </td>
+            <td class="py-2.5 px-3 text-[10px] text-amber-100/80 max-w-[120px]">
+              ${note ? `<span class="italic text-amber-200/70">${note}</span>` : '<span class="text-amber-200/30">—</span>'}
+            </td>
+            <td class="py-2.5 px-3">
+              <div class="flex flex-col gap-1 min-w-[110px]">
+                <!-- Prominent WINNER Option -->
+                ${isWinner
+                  ? `<button onclick="adminToggleWinner(${e.id}, 'remove', '${safeName}')" class="text-[10px] px-2 py-1 bg-yellow-500 hover:bg-yellow-400 text-black border border-yellow-200 rounded-lg font-black shadow transition flex items-center justify-center gap-1 animate-pulse">🏆 WINNER (हटाएं)</button>`
+                  : `<button onclick="adminToggleWinner(${e.id}, 'declare', '${safeName}', '${e.entry_pass}', '${e.phone}', '${e.city}')" class="text-[10px] px-2 py-1 bg-gradient-to-r from-amber-500 to-yellow-400 hover:from-amber-400 hover:to-yellow-300 text-black border border-yellow-200 rounded-lg font-black shadow transition flex items-center justify-center gap-1">🏆 WINNER बनाएं</button>`
+                }
+
+                ${isVerified
+                  ? `<button onclick="adminVerifyEntry(${e.id}, 'unverify')" class="text-[10px] px-2 py-0.5 bg-rose-900/60 hover:bg-rose-900 text-rose-300 border border-rose-500/40 rounded-lg font-bold transition">🚫 अनवेरिफाई</button>`
+                  : `<button onclick="adminVerifyEntry(${e.id}, 'verify')" class="text-[10px] px-2 py-0.5 bg-emerald-900/60 hover:bg-emerald-900 text-emerald-300 border border-emerald-500/40 rounded-lg font-bold transition">✅ Verify करें</button>`
+                }
+                <div class="flex items-center gap-1">
+                  <button onclick="adminVerifyEntry(${e.id}, 'note')" class="text-[10px] px-2 py-0.5 bg-amber-900/40 hover:bg-amber-900/70 text-amber-200 border border-amber-500/30 rounded-lg font-bold transition flex-1">📝 नोट</button>
+                  <button onclick="adminDeleteEntry(${e.id}, '${safeName}')" class="text-[10px] px-2 py-0.5 bg-gray-900/60 hover:bg-red-900/80 text-red-400 border border-red-500/30 rounded-lg font-bold transition">🗑️</button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        `;
+      });
+      tbody.innerHTML = html;
+    }
+
+    function renderWinnersTable(entries) {
+      const tbody = document.getElementById('winnersTableBody');
+      const summary = document.getElementById('winnersListSummary');
+      if (!tbody) return;
+
+      const top100 = entries.slice(0, 100);
+      if (summary) summary.innerText = `Top ${top100.length} of 100 Winners Allocated`;
+
+      if (top100.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="7" class="text-center py-6 text-amber-200/60 font-sans">अभी कोई विजेता नहीं हैं।</td></tr>`;
+        return;
+      }
+
+      let html = '';
+      top100.forEach((e, idx) => {
+        const rank = e.rank || (idx + 1);
+        let tierBadge = '';
+        let tierValue = '';
+        let rowClass = '';
+
+        if (rank <= 30) {
+          tierBadge = '<span class="bg-amber-500 text-black font-bold px-2 py-0.5 rounded text-[10px]">Tier 1 (VIP)</span>';
+          tierValue = '<strong class="text-amber-300">₹50,000</strong>';
+          rowClass = 'bg-amber-500/5';
+        } else if (rank <= 80) {
+          tierBadge = '<span class="bg-slate-300 text-black font-bold px-2 py-0.5 rounded text-[10px]">Tier 2 (Grand)</span>';
+          tierValue = '<strong class="text-slate-200">₹30,000</strong>';
+        } else {
+          tierBadge = '<span class="bg-orange-600 text-white font-bold px-2 py-0.5 rounded text-[10px]">Tier 3 (Special)</span>';
+          tierValue = '<strong class="text-orange-300">₹10,000</strong>';
+        }
+
+        const choice = (e.fulfillment_choice === 'STORE_VOUCHER') ? 'डिजिटल वाउचर' : 'वुडन क्रेट';
+
+        html += `
+          <tr class="admin-table-row ${rowClass}">
+            <td class="py-2.5 px-4 font-bold text-amber-300">#${rank}</td>
+            <td class="py-2.5 px-4 font-sans font-bold text-white">${e.participant_name}</td>
+            <td class="py-2.5 px-4 font-sans">${tierBadge}</td>
+            <td class="py-2.5 px-4">${tierValue}</td>
+            <td class="py-2.5 px-4 font-sans text-amber-200">${choice}</td>
+            <td class="py-2.5 px-4 font-sans text-amber-100/80">${e.city}</td>
+            <td class="py-2.5 px-4 font-bold text-emerald-400">${e.score}/${e.total_questions} (${Number(e.time_taken_seconds).toFixed(1)}s)</td>
+          </tr>
+        `;
+      });
+      tbody.innerHTML = html;
+    }
+
+    function setParticipantFilter(filterType) {
+      currentFilter = filterType;
+      ['ALL', 'WINNERS', 'VERIFIED', 'PENDING', 'STORE_VOUCHER', 'DOORSTEP_DELIVERY'].forEach(f => {
+        const btn = document.getElementById(`filterBtn-${f}`);
+        if (btn) {
+          if (f === filterType) {
+            btn.className = 'text-xs px-3 py-1.5 rounded-lg font-bold bg-amber-500 text-black';
+          } else {
+            btn.className = 'text-xs px-3 py-1.5 rounded-lg font-bold bg-black/40 text-amber-200 border border-amber-500/30 hover:bg-amber-500/10';
+          }
+        }
+      });
+      filterParticipantsList();
+    }
+
+    function filterParticipantsList() {
+      const q = (document.getElementById('participantSearchInput')?.value || '').toLowerCase().trim();
+      let filtered = allAdminEntries.filter(e => {
+        if (currentFilter === 'WINNERS') {
+          if (Number(e.is_winner || 0) !== 1) return false;
+        } else if (currentFilter === 'VERIFIED') {
+          if (e.is_verified != 1) return false;
+        } else if (currentFilter === 'PENDING') {
+          if (e.is_verified == 1) return false;
+        } else if (currentFilter === 'STORE_VOUCHER') {
+          if (e.fulfillment_choice !== 'STORE_VOUCHER') return false;
+        } else if (currentFilter === 'DOORSTEP_DELIVERY') {
+          if (e.fulfillment_choice !== 'DOORSTEP_DELIVERY') return false;
+        }
+        if (!q) return true;
+        return (
+          (e.participant_name && e.participant_name.toLowerCase().includes(q)) ||
+          (e.phone && e.phone.includes(q)) ||
+          (e.city && e.city.toLowerCase().includes(q)) ||
+          (e.pincode && e.pincode.includes(q)) ||
+          (e.entry_pass && e.entry_pass.toLowerCase().includes(q)) ||
+          (e.admin_notes && e.admin_notes.toLowerCase().includes(q))
+        );
+      });
+      renderParticipantsTable(filtered);
+    }
+
+    // Auto-login on load if token present
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check localStorage as well
+      const savedToken = localStorage.getItem('diwali_admin_token') || sessionStorage.getItem('diwali_admin_token');
+      if (savedToken) {
+        appState.adminToken = savedToken;
+      }
+      loadAdminDashboard();
+    });
+  </script>
+  <!-- ========================================================================= -->
+  <!-- SINGLE WINNER REEL SPINNER MODAL                                          -->
+  <!-- ========================================================================= -->
+  <div id="singleWinnerModal" class="modal-layer" role="dialog" aria-modal="true" style="display: none;">
+    <div class="modal-dialog max-w-lg text-center bg-gradient-to-b from-stone-950 via-festiveMaroon to-black border-2 border-amber-400 p-6 rounded-3xl shadow-2xl relative">
+      <button class="modal-dismiss" onclick="closeSingleWinnerSpinnerModal()" aria-label="बंद करें">&times;</button>
+      
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-xs font-bold mb-3">
+        <span class="text-base">🎰</span>
+        <span>दीपावली लकी व्हील स्पिनर (Live Lucky Draw Reel)</span>
+      </div>
+
+      <h3 class="text-xl font-black text-amber-200 mb-1">1 लकी विजेता चुनें</h3>
+      <p class="text-xs text-amber-100/70 mb-5">
+        कंप्यूटराइज्ड रैंडम सेलेक्शन द्वारा लाइव लकी विनर का चयन करें
+      </p>
+
+      <!-- Slot Machine Drum Visual -->
+      <div class="bg-black/80 border-2 border-amber-500/60 rounded-2xl p-5 mb-5 shadow-inner relative overflow-hidden">
+        <div class="text-[11px] uppercase tracking-widest text-amber-300 font-bold mb-2">✦ लकी टिकट नंबर ✦</div>
+        
+        <!-- Spinning Reel Item -->
+        <div class="min-h-[70px] flex flex-col justify-center items-center py-2 bg-gradient-to-r from-amber-500/10 via-amber-500/25 to-amber-500/10 rounded-xl border border-amber-400/40">
+          <div id="reelWinnerName" class="text-2xl font-black text-amber-300 font-serif">प्रतीक्षारत...</div>
+          <div id="reelWinnerTicket" class="font-mono text-sm text-emerald-400 font-bold mt-1">LUCKY-PASS-XXXXXX</div>
+          <div id="reelWinnerCity" class="text-xs text-amber-100/70 mt-0.5">स्पिन बटन दबाएं</div>
+        </div>
+      </div>
+
+      <!-- Action Button -->
+      <div class="flex gap-2 justify-center mb-4">
+        <button id="btnStartSpin" onclick="spinSingleLuckyWinner()" class="btn-gold py-3 px-6 text-sm font-black flex items-center justify-center gap-2 shadow-xl hover:scale-105 transition-all w-full">
+          <span>🎰 स्पिन शुरू करें (Spin Wheel)</span>
+        </button>
+      </div>
+
+      <!-- Result Card (Revealed on Stop) -->
+      <div id="spinResultCard" class="hidden bg-gradient-to-b from-amber-500/20 to-black/70 border border-amber-400/60 rounded-2xl p-4 text-left space-y-2 text-xs shadow-lg">
+        <div class="flex items-center justify-between border-b border-amber-400/30 pb-2">
+          <span class="text-emerald-400 font-bold flex items-center gap-1">
+            <span>🎉</span> <span>लकी ड्रॉ विजेता घोषित!</span>
+          </span>
+          <span class="bg-amber-500 text-black font-mono font-bold text-[10px] px-2 py-0.5 rounded">
+            Tier 1 • ₹50,000
+          </span>
+        </div>
+        <div class="grid grid-cols-2 gap-2 pt-1 text-[11px]">
+          <div>नाम: <strong id="spinResName" class="text-white block font-bold text-xs">—</strong></div>
+          <div>मोबाइल: <strong id="spinResPhone" class="text-amber-300 font-mono block">—</strong></div>
+          <div>स्थान: <strong id="spinResCity" class="text-amber-100/80 block">—</strong></div>
+          <div>टिकट पास: <strong id="spinResPass" class="text-emerald-300 font-mono block font-bold">—</strong></div>
+        </div>
+        <div class="pt-2 border-t border-amber-500/20 text-amber-200/90 text-[11px]">
+          पुरस्कार विकल्प: <strong id="spinResFulfillment" class="text-amber-300 font-semibold">—</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cartGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8d6"/>
+      <stop offset="35%" stop-color="#f8c64e"/>
+      <stop offset="70%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#7a5500"/>
+    </linearGradient>
+    <linearGradient id="wheelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="50%" stop-color="#64748b"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ground Shadow -->
+  <ellipse cx="65" cy="108" rx="36" ry="6" fill="#000000" opacity="0.5" filter="blur(4px)"/>
+
+  <!-- Cart Basket Wireframe -->
+  <path d="M 22 25 L 34 25 L 48 75 L 94 75 L 104 40 L 38 40" fill="none" stroke="url(#cartGold)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" filter="drop-shadow(0 4px 5px rgba(0,0,0,0.4))"/>
+  
+  <!-- Wire Grid Lines -->
+  <line x1="42" y1="52" x2="100" y2="52" stroke="url(#cartGold)" stroke-width="2.5"/>
+  <line x1="45" y1="64" x2="96" y2="64" stroke="url(#cartGold)" stroke-width="2.5"/>
+  <line x1="58" y1="42" x2="58" y2="73" stroke="url(#cartGold)" stroke-width="2.5"/>
+  <line x1="74" y1="42" x2="74" y2="73" stroke="url(#cartGold)" stroke-width="2.5"/>
+  <line x1="88" y1="42" x2="88" y2="73" stroke="url(#cartGold)" stroke-width="2.5"/>
+
+  <!-- Cart Handle Cushion -->
+  <rect x="16" y="21" width="16" height="8" rx="4" fill="#dc2626" stroke="#ffd700" stroke-width="1.5"/>
+
+  <!-- Goods in Cart: Golden Diwali Ticket & Gift -->
+  <g transform="translate(48, 26) rotate(-10)">
+    <rect x="0" y="0" width="30" height="20" rx="3" fill="#dc2626" stroke="#ffd700" stroke-width="2"/>
+    <line x1="15" y1="0" x2="15" y2="20" stroke="#ffd700" stroke-width="3"/>
+    <circle cx="15" cy="0" r="4" fill="#ffd700"/>
+  </g>
+
+  <!-- Wheels (Front & Rear) -->
+  <circle cx="52" cy="94" r="10" fill="url(#wheelGrad)" stroke="#ffd700" stroke-width="2"/>
+  <circle cx="52" cy="94" r="4" fill="#ffd700"/>
+
+  <circle cx="90" cy="94" r="10" fill="url(#wheelGrad)" stroke="#ffd700" stroke-width="2"/>
+  <circle cx="90" cy="94" r="4" fill="#ffd700"/>
+</svg>

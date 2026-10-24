@@ -12,13 +12,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Core Theme Stylesheet -->
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="style.css">
 
   <!-- Tailwind CSS Engine -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
   <style>
     .admin-tab-btn {
@@ -79,8 +79,8 @@
   <header class="relative z-20 bg-black/70 border-b border-amber-500/30 backdrop-blur-md sticky top-0">
     <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
       <!-- Brand Logo & Title -->
-      <a href="/" class="flex items-center gap-3">
-        <img src="/assets/logo-diya.svg" alt="शुभ दीया" class="w-9 h-9">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/logo-diya.svg" alt="शुभ दीया" class="w-9 h-9">
         <div>
           <div class="flex items-center gap-2">
             <span class="font-serif font-black text-lg text-amber-300">शुभ दीपावली धमाका</span>
@@ -94,14 +94,14 @@
 
       <!-- Quick Actions & Session State -->
       <div class="flex items-center gap-3">
-        <a href="/" class="hidden sm:inline-flex items-center gap-1.5 text-xs text-amber-200/90 hover:text-white bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-full border border-amber-500/20 transition">
+        <a href="index.html" class="hidden sm:inline-flex items-center gap-1.5 text-xs text-amber-200/90 hover:text-white bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-full border border-amber-500/20 transition">
           <span>← मुख्य वेबसाइट देखें</span>
         </a>
 
         <!-- Authenticated Header Controls (Visible when logged in) -->
         <div id="authHeaderControls" class="hidden flex items-center gap-2">
           <button onclick="refreshAdminDataWithToast()" class="bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 px-3 py-1.5 rounded-full text-xs font-bold transition flex items-center gap-1">
-            <img src="/assets/icons/refresh-3d.svg" class="w-3.5 h-3.5" alt="">
+            <img src="assets/icons/refresh-3d.svg" class="w-3.5 h-3.5" alt="">
             <span class="hidden md:inline">रिफ्रेश</span>
           </button>
           <button onclick="handleAdminLogout()" class="bg-rose-900/60 hover:bg-rose-900 text-rose-200 border border-rose-500/40 px-3 py-1.5 rounded-full text-xs font-bold transition">
@@ -122,7 +122,7 @@
     <!-- ----------------------------------------------------------------------- -->
     <div id="adminLoginView" class="max-w-md mx-auto my-12 bg-black/60 border-2 border-amber-500/40 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur-xl text-center">
       <div class="w-16 h-16 mx-auto mb-3 bg-amber-500/10 border border-amber-500/30 rounded-2xl flex items-center justify-center shadow-inner">
-        <img src="/assets/icons/lock-3d.svg" class="w-9 h-9" alt="Lock">
+        <img src="assets/icons/lock-3d.svg" class="w-9 h-9" alt="Lock">
       </div>
       
       <h1 class="text-2xl font-serif font-black text-amber-200 mb-1">व्यवस्थापक लॉगिन</h1>
@@ -180,26 +180,26 @@
       <div class="flex items-center justify-between flex-wrap gap-3 pb-2 border-b border-amber-500/30">
         <div class="flex items-center gap-2 overflow-x-auto py-1 max-w-full">
           <button onclick="switchAdminTab('overview')" id="tabBtn-overview" class="admin-tab-btn active">
-            <img src="/assets/icons/target-3d.svg" class="w-4 h-4" alt="">
+            <img src="assets/icons/target-3d.svg" class="w-4 h-4" alt="">
             <span>1. ओवरव्यू व सांख्यिकी</span>
           </button>
           <button onclick="switchAdminTab('participants')" id="tabBtn-participants" class="admin-tab-btn">
-            <img src="/assets/icons/users-3d.svg" class="w-4 h-4" alt="">
+            <img src="assets/icons/users-3d.svg" class="w-4 h-4" alt="">
             <span>2. प्रतिभागी व टिकट (<span id="tabCountBadge">0</span>)</span>
           </button>
           <button onclick="switchAdminTab('winners')" id="tabBtn-winners" class="admin-tab-btn">
-            <img src="/assets/icons/medal1-3d.svg" class="w-4 h-4" alt="">
+            <img src="assets/icons/medal1-3d.svg" class="w-4 h-4" alt="">
             <span>3. Top 100 विजेता व ड्रॉ</span>
           </button>
           <button onclick="switchAdminTab('settings')" id="tabBtn-settings" class="admin-tab-btn">
-            <img src="/assets/icons/shield-3d.svg" class="w-4 h-4" alt="">
+            <img src="assets/icons/shield-3d.svg" class="w-4 h-4" alt="">
             <span>4. सेटिंग्स व सुरक्षा</span>
           </button>
         </div>
 
         <div class="flex items-center gap-2">
           <button onclick="exportWinnerDispatchCsv()" class="btn-gold py-2 px-3 text-xs font-bold flex items-center gap-1.5 shadow-md">
-            <img src="/assets/icons/download-3d.svg" class="w-3.5 h-3.5" alt="">
+            <img src="assets/icons/download-3d.svg" class="w-3.5 h-3.5" alt="">
             <span>Excel / CSV डाउनलोड</span>
           </button>
         </div>
@@ -215,7 +215,7 @@
           <div class="admin-kpi-card">
             <div class="flex items-center justify-between mb-2">
               <span class="text-xs text-amber-200/80 font-bold uppercase">कुल प्रतिभागी</span>
-              <img src="/assets/icons/users-3d.svg" class="w-6 h-6" alt="">
+              <img src="assets/icons/users-3d.svg" class="w-6 h-6" alt="">
             </div>
             <div id="admContestCount" class="text-2xl sm:text-3xl font-mono font-black text-emerald-400">0</div>
             <div class="text-[11px] text-amber-200/70 mt-1">क्विज़ पूर्ण व पंजीकृत यूज़र्स</div>
@@ -224,7 +224,7 @@
           <div class="admin-kpi-card">
             <div class="flex items-center justify-between mb-2">
               <span class="text-xs text-amber-200/80 font-bold uppercase">कुल टिकट बुक्ड</span>
-              <img src="/assets/icons/ticket-3d.svg" class="w-6 h-6" alt="">
+              <img src="assets/icons/ticket-3d.svg" class="w-6 h-6" alt="">
             </div>
             <div id="admTicketsCount" class="text-2xl sm:text-3xl font-mono font-black text-amber-300">0</div>
             <div class="text-[11px] text-amber-200/70 mt-1">प्रविष्ट टिकट संख्या (₹49 प्रति टिकट)</div>
@@ -233,7 +233,7 @@
           <div class="admin-kpi-card">
             <div class="flex items-center justify-between mb-2">
               <span class="text-xs text-amber-200/80 font-bold uppercase">कुल राजस्व</span>
-              <img src="/assets/icons/card-3d.svg" class="w-6 h-6" alt="">
+              <img src="assets/icons/card-3d.svg" class="w-6 h-6" alt="">
             </div>
             <div id="admRevenueCount" class="text-2xl sm:text-3xl font-mono font-black text-white">₹0</div>
             <div class="text-[11px] text-amber-200/70 mt-1">UPI व Razorpay कुल प्राप्त राशि</div>
@@ -242,7 +242,7 @@
           <div class="admin-kpi-card">
             <div class="flex items-center justify-between mb-2">
               <span class="text-xs text-amber-200/80 font-bold uppercase">ईनाम पूल</span>
-              <img src="/assets/icons/gift-3d.svg" class="w-6 h-6" alt="">
+              <img src="assets/icons/gift-3d.svg" class="w-6 h-6" alt="">
             </div>
             <div class="text-2xl sm:text-3xl font-serif font-black text-amber-300">₹32,00,000</div>
             <div class="text-[11px] text-amber-200/70 mt-1">100 विजेताओं में पूर्णतः आबंटित</div>
@@ -274,13 +274,13 @@
           <!-- Store Voucher vs Doorstep Delivery -->
           <div class="bg-black/50 border border-amber-500/30 rounded-2xl p-5 shadow-lg">
             <h2 class="text-sm font-bold text-amber-300 mb-3 flex items-center gap-2">
-              <img src="/assets/icons/target-3d.svg" class="w-4 h-4" alt="">
+              <img src="assets/icons/target-3d.svg" class="w-4 h-4" alt="">
               <span>विजेता डिलीवरी प्राथमिकता (Fulfillment Choice)</span>
             </h2>
             <div class="grid grid-cols-2 gap-3 mb-3">
               <div class="bg-emerald-950/40 border border-emerald-500/40 p-3 rounded-xl text-center">
                 <div class="text-xs text-emerald-300 font-bold mb-1 flex items-center justify-center gap-1">
-                  <img src="/assets/icons/voucher-3d.svg" class="w-3.5 h-3.5" alt="">
+                  <img src="assets/icons/voucher-3d.svg" class="w-3.5 h-3.5" alt="">
                   <span>स्टोर वाउचर</span>
                 </div>
                 <div id="admVoucherCount" class="text-xl font-mono font-bold text-white">0</div>
@@ -289,7 +289,7 @@
 
               <div class="bg-amber-950/40 border border-amber-500/40 p-3 rounded-xl text-center">
                 <div class="text-xs text-amber-300 font-bold mb-1 flex items-center justify-center gap-1">
-                  <img src="/assets/icons/crate-3d.svg" class="w-3.5 h-3.5" alt="">
+                  <img src="assets/icons/crate-3d.svg" class="w-3.5 h-3.5" alt="">
                   <span>होम डिलीवरी</span>
                 </div>
                 <div id="admDeliveryCount" class="text-xl font-mono font-bold text-white">0</div>
@@ -422,7 +422,7 @@
             <div>
               <div class="flex flex-wrap items-center gap-2 mb-2">
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500 text-black shadow">
-                  <img src="/assets/icons/blast-3d.svg" class="w-4 h-4" alt="">
+                  <img src="assets/icons/blast-3d.svg" class="w-4 h-4" alt="">
                   <span>विजेता चयन एवं लकी ड्रॉ इंजन</span>
                 </span>
                 <span id="activeDrawModeBadge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold border border-emerald-400/60 bg-emerald-950/80 text-emerald-300 shadow">
@@ -463,7 +463,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div class="bg-gradient-to-b from-amber-500/20 to-black/60 border-2 border-amber-400/50 rounded-2xl p-4 text-center">
             <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-amber-500 text-black font-bold text-xs uppercase mb-2">
-              <img src="/assets/icons/medal1-3d.svg" class="w-3.5 h-3.5" alt="">
+              <img src="assets/icons/medal1-3d.svg" class="w-3.5 h-3.5" alt="">
               <span>Tier 1 • रैंक 1 से 30</span>
             </div>
             <div class="text-2xl font-black text-amber-300">₹50,000 प्रत्येक</div>
@@ -472,7 +472,7 @@
 
           <div class="bg-gradient-to-b from-slate-400/20 to-black/60 border-2 border-slate-400/40 rounded-2xl p-4 text-center">
             <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-300 text-slate-900 font-bold text-xs uppercase mb-2">
-              <img src="/assets/icons/medal2-3d.svg" class="w-3.5 h-3.5" alt="">
+              <img src="assets/icons/medal2-3d.svg" class="w-3.5 h-3.5" alt="">
               <span>Tier 2 • रैंक 31 से 80</span>
             </div>
             <div class="text-2xl font-black text-slate-200">₹30,000 प्रत्येक</div>
@@ -481,7 +481,7 @@
 
           <div class="bg-gradient-to-b from-orange-500/20 to-black/60 border-2 border-orange-500/40 rounded-2xl p-4 text-center">
             <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-orange-500 text-white font-bold text-xs uppercase mb-2">
-              <img src="/assets/icons/medal3-3d.svg" class="w-3.5 h-3.5" alt="">
+              <img src="assets/icons/medal3-3d.svg" class="w-3.5 h-3.5" alt="">
               <span>Tier 3 • रैंक 81 से 100</span>
             </div>
             <div class="text-2xl font-black text-orange-300">₹10,000 प्रत्येक</div>
@@ -563,7 +563,7 @@
               डिजिटल पर्सनल डेटा प्रोटेक्शन (DPDP) नियमों के तहत सिमुलेशन या टेस्ट प्रविष्टियों को आवश्यकता पड़ने पर सुरक्षित रीसेट किया जा सकता है।
             </p>
             <button onclick="triggerDataPurge()" class="bg-rose-900/60 hover:bg-rose-900 text-rose-200 border border-rose-500/40 py-2.5 px-4 rounded-xl text-xs font-bold transition w-full flex items-center justify-center gap-2 shadow-lg">
-              <img src="/assets/icons/trash-3d.svg" class="w-4 h-4" alt="">
+              <img src="assets/icons/trash-3d.svg" class="w-4 h-4" alt="">
               <span>सिमुलेशन डेटा रीसेट करें (Purge Demo Data)</span>
             </button>
           </div>
@@ -580,7 +580,7 @@
   </div>
 
   <!-- Client-side Interactive Engine -->
-  <script src="/app.js"></script>
+  <script src="app.js"></script>
 
   <script>
     // State for standalone Admin Page

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cardDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b0a18"/>
+      <stop offset="50%" stop-color="#19030a"/>
+      <stop offset="100%" stop-color="#050002"/>
+    </linearGradient>
+    <linearGradient id="chipGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8d6"/>
+      <stop offset="50%" stop-color="#f8c64e"/>
+      <stop offset="100%" stop-color="#996e08"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shadow -->
+  <rect x="18" y="32" width="84" height="54" rx="8" fill="#000" opacity="0.6" filter="blur(6px)" transform="rotate(-8 60 60)"/>
+
+  <!-- Card Body -->
+  <g transform="rotate(-8 60 60)">
+    <rect x="18" y="30" width="84" height="54" rx="8" fill="url(#cardDark)" stroke="#f8c64e" stroke-width="2"/>
+    
+    <!-- Gold Foil Geometric Accent Wave -->
+    <path d="M 18 55 Q 50 40 102 65 L 102 84 L 18 84 Z" fill="#b8860b" opacity="0.25"/>
+
+    <!-- EMV Chip 3D -->
+    <rect x="28" y="44" width="16" height="12" rx="3" fill="url(#chipGold)" stroke="#664600" stroke-width="1"/>
+    <line x1="28" y1="50" x2="44" y2="50" stroke="#785300" stroke-width="0.8"/>
+    <line x1="36" y1="44" x2="36" y2="56" stroke="#785300" stroke-width="0.8"/>
+
+    <!-- Contactless Wave -->
+    <path d="M 52 46 A 6 6 0 0 1 52 54" fill="none" stroke="#f8c64e" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M 56 43 A 10 10 0 0 1 56 57" fill="none" stroke="#f8c64e" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- Embossed Cardholder & Logo -->
+    <rect x="28" y="68" width="38" height="4" rx="1.5" fill="#ffffff" opacity="0.8"/>
+    <!-- Hologram Seal -->
+    <circle cx="88" cy="68" r="7" fill="#ef4444" opacity="0.85"/>
+    <circle cx="78" cy="68" r="7" fill="#f59e0b" opacity="0.85"/>
+  </g>
+</svg>

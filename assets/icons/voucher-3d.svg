@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="voucherGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="60%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shadow -->
+  <rect x="18" y="32" width="84" height="54" rx="8" fill="#000" opacity="0.6" filter="blur(6px)"/>
+
+  <!-- Voucher Card Body -->
+  <rect x="18" y="28" width="84" height="56" rx="8" fill="url(#voucherGrad)" stroke="#f8c64e" stroke-width="2.5" filter="drop-shadow(0 6px 10px rgba(0,0,0,0.5))"/>
+
+  <!-- Perforated Notches on Voucher Ends -->
+  <circle cx="18" cy="56" r="6" fill="#1f050d"/>
+  <circle cx="102" cy="56" r="6" fill="#1f050d"/>
+
+  <!-- Dotted Tear line -->
+  <line x1="40" y1="28" x2="40" y2="84" stroke="#f8c64e" stroke-width="2" stroke-dasharray="3,3"/>
+
+  <!-- Voucher Store QR Matrix Simulation -->
+  <rect x="23" y="44" width="13" height="13" fill="#ffffff" rx="2"/>
+  <rect x="25" y="46" width="4" height="4" fill="#000"/>
+  <rect x="30" y="46" width="4" height="4" fill="#000"/>
+  <rect x="25" y="51" width="4" height="4" fill="#000"/>
+
+  <!-- Amount & Text -->
+  <text x="46" y="46" font-family="'Cinzel', serif" font-size="9" font-weight="900" fill="#fde047">GIFT VOUCHER</text>
+  <text x="46" y="62" font-family="'Outfit', sans-serif" font-size="14" font-weight="900" fill="#ffffff">₹50,000</text>
+  <text x="46" y="74" font-family="'Outfit', sans-serif" font-size="7" fill="#6ee7b7">LICENSED STORE PICKUP</text>
+</svg>

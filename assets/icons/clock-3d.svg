@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <linearGradient id="clockBrass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8d6"/>
+      <stop offset="30%" stop-color="#f8c64e"/>
+      <stop offset="70%" stop-color="#b8860b"/>
+      <stop offset="100%" stop-color="#543300"/>
+    </linearGradient>
+    <radialGradient id="clockDial" cx="45%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#3b0f1a"/>
+      <stop offset="70%" stop-color="#1f050d"/>
+      <stop offset="100%" stop-color="#0a0104"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Shadow -->
+  <ellipse cx="60" cy="110" rx="38" ry="7" fill="#000" opacity="0.6" filter="blur(4px)"/>
+
+  <!-- Top Crown & Loop -->
+  <circle cx="60" cy="18" r="10" fill="none" stroke="url(#clockBrass)" stroke-width="4"/>
+  <rect x="56" y="24" width="8" height="8" rx="2" fill="url(#clockBrass)"/>
+
+  <!-- Outer Watch Case -->
+  <circle cx="60" cy="66" r="44" fill="url(#clockBrass)" filter="drop-shadow(0 8px 10px rgba(0,0,0,0.6))"/>
+  
+  <!-- Dial Bevel -->
+  <circle cx="60" cy="66" r="37" fill="url(#clockDial)" stroke="#d4af37" stroke-width="2"/>
+
+  <!-- Hour Markers -->
+  <circle cx="60" cy="35" r="2.5" fill="#f8c64e"/>
+  <circle cx="91" cy="66" r="2.5" fill="#f8c64e"/>
+  <circle cx="60" cy="97" r="2.5" fill="#f8c64e"/>
+  <circle cx="29" cy="66" r="2.5" fill="#f8c64e"/>
+
+  <!-- Clock Hands (Pointing to 8:00 IST) -->
+  <line x1="60" y1="66" x2="42" y2="78" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <line x1="60" y1="66" x2="60" y2="40" stroke="#f8c64e" stroke-width="3" stroke-linecap="round"/>
+  <!-- Second Hand (Red) -->
+  <line x1="60" y1="72" x2="60" y2="38" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Center Pin -->
+  <circle cx="60" cy="66" r="4" fill="#ffd700" stroke="#b8860b" stroke-width="1"/>
+
+  <!-- Glass Dome Specular Reflection -->
+  <path d="M 30 50 A 34 34 0 0 1 85 40 A 34 26 0 0 0 30 50 Z" fill="#ffffff" opacity="0.25"/>
+</svg>

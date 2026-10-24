@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <defs>
+    <radialGradient id="ringCrimson" cx="45%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#ff334b"/>
+      <stop offset="70%" stop-color="#990b1c"/>
+      <stop offset="100%" stop-color="#4d020a"/>
+    </radialGradient>
+    <radialGradient id="ringGold" cx="45%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#fff8d6"/>
+      <stop offset="50%" stop-color="#f8c64e"/>
+      <stop offset="100%" stop-color="#805b00"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Shadow -->
+  <ellipse cx="60" cy="110" rx="45" ry="8" fill="#000" opacity="0.6" filter="blur(5px)"/>
+
+  <!-- Outer Ring (Crimson) -->
+  <circle cx="60" cy="58" r="48" fill="url(#ringCrimson)" stroke="#ffd700" stroke-width="3" filter="drop-shadow(0 6px 10px rgba(0,0,0,0.5))"/>
+  
+  <!-- Second Ring (Gold) -->
+  <circle cx="60" cy="58" r="37" fill="url(#ringGold)" stroke="#990b1c" stroke-width="2"/>
+
+  <!-- Third Ring (Crimson) -->
+  <circle cx="60" cy="58" r="26" fill="url(#ringCrimson)" stroke="#ffd700" stroke-width="2"/>
+
+  <!-- Bullseye Center (Gold Core) -->
+  <circle cx="60" cy="58" r="14" fill="url(#ringGold)" stroke="#ffffff" stroke-width="2" filter="drop-shadow(0 0 8px #ffd700)"/>
+  <circle cx="60" cy="58" r="5" fill="#ffffff"/>
+
+  <!-- 3D Arrow Shaft hitting center -->
+  <g transform="translate(60, 58) rotate(-40)">
+    <!-- Arrow Head Embedded -->
+    <polygon points="0,0 -8,-14 8,-14" fill="#d4af37"/>
+    <!-- Shaft -->
+    <rect x="-3" y="-65" width="6" height="55" fill="#f8c64e" stroke="#5c4100" stroke-width="1"/>
+    <!-- Fletching Feathers -->
+    <polygon points="-3,-55 -15,-65 -3,-60" fill="#dc2626"/>
+    <polygon points="3,-55 15,-65 3,-60" fill="#dc2626"/>
+    <polygon points="-3,-45 -13,-55 -3,-50" fill="#ffd700"/>
+    <polygon points="3,-45 13,-55 3,-50" fill="#ffd700"/>
+  </g>
+</svg>

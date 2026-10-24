@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- Background Gradient: Deep Maroon into Royal Crimson -->
+    <radialGradient id="festiveGlow" cx="50%" cy="35%" r="80%">
+      <stop offset="0%" stop-color="#42081D"/>
+      <stop offset="45%" stop-color="#2B0615"/>
+      <stop offset="85%" stop-color="#16030C"/>
+      <stop offset="100%" stop-color="#0B0106"/>
+    </radialGradient>
+
+    <!-- Radiant Gold Foil Heading -->
+    <linearGradient id="goldFoil" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="25%" stop-color="#FFF275"/>
+      <stop offset="60%" stop-color="#FFD700"/>
+      <stop offset="85%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+
+    <!-- Ornate Gold Frame -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="50%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+
+    <radialGradient id="centerBurst" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#FF9800" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#D32F2F" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#42081D" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Deep Crimson Canvas -->
+  <rect width="1200" height="630" fill="url(#festiveGlow)"/>
+  <circle cx="600" cy="220" r="320" fill="url(#centerBurst)"/>
+
+  <!-- Ornate Double Golden Borders -->
+  <rect x="25" y="25" width="1150" height="580" rx="20" fill="none" stroke="url(#borderGrad)" stroke-width="2.5" opacity="0.85"/>
+  <rect x="38" y="38" width="1124" height="554" rx="14" fill="none" stroke="#D4AF37" stroke-width="1" stroke-dasharray="8,6" opacity="0.5"/>
+
+  <!-- Corner Rangoli Flourishes -->
+  <g stroke="#FFD700" stroke-width="1.6" fill="none" opacity="0.65">
+    <!-- Top Left -->
+    <circle cx="55" cy="55" r="16"/>
+    <circle cx="55" cy="55" r="7"/>
+    <line x1="55" y1="32" x2="55" y2="78"/>
+    <line x1="32" y1="55" x2="78" y2="55"/>
+    <!-- Top Right -->
+    <circle cx="1145" cy="55" r="16"/>
+    <circle cx="1145" cy="55" r="7"/>
+    <line x1="1145" y1="32" x2="1145" y2="78"/>
+    <line x1="1122" y1="55" x2="1168" y2="55"/>
+    <!-- Bottom Left -->
+    <circle cx="55" cy="575" r="16"/>
+    <circle cx="55" cy="575" r="7"/>
+    <line x1="55" y1="552" x2="55" y2="598"/>
+    <line x1="32" y1="575" x2="78" y2="575"/>
+    <!-- Bottom Right -->
+    <circle cx="1145" cy="575" r="16"/>
+    <circle cx="1145" cy="575" r="7"/>
+    <line x1="1145" y1="552" x2="1145" y2="598"/>
+    <line x1="1122" y1="575" x2="1168" y2="575"/>
+  </g>
+
+  <!-- Central Auspicious Diya -->
+  <g transform="translate(545, 95) scale(1.15)">
+    <!-- Base -->
+    <path d="M22 68C22 92 38 104 60 104C82 104 98 92 98 68C98 64 22 64 22 68Z" fill="#D4AF37"/>
+    <ellipse cx="60" cy="68" rx="38" ry="8.5" fill="#FFD700"/>
+    <ellipse cx="60" cy="68" rx="32" ry="5.5" fill="#8B5A00"/>
+    <!-- Flame -->
+    <path d="M60 15C65 28 75 38 71 52C67 61 53 61 49 52C45 38 55 28 60 15Z" fill="#FF6F00"/>
+    <ellipse cx="60" cy="49" rx="5.5" ry="8.5" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Festive Badge Capsule -->
+  <rect x="440" y="245" width="320" height="38" rx="19" fill="#2B0615" stroke="#FFD700" stroke-width="1.5"/>
+  <text x="600" y="270" font-family="'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" fill="#FFF275" text-anchor="middle" letter-spacing="2">
+    🪔 शुभ दीपोत्सव लकी ड्रा 2026 💥
+  </text>
+
+  <!-- Hindi Brand Title -->
+  <text x="600" y="355" font-family="'Tiro Devanagari Hindi', 'Noto Sans Devanagari', 'Segoe UI', sans-serif" font-size="64" font-weight="900" fill="url(#goldFoil)" text-anchor="middle" filter="drop-shadow(0 4px 20px rgba(255, 215, 0, 0.4))">
+    शुभ दीपावली महा धमाका
+  </text>
+
+  <!-- English Title -->
+  <text x="600" y="415" font-family="'Cinzel', Georgia, serif" font-size="28" font-weight="800" fill="#FFFBEB" text-anchor="middle" letter-spacing="4">
+    SHUBH DIWALI DHAMAKA
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="465" font-family="'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="600" fill="#FFD700" text-anchor="middle">
+    100 भाग्यशाली विजेता • ₹18 लाख का भव्य पटाखा उपहार पूल • परिणाम: 4 नवंबर
+  </text>
+
+  <!-- Disclaimer Footer Strip -->
+  <rect x="160" y="525" width="880" height="36" rx="10" fill="#16030C" stroke="#D32F2F" stroke-width="1"/>
+  <text x="600" y="548" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#FFFBEB" text-anchor="middle">
+    ⚠️ केवल डेमो एवं संकल्पना पूर्वावलोकन: वास्तविक धन संग्रह एवं सशुल्क प्रविष्टियां विधिक समीक्षा हेतु बंद हैं।
+  </text>
+</svg>

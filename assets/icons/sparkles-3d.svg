@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <radialGradient id="spkCenter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#fef08a"/>
+      <stop offset="80%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Large Center Sparkle -->
+  <g transform="translate(45,45)" filter="drop-shadow(0 0 8px #f59e0b)">
+    <path d="M 0 -38 C 0 -12 12 0 38 0 C 12 0 0 12 0 38 C 0 12 -12 0 -38 0 C -12 0 0 -12 0 -38 Z" fill="url(#spkCenter)"/>
+    <circle cx="0" cy="0" r="6" fill="#ffffff"/>
+  </g>
+
+  <!-- Small Top Right Sparkle -->
+  <g transform="translate(80,22)" filter="drop-shadow(0 0 6px #ffd700)">
+    <path d="M 0 -20 C 0 -6 6 0 20 0 C 6 0 0 6 0 20 C 0 6 -6 0 -20 0 C -6 0 0 -6 0 -20 Z" fill="url(#spkCenter)"/>
+    <circle cx="0" cy="0" r="3" fill="#ffffff"/>
+  </g>
+
+  <!-- Small Bottom Left Sparkle -->
+  <g transform="translate(20,78)" filter="drop-shadow(0 0 6px #ffd700)">
+    <path d="M 0 -16 C 0 -5 5 0 16 0 C 5 0 0 5 0 16 C 0 5 -5 0 -16 0 C -5 0 0 -5 0 -16 Z" fill="url(#spkCenter)"/>
+    <circle cx="0" cy="0" r="2.5" fill="#ffffff"/>
+  </g>
+</svg>
