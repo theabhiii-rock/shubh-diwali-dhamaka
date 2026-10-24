@@ -168,18 +168,20 @@ function playCrackerAudio() {
 // ---------------------------------------------------------------------------
 // 3. CANVAS FIREWORKS ENGINE
 // ---------------------------------------------------------------------------
+// 3. ULTRA-LIGHT HIGH-PERFORMANCE FESTIVE CANVAS ENGINE (MOBILE OPTIMIZED)
+// ---------------------------------------------------------------------------
 const canvas = document.getElementById('fireworksCanvas');
-const ctx = canvas ? canvas.getContext('2d') : null;
+const ctx = canvas ? canvas.getContext('2d', { alpha: true }) : null;
 let particles = [];
-let rockets = [];
+let isFireworksRunning = false;
 
 function resizeCanvas() {
   if (!canvas) return;
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  canvas.width = Math.min(window.innerWidth, 1920);
+  canvas.height = Math.min(window.innerHeight, 1080);
 }
 if (canvas) {
-  window.addEventListener('resize', resizeCanvas);
+  window.addEventListener('resize', resizeCanvas, { passive: true });
   resizeCanvas();
 }
 
@@ -187,15 +189,15 @@ class SparkParticle {
   constructor(x, y, color) {
     this.x = x;
     this.y = y;
-    this.color = color || `hsl(${Math.random() * 50 + 20}, 95%, 65%)`;
+    this.color = color || '#ffd700';
     const angle = Math.random() * Math.PI * 2;
-    const speed = Math.random() * 4.5 + 1.5;
+    const speed = Math.random() * 3.5 + 1.2;
     this.vx = Math.cos(angle) * speed;
     this.vy = Math.sin(angle) * speed;
     this.alpha = 1;
-    this.decay = Math.random() * 0.018 + 0.015;
-    this.gravity = 0.08;
-    this.size = Math.random() * 2.2 + 1;
+    this.decay = Math.random() * 0.025 + 0.02;
+    this.gravity = 0.06;
+    this.size = Math.random() * 2 + 1;
   }
   update() {
     this.vx *= 0.98;
@@ -206,23 +208,18 @@ class SparkParticle {
   }
   draw() {
     if (!ctx) return;
-    ctx.save();
     ctx.globalAlpha = Math.max(0, this.alpha);
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
     ctx.fillStyle = this.color;
-    ctx.shadowBlur = 6;
-    ctx.shadowColor = this.color;
     ctx.fill();
-    ctx.restore();
   }
 }
 
 function triggerCrackerBurst(x, y) {
   if (appState.isMotionPaused || !canvas || !ctx) return;
-  // Adaptive particle count: lighter on mobile for silky 60fps & battery saving
   const isMobile = window.innerWidth < 768;
-  const count = isMobile ? 22 : 40;
+  const count = isMobile ? 14 : 28;
   const festiveColors = [
     '#ffd700', '#f59e0b', '#ff6f00', '#ea580c', '#dc2626', '#10b981', '#fffbeb', '#fbbf24'
   ];
@@ -231,47 +228,58 @@ function triggerCrackerBurst(x, y) {
     particles.push(new SparkParticle(x, y, color));
   }
   playCrackerAudio();
+
+  // Wake up animation loop if sleeping
+  if (!isFireworksRunning) {
+    isFireworksRunning = true;
+    requestAnimationFrame(animateFireworksLoop);
+  }
 }
 
 function triggerMobileSpark() {
   triggerCrackerBurst(window.innerWidth / 2, window.innerHeight * 0.35);
 }
 
-// User click / touch on empty page areas triggers festive sparks
+// User click / touch on empty page areas triggers festive sparks (passive touch)
 window.addEventListener('click', (e) => {
   if (appState.isMotionPaused || !canvas || !ctx) return;
-  if (!e.target.closest('button, a, input, select, textarea, .modal-dialog, .mobile-bottom-dock')) {
+  if (!e.target.closest('button, a, input, select, textarea, .modal-dialog, .mobile-bottom-dock, .spec-card, .bento-card')) {
     triggerCrackerBurst(e.clientX, e.clientY);
   }
-});
+}, { passive: true });
 
 function animateFireworksLoop() {
-  if (!canvas || !ctx) return;
+  if (!canvas || !ctx) {
+    isFireworksRunning = false;
+    return;
+  }
+
+  // If all particles dead and motion paused or mobile, clear & go to sleep
+  if (particles.length === 0) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    isFireworksRunning = false;
+    return; // Sleep! Zero CPU / GPU usage!
+  }
+
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  if (!appState.isMotionPaused) {
-    // Occasional gentle ambient spark
-    if (Math.random() < 0.02) {
-      triggerCrackerBurst(
-        Math.random() * canvas.width, 
-        Math.random() * (canvas.height * 0.5) + 50
-      );
-    }
-
-    for (let i = particles.length - 1; i >= 0; i--) {
-      particles[i].update();
-      particles[i].draw();
-      if (particles[i].alpha <= 0) {
-        particles.splice(i, 1);
-      }
+  for (let i = particles.length - 1; i >= 0; i--) {
+    particles[i].update();
+    particles[i].draw();
+    if (particles[i].alpha <= 0) {
+      particles.splice(i, 1);
     }
   }
 
   requestAnimationFrame(animateFireworksLoop);
 }
-if (canvas && ctx) {
-  animateFireworksLoop();
-}
+
+// One celebratory welcome burst on initial load
+setTimeout(() => {
+  if (canvas && ctx && !appState.isMotionPaused) {
+    triggerCrackerBurst(window.innerWidth * 0.5, window.innerHeight * 0.3);
+  }
+}, 800);
 
 // ---------------------------------------------------------------------------
 // 4. EVENT TIMELINE COUNTDOWN
@@ -395,7 +403,7 @@ function startLiveWinnerCountdown(initialSeconds) {
 
 function initLiveWinnerPolling() {
   pollLiveWinner();
-  setInterval(pollLiveWinner, 4000);
+  setInterval(pollLiveWinner, 10000);
 }
 
 // ---------------------------------------------------------------------------

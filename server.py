@@ -86,7 +86,7 @@ def init_db():
     admin_row = c.fetchone()
     if not admin_row:
         # Generate hash for admin password
-        admin_pwd = config.ADMIN_PASSWORD or "ShubhDiwali@Admin2026!Secure"
+        admin_pwd = config.ADMIN_PASSWORD or secrets.token_urlsafe(16)
         pwd_hash = security.hash_password(admin_pwd)
         c.execute('''
         INSERT INTO admin_users (username, password_hash, role, created_at)
