@@ -3,15 +3,17 @@
 > **A distinctive, premium multi-page Indian festive celebration platform, cultural trivia challenge, and authentic Diwali brand experience.**
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=flat&logo=github)](https://github.com/theabhiii-rock/shubh-diwali-dhamaka)
-[![Live Web URL](https://img.shields.io/badge/Live-Web%20Platform-brightgreen?style=flat&logo=cloudflare)](https://emerald-apache-lauderdale-claims.trycloudflare.com)
+[![Live Website](https://img.shields.io/badge/Live-Official%20Website-brightgreen?style=flat&logo=googlechrome)](https://theabhiii-rock.github.io/shubh-diwali-dhamaka/)
+[![Short Link](https://img.shields.io/badge/Short%20Link-diwali--dhamaka--2026-gold?style=flat&logo=link)](https://tinyurl.com/diwali-dhamaka-2026)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat&logo=python)](https://python.org)
 [![Security Audited](https://img.shields.io/badge/Security-OWASP%20Hardened-gold?style=flat&logo=shield)](SECOND_PASS_SECURITY_REPORT.md)
 
 ---
 
-## 🌐 LIVE PLATFORM & DEMO
-- **Public Live URL (HTTPS)**: [https://emerald-apache-lauderdale-claims.trycloudflare.com](https://emerald-apache-lauderdale-claims.trycloudflare.com)
-- **GitHub Repository**: [https://github.com/theabhiii-rock/shubh-diwali-dhamaka](https://github.com/theabhiii-rock/shubh-diwali-dhamaka)
+## 🌐 OFFICIAL LIVE PLATFORM & LINKS
+- 🌟 **Permanent Live Website (Google / HTTPS)**: [https://theabhiii-rock.github.io/shubh-diwali-dhamaka/](https://theabhiii-rock.github.io/shubh-diwali-dhamaka/)
+- 🔗 **Short Sharing Link (1-Click Short URL)**: [https://tinyurl.com/diwali-dhamaka-2026](https://tinyurl.com/diwali-dhamaka-2026)
+- 🐙 **Official GitHub Repository**: [https://github.com/theabhiii-rock/shubh-diwali-dhamaka](https://github.com/theabhiii-rock/shubh-diwali-dhamaka)
 
 ---
 
