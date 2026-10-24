@@ -2,6 +2,17 @@
 
 > **A distinctive, premium multi-page Indian festive celebration platform, cultural trivia challenge, and authentic Diwali brand experience.**
 
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=flat&logo=github)](https://github.com/theabhiii-rock/shubh-diwali-dhamaka)
+[![Live Web URL](https://img.shields.io/badge/Live-Web%20Platform-brightgreen?style=flat&logo=cloudflare)](https://emerald-apache-lauderdale-claims.trycloudflare.com)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat&logo=python)](https://python.org)
+[![Security Audited](https://img.shields.io/badge/Security-OWASP%20Hardened-gold?style=flat&logo=shield)](SECOND_PASS_SECURITY_REPORT.md)
+
+---
+
+## 🌐 LIVE PLATFORM & DEMO
+- **Public Live URL (HTTPS)**: [https://emerald-apache-lauderdale-claims.trycloudflare.com](https://emerald-apache-lauderdale-claims.trycloudflare.com)
+- **GitHub Repository**: [https://github.com/theabhiii-rock/shubh-diwali-dhamaka](https://github.com/theabhiii-rock/shubh-diwali-dhamaka)
+
 ---
 
 ## ⚖️ LEGAL AND PRODUCT SAFETY GATE ENFORCEMENT
