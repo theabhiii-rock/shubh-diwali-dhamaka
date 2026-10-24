@@ -2355,6 +2355,12 @@ button:hover .btn-icon-3d, a:hover .btn-icon-3d {
     animation: none !important;
   }
 
+  /* Hide large 90px corner diyas on mobile to prevent overlapping trust badge text */
+  .hero-corner-diya-left,
+  .hero-corner-diya-right {
+    display: none !important;
+  }
+
   .header-container {
     padding: 0.5rem 0.85rem;
   }
